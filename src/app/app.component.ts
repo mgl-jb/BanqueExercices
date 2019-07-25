@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import exercices from '../assets/exercices.json';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BanqueExercices';
+  Exercices: any = exercices;
 }
