@@ -32,49 +32,55 @@ export class HomeComponent implements OnInit {
   exercices: any = exercices;
   // menurecherche: any = menuRecherche;
   menuRecherche = {
-    'niveau débutant': {
-      'jeux': ['la conjugaison ', 'la grammaire', 'le vocabulaire'],
-      'grammaire': ['le français de base', 'les déterminants', 'les adjectifs qualificatifs', 'les prépositions',
-        'les noms', 'les pronoms', 'les adverbes', 'la phrase'
+    "niveau débutant": {
+      "jeux": ["la conjugaison ", "la grammaire", "le vocabulaire"],
+      "grammaire": ["le français de base", "les déterminants", "les adjectifs qualificatifs", "les prépositions",
+        "les noms", "les pronoms", "les adverbes", "la phrase"
       ],
-      'verbes': ['Présent', 'Futur simple et futur proche', 'Passé composé et passé récent', 'Imparfait',
-       'Verbes pronominaux', 'Verbes pronominaux'],
-       'écoute et répetition': ['Langue et premiers mots', 'Thème '],
-      'vocabulaire': ['Symboles et mots de base', 'Thèmes et situations '],
-      'lecture' : ['Dictées', 'Quiz']
+      "verbes": ["Présent", "Futur simple et futur proche", "Passé composé et passé récent", "Imparfait",
+        "Verbes pronominaux", "Verbes pronominaux"
+      ],
+      "écoute et répetition": ["Langue et premiers mots", "Thème "],
+      "vocabulaire": ["Symboles et mots de base", "Thèmes et situations "],
+      "lecture": ["Dictées", "Quiz"]
     },
-    'niveau intermédiaire': {
-      'jeux': ['Jeux de verbes ', 'Jeux de vocabulaire'],
-      'grammaire': ['Les déterminants', 'Le genre et le nombre du nom', 'L\'adjectif', 'Les prépositions/mots-liens',
-        'La phrase', 'Le texte', 'Les homophones (exercices)', 'Les homophones (explications)'
+
+    "niveau intermédiaire": {
+      "jeux": ["Jeux de verbes ", "Jeux de vocabulaire"],
+      "grammaire": ["Les déterminants", "Le genre et le nombre du nom", "L\"adjectif", "Les prépositions/mots-liens",
+        "La phrase", "Le texte", "Les homophones (exercices)", "Les homophones (explications)"
       ],
-      'verbes': ['Verbes en ER - IR - RE ', 'Indicatif de verbes variés', 'Participe passé', 'Accord du participe passé avec le verbe Avoir',
-       'Accord du participe passé avec le verbe Être', 'Accord du participe passé avec un verbe pronominal', 'Imparfait',
-      'Passé composé', 'Imparfait ou Passé composé', 'Plus-que-parfait', 'Imparfait, Passé composé ou Plus-que-parfait', 'Conditionnel',
-      'Hypothèse au présent', 'Subjonctif', 'Tests de conjugaison'],
-       'écoute et répetition': ['Langue et premiers mots', 'Thème '],
-       'Prononciation/compréhension orale' : ['Exercices de phonétique', 'Synonymes', 'Antonymes', 'Cas particuliers'],
-      'vocabulaire': ['Vocabulaire thématique', 'Thèmes et situations '],
-      'lecture' : ['Activités', 'Emploi', 'Médias et divers thèmes'],
-      'Dictées / orthographe' : ['Textes lacunaires thématiques']
+      "verbes": ["Verbes en ER - IR - RE ", "Indicatif de verbes variés", "Participe passé", "Accord du participe passé avec le verbe Avoir",
+        "Accord du participe passé avec le verbe Être", "Accord du participe passé avec un verbe pronominal", "Imparfait",
+        "Passé composé", "Imparfait ou Passé composé", "Plus-que-parfait", "Imparfait, Passé composé ou Plus-que-parfait", "Conditionnel",
+        "Hypothèse au présent", "Subjonctif", "Tests de conjugaison"
+      ],
+      "écoute et répetition": ["Langue et premiers mots", "Thème "],
+      "Prononciation/compréhension orale": ["Exercices de phonétique", "Synonymes", "Antonymes", "Cas particuliers"],
+      "vocabulaire": ["Vocabulaire thématique", "Thèmes et situations "],
+      "lecture": ["Activités", "Emploi", "Médias et divers thèmes"],
+      "Dictées / orthographe": ["Textes lacunaires thématiques"]
     },
-    'niveau avancé': {
-      'jeux': ['Jeux de verbes ', 'Jeux de grammaire (Chassez l’intrus)', 'Vocabulaire / divers', 'Jeux du pendu',
-    'Jeux de correspondances'],
-      'grammaire': ['Les déterminants', 'Le genre et le nombre du nom', 'Les adjectifs qualificatifs', 'Les adverbes',
-        'L\'orthographe', 'Les pronoms relatifs', 'Les prépositions', 'Les conjonctions', 'La phrase',
-        'L\'interrogation', 'Le texte', 'La ponctuation', 'Expressions à corriger', 'Analyse grammaticale', 'La Nominalisation',
-        'Les homophones'
+    "niveau avancé": {
+      "jeux": ["Jeux de verbes ", "Jeux de grammaire (Chassez l’intrus)", "Vocabulaire / divers", "Jeux du pendu",
+        "Jeux de correspondances"
       ],
-      'verbes': ['Nature du verbe', 'Mode indicatif', 'Mode infinitif et mode participe', 'Conditionnel passé', 'Subjonctif ou indicatif',
-    'Accord du verbe ', 'Accord du participe passé ', 'Temps variés', 'Révision'],
-       'écoute et répetition': ['Langue et premiers mots', 'Thème '],
-       'compréhension orale' : ['Bandes annonces / reportages', 'Phonétique', 'Compréhension orale', 'Français parlé au Québec'],
-      'vocabulaire': ['Synonymes', 'Quelques cas particuliers', 'Proverbes - Expressions - Définitions',
-    'Emploi varié', 'Sens propre / figuré'],
-      'lecture / comréhension ecrite' : ['?'],
-      'Dictées et tests' : ['Dictées', 'Tests / Révision'],
-      'Français des affaires' : ['Affaires et bureau']
+      "grammaire": ["Les déterminants", "Le genre et le nombre du nom", "Les adjectifs qualificatifs", "Les adverbes",
+        "L\"orthographe", "Les pronoms relatifs", "Les prépositions", "Les conjonctions", "La phrase",
+        "L\"interrogation", "Le texte", "La ponctuation", "Expressions à corriger", "Analyse grammaticale", "La Nominalisation",
+        "Les homophones"
+      ],
+      "verbes": ["Nature du verbe", "Mode indicatif", "Mode infinitif et mode participe", "Conditionnel passé", "Subjonctif ou indicatif",
+        "Accord du verbe ", "Accord du participe passé ", "Temps variés", "Révision"
+      ],
+      "écoute et répetition": ["Langue et premiers mots", "Thème "],
+      "compréhension orale": ["Bandes annonces / reportages", "Phonétique", "Compréhension orale", "Français parlé au Québec"],
+      "vocabulaire": ["Synonymes", "Quelques cas particuliers", "Proverbes - Expressions - Définitions",
+        "Emploi varié", "Sens propre / figuré"
+      ],
+      "lecture / comréhension ecrite": ["?"],
+      "Dictées et tests": ["Dictées", "Tests / Révision"],
+      "Français des affaires": ["Affaires et bureau"]
     }
   };
 
