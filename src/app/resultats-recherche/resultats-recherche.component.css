@@ -6762,3 +6762,33 @@ body {
   width:939px;
   word-wrap:break-word;
 }
+#u2222_div {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  float:left;
+  width:25%;
+  height:27px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 1);
+  box-sizing:border-box;
+  border-width:1px;
+  border-style:solid;
+  border-color:rgba(1, 107, 181, 1);
+  border-radius:5px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  color:#016BB5;
+}
+#u2222 {
+  border-width:0px;
+  position:absolute;
+  left:159px;
+  top:266px;
+  float:left;
+  width:25%;
+  height:27px;
+  color:#016BB5;
+}
