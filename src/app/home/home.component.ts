@@ -16,10 +16,10 @@ export interface DialogData {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: [
-    './jquery-ui-themes.css',
-    './axure_rp_page.css',
-    './styles_data.css',
-    './styles_home.css'
+    '../shared/jquery-ui-themes.css',
+    '../shared/axure_rp_page.css',
+    '../shared/styles_data.css',
+    './home.component.css'
   ]
 })
 export class HomeComponent implements OnInit {

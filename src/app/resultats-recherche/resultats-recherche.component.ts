@@ -5,10 +5,10 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-resultats-recherche',
   templateUrl: './resultats-recherche.component.html',
   styleUrls: [
-    './jquery-ui-themes.css',
-    './axure_rp_page.css',
-    './styles_data.css',
-    './styles_resultat_recher.css'
+    '../shared/jquery-ui-themes.css',
+    '../shared/axure_rp_page.css',
+    '../shared/styles_data.css',
+    './resultats-recherche.component.css'
 ]
 })
 export class ResultatsRechercheComponent implements OnInit {
