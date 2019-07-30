@@ -4,7 +4,6 @@
 
   <div id="base" class="">
 
-    <!-- Unnamed (Rectangle) -->
     <div id="u115" class="ax_default heading_3">
       <div id="u115_div" class=""></div>
       <div id="u115_text" class="text ">
@@ -12,7 +11,7 @@
       </div>
     </div>
 
-    <!-- Unnamed (Rectangle) -->
+
     <div id="u116" class="ax_default paragraph">
       <div id="u116_div" class=""></div>
       <div id="u116_text" class="text ">
@@ -21,7 +20,6 @@
       </div>
     </div>
 
-    <!-- Unnamed (Rectangle) -->
     <div id="u118" class="ax_default heading_3">
       <div id="u118_div" class=""></div>
       <div id="u118_text" class="text ">
@@ -34,7 +32,6 @@
       </div>
     </div>
 
-    <!-- btn_nouvelle_recherche (Rectangle) -->
     <div id="u119" class="ax_default label" data-label="btn_nouvelle_recherche">
       <div id="u119_div" class=""></div>
       <div id="u119_text" class="text ">
@@ -42,8 +39,6 @@
       </div>
     </div>
 
-
-    <!-- Unnamed (Rectangle) -->
     <div id="u242" class="ax_default heading_3">
       <div id="u242_div" class=""></div>
       <div id="u242_text" class="text ">
@@ -59,31 +54,24 @@
         </div>
       </div>
 
-      <div id="u777" class="ax_default" data-label="L'accord de l'adjectif" data-width="1023">
+      <div *ngFor="let item of arrr" id="u777">
 
-        <!-- Unnamed (Rectangle) -->
-        <div id="u778" class="ax_default box_1">
-          <div id="u778_div" class=""></div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u779" class="ax_default heading_3">
-          <div id="u779_div" class=""></div>
+        <div id="u779">
           <div id="u779_text" class="text ">
             <p><span>L'accord de l'adjectif</span></p>
           </div>
         </div>
         <div id="u666">
           <div *ngFor="let item of arrr" id="u669">
-              <div id="u668" class="ax_default icon">
-                  <img id="u668_img" class="img " src="../../assets/images/images_recherche/u131.png" />
-                </div>
-                <div id="u667" class="ax_default label">
-                  <div id="u667_div" class=""></div>
-                  <div id="u667_text" class="text ">
-                    <p><span>{{item}}</span></p>
-                  </div>
-                </div>
+            <div id="u668" class="ax_default icon">
+              <img id="u668_img" class="img " src="../../assets/images/images_recherche/u131.png" />
+            </div>
+            <div id="u667" class="ax_default label">
+              <div id="u667_div" class=""></div>
+              <div id="u667_text" class="text ">
+                <p><span>{{item}}</span></p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -91,10 +79,6 @@
       </div>
 
     </div>
-
-
-
-
 
   </div>
 
