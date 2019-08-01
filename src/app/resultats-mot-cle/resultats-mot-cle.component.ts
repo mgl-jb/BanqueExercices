@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultatsMotCleComponent implements OnInit {
 
-  arrr=["lkjk","lki"];
+  arrr=["lkjk","lki", "jygdkj", "dkhgdjhd","hdhhjdkjd", "dhhdkljdl", "jkhdjhd","lkjk","lki", "jygdkj"];
   constructor() { }
 
   ngOnInit() {

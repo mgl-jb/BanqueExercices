@@ -5303,11 +5303,10 @@ body {
 }
 #u779 {
   border-width:0px;
-  position:sticky;
+  position:relative;
   left:20px;
   top:10px;
   width:172px;
-  height:24px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
   font-weight:700;
   font-style:normal;
@@ -5416,9 +5415,9 @@ body {
 }
 #u828 {
   border-width:0px;
-  position:absolute;
+  position:relative;
   left:0px;
-  top:0px;
+  top:20px;
   width:304px;
   height:19px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
@@ -5429,9 +5428,14 @@ body {
 }
 #u828_text {
   border-width:0px;
-  position:absolute;
+  position:relative;
   left:0px;
   top:0px;
   width:304px;
   white-space:nowrap;
+}
+#u888{
+  position:relative;
+  left:159px;
+  top:266px;
 }
