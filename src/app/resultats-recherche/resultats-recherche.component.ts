@@ -17,6 +17,8 @@ export class ResultatsRechercheComponent implements OnInit {
   exercice: string;
   type: string;
 
+  arrr=["hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
+   "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {

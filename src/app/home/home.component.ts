@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('t2', {static: false}) testView2: ElementRef;
   @ViewChild('t3', {static: false}) testView3: ElementRef;
 
-
+  motCle: string;
   exercices: any = exercices;
   // menurecherche: any = menuRecherche;
   menuRecherche = {
@@ -160,7 +160,9 @@ export class HomeComponent implements OnInit {
 ];
 
   options = {
-    keys: ['Type1', 'Type2', 'Type3']
+    tokenize: true,
+    matchAllTokens: true,
+    keys: ["Titre de l'activité"]
   };
 
   u1Input: any;
@@ -206,8 +208,9 @@ export class HomeComponent implements OnInit {
   myClick() {
     console.log('test');
     let fuse : any = new Fuse(this.exercices, this.options);
-    var txt = this.u4Input;
+    var txt = this.motCle;
     console.log(txt);
+    console.log(this.options);
     console.log(fuse.search(txt));
   }
 

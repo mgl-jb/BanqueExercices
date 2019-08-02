@@ -1,0 +1,132 @@
+<body>
+  <div id="base" class="">
+
+
+    <div id="u308" class="ax_default paragraph">
+      <div id="u308_div" class=""></div>
+      <div id="u308_text" class="text ">
+        <p><a id="u309" class="link"><span style="color:#016BB5;">Accueil</span></a><span> &gt; Résultat de la recherche par mot clés</span></p>
+      </div>
+    </div>
+
+
+    <div id="u307" class="ax_default heading_3">
+      <div id="u307_div" class=""></div>
+      <div id="u307_text" class="text ">
+        <p><span>Exercices trouvés pour votre recherche : </span></p>
+      </div>
+    </div>
+
+
+    <div id="u310" class="ax_default heading_3">
+      <div id="u310_div" class=""></div>
+      <div id="u310_text" class="text ">
+        <p><span>Démonstratif</span></p>
+      </div>
+    </div>
+
+
+    <div id="u311" class="ax_default label" data-label="btn_nouvelle_recherche">
+      <div id="u311_div" class=""></div>
+      <div id="u311_text" class="text ">
+        <p><span>Faire une nouvelle recherche</span></p>
+      </div>
+    </div>
+
+
+    <div id="u312" class="ax_default heading_3">
+      <div id="u312_div" class=""></div>
+      <div id="u312_text" class="text ">
+        <p><span>Filtrer les résultats de recherche</span></p>
+      </div>
+    </div>
+
+    <div id="u321" class="ax_default label">
+      <div id="u321_div" class=""></div>
+      <div id="u321_text" class="text ">
+        <p><span>Par niveau</span></p>
+      </div>
+    </div>
+
+
+    <div id="u322" class="ax_default droplist" data-label="niveaux">
+      <select id="u322_input">
+        <option selected value="Sélectionnez un niveau">Sélectionnez un niveau</option>
+        <option value="niveau débutant">niveau débutant</option>
+        <option value="niveau intermédiaire">niveau intermédiaire</option>
+      </select>
+    </div>
+
+
+    <div id="u323" class="ax_default label">
+      <div id="u323_div" class=""></div>
+      <div id="u323_text" class="text ">
+        <p><span>Par compétences</span></p>
+      </div>
+    </div>
+
+
+    <div id="u324" class="ax_default label">
+      <div id="u324_div" class=""></div>
+      <div id="u324_text" class="text ">
+        <p><span>Par types</span></p>
+      </div>
+    </div>
+
+
+    <div id="u325" class="ax_default droplist" data-label="compétences">
+      <select id="u325_input" disabled>
+        <option value="Sélectionnez une compétence">Sélectionnez une compétence</option>
+        <option selected value="Grammaire">Grammaire</option>
+        <option value="Verbes">Verbes</option>
+        <option value="Oral">Oral</option>
+        <option value="Ecrit">Ecrit</option>
+        <option value="Vocabulaire">Vocabulaire</option>
+      </select>
+    </div>
+
+    <div id="u326" class="ax_default droplist" data-label="types">
+      <select id="u326_input">
+        <option value="Sélectionnez un type">Sélectionnez un type</option>
+        <option value="Les abjectifs">Les abjectifs</option>
+        <option value="Les pronoms">Les pronoms</option>
+      </select>
+    </div>
+
+    <div  id="u888">
+      <div *ngFor="let item of arrr" >
+          <div id="u828">
+              <div id="u828_text" class="text ">
+                <p><span>Niveau débutant / Grammaire / Les adjectifs</span></p>
+              </div>
+            </div>
+
+            <div *ngFor="let item of arrr" id="u777">
+
+              <div id="u779">
+                <div id="u779_text" class="text ">
+                  <p><span>L'accord de l'adjectif</span></p>
+                </div>
+              </div>
+              <div id="u666">
+                <div *ngFor="let item of arrr" id="u669">
+                  <div id="u668" class="ax_default icon">
+                    <img id="u668_img" class="img " src="../../assets/images/u131.png" />
+                  </div>
+                  <div id="u667" class="ax_default label">
+                    <div id="u667_div" class=""></div>
+                    <div id="u667_text" class="text ">
+                      <p><span>{{item}}</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+      </div>
+
+
+
+    </div>
