@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ResultatsRechercheComponent } from './resultats-recherche/resultats-recherche.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsMotCleComponent } from './resultats-mot-cle/resultats-mot-cle.component';
+import { ContenantResultatComponent } from './contenant-resultat/contenant-resultat.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ResultatsMotCleComponent } from './resultats-mot-cle/resultats-mot-cle.
     HomeComponent,
     ResultatsRechercheComponent,
     ResultatsMotCleComponent,
+    ContenantResultatComponent,
   ],
   imports: [
     FormsModule,

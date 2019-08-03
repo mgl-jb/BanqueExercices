@@ -53,29 +53,7 @@
         </div>
       </div>
 
-      <div *ngFor="let item of arrr" id="u777">
-
-        <div id="u779">
-          <div id="u779_text" class="text ">
-            <p><span>L'accord de l'adjectif</span></p>
-          </div>
-        </div>
-        <div id="u666">
-          <div *ngFor="let item of arrr" id="u669">
-            <div id="u668" class="ax_default icon">
-              <img id="u668_img" class="img " src="../../assets/images/u131.png" />
-            </div>
-            <div id="u667" class="ax_default label">
-              <div id="u667_div" class=""></div>
-              <div id="u667_text" class="text ">
-                <p><span>{{item}}</span></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      <app-contenant-resultat style="top:20px" *ngFor="let item of arrr"></app-contenant-resultat>
 
     </div>
 
