@@ -10,6 +10,7 @@ import { ResultatsRechercheComponent } from './resultats-recherche/resultats-rec
 import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsMotCleComponent } from './resultats-mot-cle/resultats-mot-cle.component';
 import { ContenantResultatComponent } from './contenant-resultat/contenant-resultat.component';
+import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ContenantResultatComponent } from './contenant-resultat/contenant-resul
     ResultatsRechercheComponent,
     ResultatsMotCleComponent,
     ContenantResultatComponent,
+    BoiteOutilsComponent,
   ],
   imports: [
     FormsModule,
@@ -29,6 +31,7 @@ import { ContenantResultatComponent } from './contenant-resultat/contenant-resul
       { path: 'home', component: HomeComponent },
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
+      { path: 'boite_outils', component: BoiteOutilsComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),

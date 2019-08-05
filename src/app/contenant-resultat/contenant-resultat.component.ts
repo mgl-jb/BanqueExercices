@@ -15,7 +15,7 @@ export class ContenantResultatComponent implements  AfterViewInit {
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
 
-  arrr=["hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
+  arrr=["hjgfghf","fhfjkhfehj bbbbb", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
    "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 

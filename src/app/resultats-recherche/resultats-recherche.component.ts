@@ -20,7 +20,7 @@ export class ResultatsRechercheComponent implements OnInit, AfterViewInit {
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
 
-  arrr=["hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
+  arrr=["hjgfghf","fhfjkhfehj fhhhhghghgg", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
    "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
