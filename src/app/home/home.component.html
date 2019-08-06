@@ -1,447 +1,429 @@
 
-<!-- Unnamed (Rectangle) -->
-<div id="u0" class="ax_default box_1">
-  <div id="u0_div" class=""></div>
-</div>
-<!-- Unnamed (Rectangle) -->
-<div id="u46" class="ax_default label">
-    <div id="u46_div" class=""></div>
-    <div id="u46_text" class="text ">
-      <p><span>Je suis</span></p>
+
+  <div id="base" class="">
+
+    <!-- Unnamed (Horizontal Line) -->
+    <div id="u0" class="ax_default line">
+      <img id="u0_img" class="img " src="../../assets/images/u0.png"/>
     </div>
-  </div>
 
-<!-- niveaux (Droplist) -->
-<div id="u1" class="ax_default droplist" data-label="niveaux">
-  <select #t1 id="u1_input" (change)="configurer_u4_input($event.target.value)">
-    <option selected> choisir un niveau </option>
-    <option value="niveau débutant">niveau débutant</option>
-    <option value="niveau intermédiaire">niveau intermédiaire</option>
-    <option value="niveau avancé">niveau avancé</option>
-  </select>
-</div>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u1" class="ax_default box_1">
+      <div id="u1_div" class=""></div>
+    </div>
 
-<!-- compétences (Dynamic Panel) -->
-<div id="u2" class="ax_default" data-label="compétences">
-  <div id="u2_state0" class="panel_state" data-label="débutant">
-    <div id="u2_state0_content" class="panel_state_content">
+    <!-- niveaux (Droplist) -->
+    <div id="u2" class="ax_default droplist" data-label="niveaux">
+      <select #t1 id="u1_input" (change)="configurer_u5_input($event.target.value)">
+        <option value="Tous niveaux">Tous niveaux</option>
+        <option selected value="niveau débutant">niveau débutant</option>
+        <option value="niveau intermédiaire">niveau intermédiaire</option>
+        <option value="niveau avancé">niveau avancé</option>
+      </select>
+    </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u3" class="ax_default label">
-        <div id="u3_div" class=""></div>
-        <div id="u3_text" class="text ">
-          <p><span>je veux travailler</span></p>
-        </div>
-      </div>
+    <!-- compétences (Dynamic Panel) -->
+    <div id="u3" class="ax_default" data-label="compétences">
+      <div id="u3_state0" class="panel_state" data-label="débutant">
+        <div id="u3_state0_content" class="panel_state_content">
 
-      <!-- compétences (Droplist) -->
-      <div id="u4" class="ax_default droplist" data-label="compétences">
-
-        <select #t2 id="u4_input" (change)="configurer_u6_input($event.target.value)">
-          <option *ngFor="let key of keys1" [value]="key">{{key}}</option>
-        </select>
-      </div>
-
-
-      <!-- types débutant (Dynamic Panel) -->
-      <div id="u5" class="ax_default" data-label="types débutant">
-        <div id="u5_state0" class="panel_state" data-label="débutant / grammaire">
-          <div id="u5_state0_content" class="panel_state_content">
-
-            <!-- Unnamed (Droplist) -->
-            <div id="u6" class="ax_default droplist">
-              <select #t3 id="u6_input" (change)=myClick2($event.target.value)>
-                <option *ngFor="let item of array2" [value]="item">{{item}}</option>
-              </select>
+          <!-- Unnamed (Rectangle) -->
+          <div id="u4" class="ax_default label">
+            <div id="u4_div" class=""></div>
+            <div id="u4_text" class="text ">
+              <p><span>je veux travailler</span></p>
             </div>
+          </div>
 
-            <!-- Unnamed (Rectangle) -->
-            <div id="u7" class="ax_default label">
-              <div id="u7_div" class=""></div>
-              <div id="u7_text" class="text ">
-                <p><span>sur</span></p>
+          <!-- compétences (Droplist) -->
+          <div id="u5" class="ax_default droplist" data-label="compétences">
+            <select #t2 id="u5_input" (change)="configurer_u7_input($event.target.value)">
+              <option *ngFor="let key of keys1" [value]="key">{{key}}</option>
+            </select>
+          </div>
+
+          <!-- types débutant (Dynamic Panel) -->
+          <div id="u6" class="ax_default" data-label="types débutant">
+            <div id="u6_state0" class="panel_state" data-label="débutant / grammaire">
+              <div id="u6_state0_content" class="panel_state_content">
+
+                <!-- Unnamed (Droplist) -->
+                <div id="u7" class="ax_default droplist">
+                  <select #t3 id="u7_input" (change)=myClick2($event.target.value)>
+                    <option *ngFor="let item of array2" [value]="item">{{item}}</option>
+                  </select>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u8" class="ax_default label">
+                  <div id="u8_div" class=""></div>
+                  <div id="u8_text" class="text ">
+                    <p><span>sur</span></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-          </div>
+      </div>
+
+    </div>
+
+    <!-- Unnamed (Group) -->
+    <div id="u43" class="ax_default" data-left="498" data-top="418" data-width="157" data-height="17">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u44" class="ax_default label">
+        <div id="u44_div" class=""></div>
+        <div id="u44_text" class="text ">
+          <p><span style="text-decoration:underline;" (click)="resetSelelction()">Réinitialiser la recherche</span></p>
         </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u45" class="ax_default icon">
+        <img id="u45_img" class="img " src="../../assets/images/u45.png"/>
       </div>
     </div>
 
-<!-- Unnamed (Group) -->
-<div id="u42" class="ax_default" data-left="498" data-top="314" data-width="157" data-height="17">
-
-  <!-- Unnamed (Rectangle) -->
-  <div id="u43" class="ax_default label">
-    <div id="u43_div" class=""></div>
-    <div id="u43_text" class="text ">
-      <p><button style="text-decoration:underline; background:none;border:none;" (click)="resetSelelction()">
-          Réinitialiser la recherche</button></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u46" class="ax_default primary_button">
+      <div id="u46_div" class=""></div>
+      <div id="u46_text" class="text ">
+        <p><span [routerLink]="['/resultats', u1Input, u4Input, u6Input]">LANCER LA RECHERCHE</span></p>
+      </div>
     </div>
-  </div>
 
-  <!-- Unnamed (Shape) -->
-  <div id="u44" class="ax_default icon">
-    <img id="u44_img" class="img " src="/../../assets/images/u44.png" />
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u45" class="ax_default primary_button">
-  <div id="u45_div" class=""></div>
-  <div id="u45_text" class="text ">
-    <p><span [routerLink]="['/resultats', u1Input, u4Input, u6Input]">LANCER LA RECHERCHE</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u47" class="ax_default box_1">
-  <div id="u47_div" class=""></div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u48" class="ax_default heading_3">
-  <div id="u48_div" class=""></div>
-  <div id="u48_text" class="text ">
-    <p><span>Rechercher un exercice</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u49" class="ax_default heading_3">
-  <div id="u49_div" class=""></div>
-  <div id="u49_text" class="text ">
-    <p><span>Rechercher par mots clés</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Group) -->
-<div id="u50" class="ax_default" data-left="198" data-top="471" data-width="508" data-height="32">
-
-  <!-- Unnamed (Text Field) -->
-  <div id="u51" class="ax_default text_field">
-    <input [(ngModel)]="motCle" id="u51_input" type="text" value="" />
-  </div>
-
-  <!-- Unnamed (Horizontal Line) -->
-  <div id="u52" class="ax_default line">
-    <img id="u52_img" class="img " src="../../assets/images/u52.png" />
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u53" class="ax_default primary_button">
-  <div id="u53_div" class=""></div>
-  <div id="u53_text" class="text ">
-    <p><span  (click)="myClick()"  [routerLink]="['/resultat_mot_cle', motCle]">RECHERCHER</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Group) -->
-<div id="u54" class="ax_default" data-left="158" data-top="409" data-width="39" data-height="39">
-
-  <!-- Unnamed (Ellipse) -->
-  <div id="u55" class="ax_default ellipse">
-    <img id="u55_img" class="img " src="../../assets/images/u55.png" />
-  </div>
-
-  <!-- Unnamed (Shape) -->
-  <div id="u56" class="ax_default icon">
-    <img id="u56_img" class="img " src="../../assets/images/u56.png" />
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u57" class="ax_default box_1">
-  <div id="u57_div" class=""></div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u58" class="ax_default heading_3">
-  <div id="u58_div" class=""></div>
-  <div id="u58_text" class="text ">
-    <p><span>Approfondir le français</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u59" class="ax_default ellipse">
-  <img id="u59_img" class="img " src="../../assets/images/u59.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u60" class="ax_default box_1">
-  <div id="u60_div" class=""></div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u61" class="ax_default heading_3">
-  <div id="u61_div" class=""></div>
-  <div id="u61_text" class="text ">
-    <p><span>Boite à outils</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u62" class="ax_default ellipse">
-  <img id="u62_img" class="img " src="../../assets/images/u62.png" />
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u63" class="ax_default icon">
-  <img id="u63_img" class="img " src="../../assets/images/u63.png" />
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u64" class="ax_default icon">
-  <img id="u64_img" class="img " src="../../assets/images/u64.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u65" class="ax_default label">
-  <div id="u65_div" class=""></div>
-  <div id="u65_text" class="text ">
-    <p><span>Français québécois</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Group) -->
-<div id="u66" class="ax_default" data-left="339" data-top="599" data-width="272" data-height="30">
-
-  <!-- Unnamed (Rectangle) -->
-  <div id="u67" class="ax_default label">
-    <div id="u67_div" class=""></div>
-    <div id="u67_text" class="text ">
-      <p><span>Français spécialisé</span></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u47" class="ax_default label">
+      <div id="u47_div" class=""></div>
+      <div id="u47_text" class="text ">
+        <p><span>Je suis</span></p>
+      </div>
     </div>
-  </div>
 
-  <!-- sort (Shape) -->
-  <div id="u68" class="ax_default icon" data-label="sort">
-    <img id="u68_img" class="img " src="../../assets/images/sort_u68.png" />
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u69" class="ax_default paragraph">
-  <div id="u69_div" class=""></div>
-  <div id="u69_text" class="text ">
-    <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Cette banque d'exercices de
-        français s'adresse aux </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">étudiants de
-        français langue seconde de stade débutant, intermédiaire et avancé</span><span
-        style="font-family:'Calibri';font-weight:400;">.</span></p>
-    <p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p>
-    <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Bon travail et bon
-        apprentissage!</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u70" class="ax_default label">
-  <div id="u70_div" class=""></div>
-  <div id="u70_text" class="text ">
-    <p><span>Aide à la rédaction</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u71" class="ax_default icon">
-  <img id="u71_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u72" class="ax_default label">
-  <div id="u72_div" class=""></div>
-  <div id="u72_text" class="text ">
-    <p><span>Conjuguaison</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u73" class="ax_default icon">
-  <img id="u73_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u74" class="ax_default label">
-  <div id="u74_div" class=""></div>
-  <div id="u74_text" class="text ">
-    <p><span>Dictionnaires</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u75" class="ax_default icon">
-  <img id="u75_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u76" class="ax_default label">
-  <div id="u76_div" class=""></div>
-  <div id="u76_text" class="text ">
-    <p><span>Tests de Français</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u77" class="ax_default icon">
-  <img id="u77_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u78" class="ax_default label">
-  <div id="u78_div" class=""></div>
-  <div id="u78_text" class="text ">
-    <p><span>Encyclopédies</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u79" class="ax_default icon">
-  <img id="u79_img" class="img " src="../../../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u80" class="ax_default label">
-  <div id="u80_div" class=""></div>
-  <div id="u80_text" class="text ">
-    <p><span>Médias francophones</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u81" class="ax_default icon">
-  <img id="u81_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u82" class="ax_default label">
-  <div id="u82_div" class=""></div>
-  <div id="u82_text" class="text ">
-    <p><span [routerLink]="['/boite_outils']">Société québécoise</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u83" class="ax_default icon">
-  <img id="u83_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u84" class="ax_default ellipse">
-  <img id="u84_img" class="img " src="../../assets/images/u84.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u85" class="ax_default ellipse">
-  <img id="u85_img" class="img " src="../../assets/images/u85.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u86" class="ax_default ellipse">
-  <img id="u86_img" class="img " src="../../assets/images/u86.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u87" class="ax_default ellipse">
-  <img id="u87_img" class="img " src="../../assets/images/u87.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u88" class="ax_default ellipse">
-  <img id="u88_img" class="img " src="../../assets/images/u88.png" />
-</div>
-
-<!-- Unnamed (Ellipse) -->
-<div id="u89" class="ax_default ellipse">
-  <img id="u89_img" class="img " src="../../assets/images/u89.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u103" class="ax_default label">
-  <div id="u103_div" class=""></div>
-  <div id="u103_text" class="text ">
-    <p><span>Ressources pédagogiques</span></p>
-  </div>
-</div>
-
-<!-- drop francais spécialisé (Group) -->
-<div id="u104" class="ax_default ax_default_hidden" data-label="drop francais spécialisé"
-  style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
-
-  <!-- Unnamed (Rectangle) -->
-  <div id="u105" class="ax_default label">
-    <div id="u105_div" class=""></div>
-    <div id="u105_text" class="text ">
-      <p><span>Admistration, droit des affaires</span></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u48" class="ax_default box_1">
+      <div id="u48_div" class=""></div>
     </div>
-  </div>
 
-  <!-- Unnamed (Rectangle) -->
-  <div id="u106" class="ax_default label">
-    <div id="u106_div" class=""></div>
-    <div id="u106_text" class="text ">
-      <p><span>Génie et sciences appliquées</span></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u49" class="ax_default heading_3">
+      <div id="u49_div" class=""></div>
+      <div id="u49_text" class="text ">
+        <p><span>Rechercher un exercice</span></p>
+      </div>
     </div>
-  </div>
 
-  <!-- Unnamed (Rectangle) -->
-  <div id="u107" class="ax_default label">
-    <div id="u107_div" class=""></div>
-    <div id="u107_text" class="text ">
-      <p><span>Santé et soins infirmiers</span></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u50" class="ax_default heading_3">
+      <div id="u50_div" class=""></div>
+      <div id="u50_text" class="text ">
+        <p><span>Rechercher par mots clés</span></p>
+      </div>
     </div>
-  </div>
 
-  <!-- Unnamed (Rectangle) -->
-  <div id="u108" class="ax_default label">
-    <div id="u108_div" class=""></div>
-    <div id="u108_text" class="text ">
-      <p><span>Tourisme et commerce</span></p>
+    <!-- Unnamed (Group) -->
+    <div id="u51" class="ax_default" data-left="198" data-top="575" data-width="508" data-height="32">
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u52" class="ax_default text_field">
+        <input [(ngModel)]="motCle" id="u52_input" type="text" value="" />
+      </div>
+
+      <!-- Unnamed (Horizontal Line) -->
+      <div id="u53" class="ax_default line">
+        <img id="u53_img" class="img " src="../../assets/images/u53.png"/>
+      </div>
     </div>
-  </div>
 
-  <!-- Unnamed (Rectangle) -->
-  <div id="u109" class="ax_default label">
-    <div id="u109_div" class=""></div>
-    <div id="u109_text" class="text ">
-      <p><span>Comptabilité</span></p>
+    <!-- Unnamed (Rectangle) -->
+    <div id="u54" class="ax_default primary_button">
+      <div id="u54_div" class=""></div>
+      <div id="u54_text" class="text ">
+        <p><span (click)="myClick()"  [routerLink]="['/resultat_mot_cle', motCle]">RECHERCHER</span></p>
+      </div>
     </div>
-  </div>
 
-  <!-- Unnamed (Rectangle) -->
-  <div id="u110" class="ax_default label">
-    <div id="u110_div" class=""></div>
-    <div id="u110_text" class="text ">
-      <p><span>Technologie de l'information et des communications</span></p>
+    <!-- Unnamed (Group) -->
+    <div id="u55" class="ax_default" data-left="158" data-top="513" data-width="39" data-height="39">
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u56" class="ax_default ellipse">
+        <img id="u56_img" class="img " src="../../assets/images/u56.png"/>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u57" class="ax_default icon">
+        <img id="u57_img" class="img " src="../../assets/images/u57.png"/>
+      </div>
     </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u58" class="ax_default box_1">
+      <div id="u58_div" class=""></div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u59" class="ax_default heading_3">
+      <div id="u59_div" class=""></div>
+      <div id="u59_text" class="text ">
+        <p><span>Exercices par type de français</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u60" class="ax_default ellipse">
+      <img id="u60_img" class="img " src="../../assets/images/u60.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u61" class="ax_default box_1">
+      <div id="u61_div" class=""></div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u62" class="ax_default heading_3">
+      <div id="u62_div" class=""></div>
+      <div id="u62_text" class="text ">
+        <p><span>Boite à outils</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u63" class="ax_default ellipse">
+      <img id="u63_img" class="img " src="../../assets/images/u63.png"/>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u64" class="ax_default icon">
+      <img id="u64_img" class="img " src="../../assets/images/u64.png"/>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u65" class="ax_default icon">
+      <img id="u65_img" class="img " src="../../assets/images/u65.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u66" class="ax_default label">
+      <div id="u66_div" class=""></div>
+      <div id="u66_text" class="text ">
+        <p><span>Français québécois</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Group) -->
+    <div id="u67" class="ax_default" data-left="499" data-top="703" data-width="272" data-height="30">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u68" class="ax_default label">
+        <div id="u68_div" class=""></div>
+        <div id="u68_text" class="text ">
+          <p><span>Français spécialisé</span></p>
+        </div>
+      </div>
+
+      <!-- sort (Shape) -->
+      <div id="u69" class="ax_default icon" data-label="sort">
+        <img id="u69_img" class="img " src="../../assets/images/sort_u69.png"/>
+      </div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u70" class="ax_default label">
+      <div id="u70_div" class=""></div>
+      <div id="u70_text" class="text ">
+        <p><span>Français général</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u71" class="ax_default paragraph">
+      <div id="u71_div" class=""></div>
+      <div id="u71_text" class="text ">
+        <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Cette banque d'exercices de français s'adresse aux </span><span style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">étudiants de français langue seconde de stade débutant, intermédiaire et avancé</span><span style="font-family:'Calibri';font-weight:400;">.</span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Vous y trouverez des exercices très variés pour </span><span style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">renforcer vos connaissances en français</span><span style="font-family:'Calibri';font-weight:400;">.</span></p><p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Pour accéder aux contenus plusieurs choix s'offrent à vous&nbsp; : </span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">&#149; faites une recherche personnalisée en fonction de votre niveau et des compétences que vous souhaitez améliorer ;</span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">&#149; faites un recherche bien spécifique par mots clés ;</span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">&#149; sélectionnez le type de français que vous aimeriez travailler.</span></p><p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p><p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Bon travail et bon apprentissage!</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u72" class="ax_default label">
+      <div id="u72_div" class=""></div>
+      <div id="u72_text" class="text ">
+        <p><span>Aide à la rédaction</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u73" class="ax_default icon">
+      <img id="u73_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u74" class="ax_default label">
+      <div id="u74_div" class=""></div>
+      <div id="u74_text" class="text ">
+        <p><span>Conjuguaison</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u75" class="ax_default icon">
+      <img id="u75_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u76" class="ax_default label">
+      <div id="u76_div" class=""></div>
+      <div id="u76_text" class="text ">
+        <p><span>Dictionnaires</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u77" class="ax_default icon">
+      <img id="u77_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u78" class="ax_default label">
+      <div id="u78_div" class=""></div>
+      <div id="u78_text" class="text ">
+        <p><span>Tests de Français</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u79" class="ax_default icon">
+      <img id="u79_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u80" class="ax_default label">
+      <div id="u80_div" class=""></div>
+      <div id="u80_text" class="text ">
+        <p><span>Encyclopédies</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u81" class="ax_default icon">
+      <img id="u81_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u82" class="ax_default label">
+      <div id="u82_div" class=""></div>
+      <div id="u82_text" class="text ">
+        <p><span>Médias francophones</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u83" class="ax_default icon">
+      <img id="u83_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u84" class="ax_default label">
+      <div id="u84_div" class=""></div>
+      <div id="u84_text" class="text ">
+        <p><span [routerLink]="['/boite_outils']">Société québécoise</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Shape) -->
+    <div id="u85" class="ax_default icon">
+      <img id="u85_img" class="img " src="../../assets/images/u73.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u86" class="ax_default ellipse">
+      <img id="u86_img" class="img " src="../../assets/images/u86.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u87" class="ax_default ellipse">
+      <img id="u87_img" class="img " src="../../assets/images/u87.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u88" class="ax_default ellipse">
+      <img id="u88_img" class="img " src="../../assets/images/u88.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u89" class="ax_default ellipse">
+      <img id="u89_img" class="img " src="../../assets/images/u89.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u90" class="ax_default ellipse">
+      <img id="u90_img" class="img " src="../../assets/images/u90.png"/>
+    </div>
+
+    <!-- Unnamed (Ellipse) -->
+    <div id="u91" class="ax_default ellipse">
+      <img id="u91_img" class="img " src="../../assets/images/u91.png"/>
+    </div>
+
+    <!-- Unnamed (header) -->
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u93" class="ax_default box_2">
+      <div id="u93_div" class=""></div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u94" class="ax_default heading_1">
+      <div id="u94_div" class=""></div>
+      <div id="u94_text" class="text ">
+        <p><span>Banque de ressources en ligne pour l'apprentissage du français</span></p>
+      </div>
+    </div>
+
+    <!-- Unnamed (Rectangle) -->
+    <div id="u95" class="ax_default box_1">
+      <div id="u95_div" class=""></div>
+    </div>
+
+    <!-- Unnamed (Image) -->
+    <div id="u96" class="ax_default image">
+      <img id="u96_img" class="img " src="../../assets/images/u96.png"/>
+    </div>
+
+    <!-- Unnamed (cours MIDI) -->
+
+    <!-- cours MIDI (Group) -->
+    <div id="u98" class="ax_default" data-label="cours MIDI" data-left="0" data-top="0" data-width="1023" data-height="190">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u99" class="ax_default box_1">
+        <div id="u99_div" class=""></div>
+        <div id="u99_text" class="text ">
+          <p style="font-size:18px;"><span style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">Apprenez le français en ligne avec le service gratuit du Ministère !</span></p><p style="font-size:18px;"><span style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#333333;"><br></span></p><p style="font-size:14px;"><span style="font-family:'Calibri';font-weight:400;color:#333333;">Le service de Francisation en ligne (FEL) vous permet d’apprendre le français à votre rythme et selon différentes formules, que vous soyez déjà arrivé ou non au Québec.</span></p><p style="font-size:14px;"><span style="font-family:'Calibri';font-weight:400;color:#333333;"><br></span></p><p style="font-size:14px;"><span style="font-family:'Calibri';font-weight:400;color:#333333;">Retrouvez plus d'informations directement sur le site du </span><a id="u100" class="link"><span style="font-family:'Calibri';font-weight:400;color:#016BB5;">ministère de l'immigration, de la diversité et de l'inclusion</span></a></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u101" class="ax_default image">
+        <img id="u101_img" class="img " src="../../assets/images/u101.png"/>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u102" class="ax_default box_1">
+        <div id="u102_div" class=""></div>
+      </div>
+    </div>
+
+    <!-- Unnamed (footer) -->
+
+    <!-- footer (Rectangle) -->
+    <div id="u104" class="ax_default box_3" data-label="footer">
+      <div id="u104_div" class=""></div>
+      <div id="u104_text" class="text ">
+        <p><span>Le ministère de l'Immigration, de la Diversité et de l'Inclusion (MIDI) a sélectionné des exercices de français qui proviennent de sites web du Québec, de la France et d'ailleurs. Par conséquent, ces exercices ne reflètent pas tous la réalité socioculturelle québécoise. Le MIDI ne peut être tenu responsable de l'exactitude, de l'actualité ni de la fiabilité du contenu des exercices qui n'ont pas été produits par le ministère.</span></p>
+      </div>
+    </div>
+
   </div>
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u111" class="ax_default label">
-  <div id="u111_div" class=""></div>
-  <div id="u111_text" class="text ">
-    <p><span>Sites d'apprentissages</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u112" class="ax_default icon">
-  <img id="u112_img" class="img " src="../../assets/images/u71.png" />
-</div>
-
-<!-- Unnamed (Rectangle) -->
-<div id="u113" class="ax_default label">
-  <div id="u113_div" class=""></div>
-  <div id="u113_text" class="text ">
-    <p><span>Trousses d'activités</span></p>
-  </div>
-</div>
-
-<!-- Unnamed (Shape) -->
-<div id="u114" class="ax_default icon">
-  <img id="u114_img" class="img " src="../../assets/images/u71.png" />
-</div>

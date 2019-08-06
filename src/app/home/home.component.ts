@@ -165,11 +165,11 @@ export class HomeComponent implements OnInit {
     keys: ["Titre de l'activité"]
   };
 
-  u1Input: any;
+  u2Input: any;
 
-  u4Input: any ;
+  u5Input: any ;
 
-  u6Input: any ;
+  u7Input: any ;
 
   array1: any;
 
@@ -187,22 +187,22 @@ export class HomeComponent implements OnInit {
   }
 
 
-  configurer_u4_input(u1: any) {
+  configurer_u5_input(u2: any) {
     this.keys1 = [];
     this.array2 = [];
-    this.u1Input = u1;
-    this.array1 = this.menuRecherche[this.u1Input];
+    this.u2Input = u2;
+    this.array1 = this.menuRecherche[this.u2Input];
     this.keys1 = Object.keys(this.array1);
     this.testView2.nativeElement.selectedIndex = 0;
-    this.u4Input = this.keys1[0];
+    this.u5Input = this.keys1[0];
   }
 
-  configurer_u6_input(u4: any) {
+  configurer_u7_input(u5: any) {
     this.array2 = [];
-    this.u4Input = u4;
-    this.array2 = this.menuRecherche[this.u1Input][this.u4Input];
+    this.u5Input = u5;
+    this.array2 = this.menuRecherche[this.u2Input][this.u5Input];
     this.testView3.nativeElement.selectedIndex = 0;
-    this.u6Input = this.array2[0];
+    this.u7Input = this.array2[0];
   }
 
   myClick() {
@@ -214,9 +214,9 @@ export class HomeComponent implements OnInit {
     console.log(fuse.search(txt));
   }
 
-  myClick2(u6:any) {
-    this.u6Input = u6;
-    console.log(this.u6Input);
+  myClick2(u7:any) {
+    this.u7Input = u7;
+    console.log(this.u7Input);
     // let index = this.testView2.nativeElement.selectedIndex;
     // let option = this.testView2.nativeElement.options[index];
 
