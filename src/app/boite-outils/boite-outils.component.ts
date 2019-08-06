@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoiteOutilsComponent implements OnInit {
 
+  arrr = ["nsjjsmmskl", "ttehhe"]
   constructor() { }
 
   ngOnInit() {

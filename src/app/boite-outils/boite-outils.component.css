@@ -1769,9 +1769,8 @@ body {
 }
 #u586 {
   border-width:0px;
-  position:absolute;
-  left:158px;
-  top:250px;
+  position:relative;
+  top:20px;
   width:69px;
   height:19px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
@@ -1779,6 +1778,7 @@ body {
   font-style:normal;
   font-size:16px;
   color:#0BB601;
+  margin-bottom: 10px;
 }
 #u586_text {
   border-width:0px;
@@ -11331,4 +11331,10 @@ body {
   top:5px;
   width:170px;
   word-wrap:break-word;
+}
+#u888{
+  position:relative;
+  left:159px;
+  top:266px;
+  width: 1030px;
 }
