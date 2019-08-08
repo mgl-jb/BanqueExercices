@@ -36,5 +36,8 @@ export class ResultatsRechercheComponent implements OnInit, AfterViewInit {
       this.renderer.setStyle(this.parentDiv.nativeElement, 'height', height);
     }
   }
+  onNotify(message: string): void {
+    console.log("testtt");
+  }
 
 }

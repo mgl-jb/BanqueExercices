@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Renderer2, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Renderer2, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,6 +20,9 @@ export class BoutonResultatComponent implements  AfterViewInit {
   arrr=["hjgfghf","fhfjkhfehj bbbbb", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
    "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
    @Input() color = '#016BB5';
+   @Input() item: any;
+   @Output()notify: EventEmitter<any> = new EventEmitter<string>();
+   itemSortant: any;
 
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
@@ -32,7 +35,12 @@ export class BoutonResultatComponent implements  AfterViewInit {
       this.renderer.setStyle(this.parentDiv.nativeElement, 'width', width);
       this.renderer.setStyle(this.childDiv.nativeElement, 'color', this.color);
       this.renderer.setStyle(this.parentDiv.nativeElement, 'color', this.color);
+      this.itemSortant = this.item;
     }
   }
+
+  onClick() {
+    this.notify.emit(this.itemSortant);
+    }
 
 }

@@ -48,12 +48,7 @@
     </div>
     <div id="u888">
 
-      <div *ngFor="let item of arrr" id="u999" class="ax_default box_1" data-label="btn l'accord de l'adjectif">
-        <div id="u999_div"></div>
-        <div id="u999_text" class="text ">
-          <p><span>{{item}}</span></p>
-        </div>
-      </div>
+      <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item] = 'item' *ngFor="let item of arrr" ></app-bouton-resultat>
 
       <app-contenant-resultat style="top:20px" *ngFor="let item of arrr"></app-contenant-resultat>
 
