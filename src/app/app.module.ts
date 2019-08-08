@@ -11,6 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsMotCleComponent } from './resultats-mot-cle/resultats-mot-cle.component';
 import { ContenantResultatComponent } from './contenant-resultat/contenant-resultat.component';
 import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
+import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
     ResultatsMotCleComponent,
     ContenantResultatComponent,
     BoiteOutilsComponent,
+    BoutonResultatComponent,
   ],
   imports: [
     FormsModule,
@@ -32,6 +34,7 @@ import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
       { path: 'boite_outils', component: BoiteOutilsComponent},
+      { path: 'bouton', component: BoutonResultatComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
