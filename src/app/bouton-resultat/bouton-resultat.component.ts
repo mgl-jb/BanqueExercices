@@ -23,6 +23,7 @@ export class BoutonResultatComponent implements  AfterViewInit {
    @Input() item: any;
    @Output()notify: EventEmitter<any> = new EventEmitter<string>();
 
+   clicked = false;
 
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
@@ -39,6 +40,7 @@ export class BoutonResultatComponent implements  AfterViewInit {
   }
 
   onClick() {
+    this.clicked = true;
     this.notify.emit(this.item);
     }
 

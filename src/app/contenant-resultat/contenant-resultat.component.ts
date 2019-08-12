@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, Renderer2, ViewChild, Input, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,7 +10,11 @@ import { ActivatedRoute } from '@angular/router';
     '../shared/styles_data.css',
     './contenant-resultat.component.css']
 })
-export class ContenantResultatComponent implements  AfterViewInit {
+export class ContenantResultatComponent implements  AfterViewChecked {
+
+  @Input() filtre: string;
+  @Input() item: string;
+  @Input() clicked: string;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
@@ -21,9 +25,9 @@ export class ContenantResultatComponent implements  AfterViewInit {
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
 
-  ngAfterViewInit() {
+  ngAfterViewChecked() {
     if (this.parentDiv && this.childDiv) {
-      let height = `${this.parentDiv.nativeElement.offsetHeight + 40 }px`;
+      const height = `${this.childDiv.nativeElement.offsetHeight + 60 }px`;
       this.renderer.setStyle(this.parentDiv.nativeElement, 'height', height);
     }
   }
