@@ -16,6 +16,7 @@ export class ResultatsRechercheComponent implements OnInit, AfterViewInit {
   niveau: string;
   exercice: string;
   type: string;
+  filtre: string;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
@@ -37,7 +38,7 @@ export class ResultatsRechercheComponent implements OnInit, AfterViewInit {
     }
   }
   onNotify(message: string): void {
-    console.log("testtt");
+    this.filtre = message;
   }
 
 }

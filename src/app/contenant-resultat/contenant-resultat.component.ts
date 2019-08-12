@@ -17,6 +17,7 @@ export class ContenantResultatComponent implements  AfterViewInit {
 
   arrr=["hjgfghf","fhfjkhfehj bbbbb", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
    "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
+
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
 

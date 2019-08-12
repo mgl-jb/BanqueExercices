@@ -1,61 +1,50 @@
-<html>
-
-<body>
-
-  <div id="base" class="">
-
-    <div id="u115" class="ax_default heading_3">
-      <div id="u115_div" class=""></div>
-      <div id="u115_text" class="text ">
-        <p><span>Exercices trouvés pour votre recherche :</span></p>
-      </div>
-    </div>
-
-
-    <div id="u116" class="ax_default paragraph">
-      <div id="u116_div" class=""></div>
-      <div id="u116_text" class="text ">
-        <p><a id="u117" class="link"><span style="color:#016BB5;">Accueil</span></a><span> &gt; Résultat de la recherche
-            personnalisée</span></p>
-      </div>
-    </div>
-
-    <div id="u118" class="ax_default heading_3">
-      <div id="u118_div" class=""></div>
-      <div id="u118_text" class="text ">
-        <p><span style="font-family:'Calibri';font-weight:400;">Exercices de </span><span
-            style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{exercice}}</span><span
-            style="font-family:'Calibri';font-weight:400;"> pour </span><span
-            style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{niveau}}</span><span
-            style="font-family:'Calibri';font-weight:400;"> : </span><span
-            style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{type}}</span></p>
-      </div>
-    </div>
-    <div id="u241" class="ax_default line">
-      <img id="u241_img" class="img " src="../../assets/images/u241.png">
-    </div>
-    <div id="u119" class="ax_default label" data-label="btn_nouvelle_recherche">
-      <div id="u119_div" class=""></div>
-      <div id="u119_text" class="text ">
-        <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
-      </div>
-    </div>
-    <div id="u242" class="ax_default heading_3">
-      <div id="u242_div" class=""></div>
-      <div id="u242_text" class="text ">
-        <p><span>Filtrer les résultats de recherche</span></p>
-      </div>
-    </div>
-    <div id="u888">
-
-      <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item] = 'item' *ngFor="let item of arrr" ></app-bouton-resultat>
-
-      <app-contenant-resultat style="top:20px" *ngFor="let item of arrr"></app-contenant-resultat>
-
-    </div>
-
+<div id="u115" class="ax_default heading_3">
+  <div id="u115_div" class=""></div>
+  <div id="u115_text" class="text ">
+    <p><span>Exercices trouvés pour votre recherche :</span></p>
   </div>
+</div>
 
-</body>
 
-</html>
+<div id="u116" class="ax_default paragraph">
+  <div id="u116_div" class=""></div>
+  <div id="u116_text" class="text ">
+    <p><a id="u117" class="link"><span style="color:#016BB5;">Accueil</span></a><span> &gt; Résultat de la recherche
+        personnalisée</span></p>
+  </div>
+</div>
+
+<div id="u118" class="ax_default heading_3">
+  <div id="u118_div" class=""></div>
+  <div id="u118_text" class="text ">
+    <p><span style="font-family:'Calibri';font-weight:400;">Exercices de </span><span
+        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{exercice}}</span><span
+        style="font-family:'Calibri';font-weight:400;"> pour </span><span
+        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{niveau}}</span><span
+        style="font-family:'Calibri';font-weight:400;"> : </span><span
+        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{type}}</span></p>
+  </div>
+</div>
+<div id="u241" class="ax_default line">
+  <img id="u241_img" class="img " src="../../assets/images/u241.png">
+</div>
+<div id="u119" class="ax_default label" data-label="btn_nouvelle_recherche">
+  <div id="u119_div" class=""></div>
+  <div id="u119_text" class="text ">
+    <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
+  </div>
+</div>
+<div id="u242" class="ax_default heading_3">
+  <div id="u242_div" class=""></div>
+  <div id="u242_text" class="text ">
+    <p><span>Filtrer les résultats de recherche</span></p>
+  </div>
+</div>
+<div id="u888">
+
+  <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' *ngFor="let item of arrr">
+  </app-bouton-resultat>
+
+  <app-contenant-resultat style="top:20px" *ngFor="let item of arrr"></app-contenant-resultat>
+
+</div>
