@@ -14,7 +14,7 @@ export class ContenantResultatComponent implements  AfterViewChecked {
 
   @Input() filtre: string;
   @Input() item: string;
-  @Input() clicked: string;
+  @Input() clicked: boolean;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
