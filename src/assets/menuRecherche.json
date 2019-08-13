@@ -1,52 +1,45 @@
 {
-  "niveau débutant": {
-    "jeux": ["la conjugaison ", "la grammaire", "le vocabulaire"],
-    "grammaire": ["le français de base", "les déterminants", "les adjectifs qualificatifs", "les prépositions",
-      "les noms", "les pronoms", "les adverbes", "la phrase"
-    ],
-    "verbes": ["Présent", "Futur simple et futur proche", "Passé composé et passé récent", "Imparfait",
-      "Verbes pronominaux", "Verbes pronominaux"
-    ],
-    "écoute et répetition": ["Langue et premiers mots", "Thème "],
-    "vocabulaire": ["Symboles et mots de base", "Thèmes et situations "],
-    "lecture": ["Dictées", "Quiz"]
+  "débutant": {
+    "l'ensemble des compétences": [""],
+    "la grammaire et l'orthographe": ["Les adjectifs", "Les adverbes", "Les déterminants", "Les noms", "La construction des phrases",
+    								 "Les prépositions", "Les pronoms","Les verbes","Les temps"],
+    "la compréhension orale": [""],
+    "la compréhension écrite": [""],
+    "la prononciation": ["Les sons", "Les voyelles", "Les consonnes", "Les virelangues", "Les liaisons","L'alphabet" ],
+    "les dictées": [""],
+    "le vocabulaire": ["Les aliments et la cuisine", "Les animaux et la nature", "Au Bureau, au travail et les métiers", "La santé et le corps", "Les loisirs et le sport", 
+    				"Les couleurs, les nombres, les objets", "La famille", "Les heures, les jours et les mois", "La maison et la constuction", "La météo et les saisons",
+    				 "La nationalité", "L'école", "La famille", "La ville et les transports", "Se présenter, se préparer", "Les sentiments", "Les directions, vers où aller",
+    				  "Les vêtements", "Vocabulaire varié"],
+    "La construction des phrases": []
   },
 
-  "niveau intermédiaire": {
-    "jeux": ["Jeux de verbes ", "Jeux de vocabulaire"],
-    "grammaire": ["Les déterminants", "Le genre et le nombre du nom", "L\"adjectif", "Les prépositions/mots-liens",
-      "La phrase", "Le texte", "Les homophones (exercices)", "Les homophones (explications)"
-    ],
-    "verbes": ["Verbes en ER - IR - RE ", "Indicatif de verbes variés", "Participe passé", "Accord du participe passé avec le verbe Avoir",
-      "Accord du participe passé avec le verbe Être", "Accord du participe passé avec un verbe pronominal", "Imparfait",
-      "Passé composé", "Imparfait ou Passé composé", "Plus-que-parfait", "Imparfait, Passé composé ou Plus-que-parfait", "Conditionnel",
-      "Hypothèse au présent", "Subjonctif", "Tests de conjugaison"
-    ],
-    "écoute et répetition": ["Langue et premiers mots", "Thème "],
-    "Prononciation/compréhension orale": ["Exercices de phonétique", "Synonymes", "Antonymes", "Cas particuliers"],
-    "vocabulaire": ["Vocabulaire thématique", "Thèmes et situations "],
-    "lecture": ["Activités", "Emploi", "Médias et divers thèmes"],
-    "Dictées / orthographe": ["Textes lacunaires thématiques"]
+  "intermédiaire": {
+   "l'ensemble des compétences": [""],
+    "la grammaire et l'orthographe": ["Les adjectifs", "Les adverbes", "Les déterminants", "Les noms", "La construction des phrases",
+    								 "Les prépositions", "Les pronoms","Les verbes","Les temps"],
+    "la compréhension orale": [""],
+    "la compréhension écrite": [""],
+    "la prononciation": ["Les sons", "Les voyelles", "Les consonnes", "Les virelangues", "Les liaisons","L'alphabet" ],
+    "les dictées": [""],
+    "le vocabulaire": ["Les aliments et la cuisine", "Les animaux et la nature", "Au Bureau, au travail et les métiers", "La santé et le corps", "Les loisirs et le sport", 
+    				"Les couleurs, les nombres, les objets", "La famille", "Les heures, les jours et les mois", "La maison et la constuction", "La météo et les saisons",
+    				 "La nationalité", "L'école", "La famille", "La ville et les transports", "Se présenter, se préparer", "Les sentiments", "Les directions, vers où aller",
+    				  "Les vêtements", "Vocabulaire varié"],
+    "La construction des phrases": []
   },
-  "niveau avancé": {
-    "jeux": ["Jeux de verbes ", "Jeux de grammaire (Chassez l’intrus)", "Vocabulaire / divers", "Jeux du pendu",
-      "Jeux de correspondances"
-    ],
-    "grammaire": ["Les déterminants", "Le genre et le nombre du nom", "Les adjectifs qualificatifs", "Les adverbes",
-      "L\"orthographe", "Les pronoms relatifs", "Les prépositions", "Les conjonctions", "La phrase",
-      "L\"interrogation", "Le texte", "La ponctuation", "Expressions à corriger", "Analyse grammaticale", "La Nominalisation",
-      "Les homophones"
-    ],
-    "verbes": ["Nature du verbe", "Mode indicatif", "Mode infinitif et mode participe", "Conditionnel passé", "Subjonctif ou indicatif",
-      "Accord du verbe ", "Accord du participe passé ", "Temps variés", "Révision"
-    ],
-    "écoute et répetition": ["Langue et premiers mots", "Thème "],
-    "compréhension orale": ["Bandes annonces / reportages", "Phonétique", "Compréhension orale", "Français parlé au Québec"],
-    "vocabulaire": ["Synonymes", "Quelques cas particuliers", "Proverbes - Expressions - Définitions",
-      "Emploi varié", "Sens propre / figuré"
-    ],
-    "lecture / comréhension ecrite": ["?"],
-    "Dictées et tests": ["Dictées", "Tests / Révision"],
-    "Français des affaires": ["Affaires et bureau"]
+  "avancé": {
+   "l'ensemble des compétences": [""],
+    "la grammaire et l'orthographe": ["Les adjectifs", "Les adverbes", "Les déterminants", "Les noms", "La construction des phrases",
+    								 "Les prépositions", "Les pronoms","Les verbes","Les temps"],
+    "la compréhension orale": [""],
+    "la compréhension écrite": [""],
+    "la prononciation": ["Les sons", "Les voyelles", "Les consonnes", "Les virelangues", "Les liaisons","L'alphabet" ],
+    "les dictées": [""],
+    "le vocabulaire": ["Les aliments et la cuisine", "Les animaux et la nature", "Au Bureau, au travail et les métiers", "La santé et le corps", "Les loisirs et le sport", 
+    				"Les couleurs, les nombres, les objets", "La famille", "Les heures, les jours et les mois", "La maison et la constuction", "La météo et les saisons",
+    				 "La nationalité", "L'école", "La famille", "La ville et les transports", "Se présenter, se préparer", "Les sentiments", "Les directions, vers où aller",
+    				  "Les vêtements", "Vocabulaire varié"],
+    "La construction des phrases": []
   }
 }
