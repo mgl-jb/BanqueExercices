@@ -34,8 +34,7 @@ export class HomeComponent implements OnInit {
 
   options = {
     tokenize: true,
-    matchAllTokens: true,
-    keys: ["Titre de l'activité"]
+    keys: ['mot clé']
   };
 
   u2Input: any;
@@ -79,7 +78,6 @@ export class HomeComponent implements OnInit {
   }
 
   myClick() {
-    console.log('test');
     let fuse : any = new Fuse(this.exercices, this.options);
     var txt = this.motCle;
     console.log(txt);
@@ -87,7 +85,7 @@ export class HomeComponent implements OnInit {
     console.log(fuse.search(txt));
   }
 
-  myClick2(u7:any) {
+  myClick2(u7: any) {
     this.u7Input = u7;
     console.log(this.u7Input);
     // let index = this.testView2.nativeElement.selectedIndex;

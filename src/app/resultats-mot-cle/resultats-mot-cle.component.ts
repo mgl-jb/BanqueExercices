@@ -11,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultatsMotCleComponent implements OnInit {
 
+  clicked = false;
+
   arrr=["lkjk","lki", "jygdkj", "dkhgdjhd","hdhhjdkjd", "dhhdkljdl", "jkhdjhd","lkjk","lki", "jygdkj"];
   constructor() { }
 
