@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2,  AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { identifierModuleUrl } from '@angular/compiler';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-resultats-recherche',
@@ -18,17 +21,26 @@ export class ResultatsRechercheComponent implements OnInit {
   type: string;
   filtre: string;
   clicked = false;
+  resultats: any;
 
-
-  arrr=["hjgfghf","fhfjkhfehj fhhhhghghgg", "Le choix de l'adjectif",  "ljhdflhfh","fdvdgxxhdbn",
-   "ssss piossrkojr", "khssjdfkfkkhjf", "hjgqfghf","fhfjkxxhfehj", "Le choix de l'adssjectif",  "ljhdflhssfh","fdvdghdbsssn"];
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.niveau = this.route.snapshot.paramMap.get('niveau');
     this.exercice = this.route.snapshot.paramMap.get('exercice');
     this.type = this.route.snapshot.paramMap.get('type');
-  }
+    // this.resultats = this.route.snapshot.data;
+    // this.route.data.subscribe(
+    //   resultats => this.resultats = resultats;
+    //   );
+    // this.route.data.pipe(
+    //   switchMap(params => {
+    //     this.resultats = params.get();
+    //     return this.resultats;
+    //   })
+    // );
+    // console.log(this.resultats);
+    }
 
   onNotify(message: string): void {
     this.filtre = message;

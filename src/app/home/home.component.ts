@@ -28,14 +28,12 @@ export class HomeComponent implements OnInit {
   @ViewChild('t2', {static: false}) testView2: ElementRef;
   @ViewChild('t3', {static: false}) testView3: ElementRef;
 
+  resultats: any;
   motCle: string;
   exercices: any = exercices;
   menuRecherche: any = menuRecherche;
 
-  options = {
-    tokenize: true,
-    keys: ['mot clé']
-  };
+  options: any;
 
   u2Input: any;
 
@@ -78,11 +76,13 @@ export class HomeComponent implements OnInit {
   }
 
   myClick() {
-    let fuse : any = new Fuse(this.exercices, this.options);
-    var txt = this.motCle;
+    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot clé'));
+    let txt = this.motCle;
+    console.log(this.motCle);
     console.log(txt);
     console.log(this.options);
-    console.log(fuse.search(txt));
+    this.resultats = fuse.search(this.motCle);
+    console.log(this.resultats);
   }
 
   myClick2(u7: any) {
@@ -94,9 +94,31 @@ export class HomeComponent implements OnInit {
     // console.log(option.innerText);
   }
 
+  myClick3() {
+    let fuse1 : any = new Fuse(this.exercices, this.creerOptions('Niveau'));
+    let tab1 = fuse1.search(this.u2Input);
+    let fuse2 : any = new Fuse(tab1, this.creerOptions('Compétence'));
+    let tab2 = fuse2.search(this.u5Input);
+    let fuse3 : any = new Fuse(tab2, this.creerOptions('sur 1'));
+    this.resultats = fuse3.search(this.u7Input);
+    let path = 'resultats/:niveau/:exercice/:type';
+    let route = this.router.config.find(r => r.path === path);
+    route.data = { resultats: this.resultats };
+  }
   resetSelelction() {
     this.testView.nativeElement.selectedIndex = 0;
     this.keys1 = [];
     this.array2 = [];
+  }
+  creerOptions(...args: any[]) {
+    this.options = {
+      tokenize: true,
+      matchAllTokens: true,
+      threshold: 0,
+      location: 0,
+      distance: 0,
+      keys: args
+    };
+    return this.options;
   }
 }
