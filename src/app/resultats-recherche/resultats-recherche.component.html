@@ -42,9 +42,9 @@
 </div>
 <div id="u888">
 
-  <app-bouton-resultat #data style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' *ngFor="let item of resultats">
+  <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item.lien' *ngFor="let item of resultats">
   </app-bouton-resultat>
 
-  <app-contenant-resultat [filtre]="filtre" style="top:20px" *ngFor="let item of resultats" [item] ='item' [clicked]="clicked"></app-contenant-resultat>
+  <app-contenant-resultat [filtre]="filtre" style="top:20px" *ngFor="let item of resultats" [item] ='item.lien' [clicked]="clicked"></app-contenant-resultat>
 
 </div>

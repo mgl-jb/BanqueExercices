@@ -6,10 +6,16 @@ import exercices from '../../assets/exercices.json';
 import menuRecherche from '../../assets/menuRecherche.json';
 
 
-export interface DialogData {
+export interface Resultat {
   niveau: string;
-  sujet: string;
-  exercice: string;
+  competence: string;
+  sur1: string;
+  mot_cle: string;
+  vide1: string;
+  activite: string;
+  langue: string;
+  lien: string;
+  phrase_explicative: string;
 }
 
 @Component({
@@ -30,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   resultats: any;
   motCle: string;
-  exercices: any = exercices;
+  exercices: Resultat[] = exercices;
   menuRecherche: any = menuRecherche;
 
   options: any;
@@ -87,23 +93,19 @@ export class HomeComponent implements OnInit {
 
   myClick2(u7: any) {
     this.u7Input = u7;
-    console.log(this.u7Input);
-    // let index = this.testView2.nativeElement.selectedIndex;
-    // let option = this.testView2.nativeElement.options[index];
-
-    // console.log(option.innerText);
   }
 
   myClick3() {
-    let fuse1 : any = new Fuse(this.exercices, this.creerOptions('Niveau'));
+    let fuse1 : any = new Fuse(this.exercices, this.creerOptions('niveau'));
     let tab1 = fuse1.search(this.u2Input);
-    let fuse2 : any = new Fuse(tab1, this.creerOptions('Compétence'));
+    let fuse2 : any = new Fuse(tab1, this.creerOptions('competence'));
     let tab2 = fuse2.search(this.u5Input);
-    let fuse3 : any = new Fuse(tab2, this.creerOptions('sur 1'));
+    let fuse3 : any = new Fuse(tab2, this.creerOptions('sur1'));
     this.resultats = fuse3.search(this.u7Input);
     let path = 'resultats/:niveau/:exercice/:type';
     let route = this.router.config.find(r => r.path === path);
     route.data = { resultats: this.resultats };
+    this.router.navigate(['/resultats', this.u2Input, this.u5Input, this.u7Input]);
   }
   resetSelelction() {
     this.testView.nativeElement.selectedIndex = 0;

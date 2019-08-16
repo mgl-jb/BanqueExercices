@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { identifierModuleUrl } from '@angular/compiler';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import {Resultat} from '../home/home.component';
 
 @Component({
   selector: 'app-resultats-recherche',
@@ -21,17 +22,17 @@ export class ResultatsRechercheComponent implements OnInit {
   type: string;
   filtre: string;
   clicked = false;
-  resultats: any;
-
+  resultats: Resultat[];
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
+
 
   ngOnInit() {
     this.niveau = this.route.snapshot.paramMap.get('niveau');
     this.exercice = this.route.snapshot.paramMap.get('exercice');
     this.type = this.route.snapshot.paramMap.get('type');
-    // this.resultats = this.route.snapshot.data;
+    this.resultats = this.route.snapshot.data as Resultat[];
     // this.route.data.subscribe(
-    //   resultats => this.resultats = resultats;
+    //   resultats => this.resultats = resultats
     //   );
     // this.route.data.pipe(
     //   switchMap(params => {
@@ -39,7 +40,7 @@ export class ResultatsRechercheComponent implements OnInit {
     //     return this.resultats;
     //   })
     // );
-    // console.log(this.resultats);
+    console.log(this.resultats);
     }
 
   onNotify(message: string): void {
