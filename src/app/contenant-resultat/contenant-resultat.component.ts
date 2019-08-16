@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, AfterViewInit, Renderer2, ViewChild, Input, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Resultat } from '../home/home.component';
 
 @Component({
   selector: 'app-contenant-resultat',
@@ -13,14 +14,12 @@ import { ActivatedRoute } from '@angular/router';
 export class ContenantResultatComponent implements  AfterViewChecked {
 
   @Input() filtre: string;
-  @Input() item: string;
+  @Input() item: Resultat;
+  @Input() resultats: Resultat[];
   @Input() clicked: boolean;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
-
-  arrr=["hjgfghf","fhfjkhfehj bbbbb", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
-   "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 

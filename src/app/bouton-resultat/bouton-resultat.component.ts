@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Renderer2, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Resultat } from '../home/home.component';
 
 @Component({
   selector: 'app-bouton-resultat',
@@ -17,11 +18,10 @@ export class BoutonResultatComponent implements  AfterViewInit {
   @ViewChild('textEl', {static: false}) textEl: ElementRef;
   @ViewChild('spanEl', {static: false}) spanEl: ElementRef;
 
-  arrr=["hjgfghf","fhfjkhfehj bbbbb", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn",
-   "ssss piorkojr", "khjdfkfkkhjf", "hjgfghf","fhfjkhfehj", "Le choix de l'adjectif",  "ljhdflhfh","fdvdghdbn"];
    @Input() color = '#016BB5';
-   @Input() item: any;
-   @Output()notify: EventEmitter<any> = new EventEmitter<string>();
+   @Input() item: Resultat;
+
+   @Output()notify: EventEmitter<any> = new EventEmitter<Resultat>();
 
    clicked = false;
 

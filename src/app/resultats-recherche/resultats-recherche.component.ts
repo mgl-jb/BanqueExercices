@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import {Resultat} from '../home/home.component';
 
+
 @Component({
   selector: 'app-resultats-recherche',
   templateUrl: './resultats-recherche.component.html',
@@ -30,7 +31,7 @@ export class ResultatsRechercheComponent implements OnInit {
     this.niveau = this.route.snapshot.paramMap.get('niveau');
     this.exercice = this.route.snapshot.paramMap.get('exercice');
     this.type = this.route.snapshot.paramMap.get('type');
-    this.resultats = this.route.snapshot.data as Resultat[];
+    this.resultats = this.route.snapshot.data.resultats as Resultat[];
     // this.route.data.subscribe(
     //   resultats => this.resultats = resultats
     //   );
@@ -43,8 +44,8 @@ export class ResultatsRechercheComponent implements OnInit {
     console.log(this.resultats);
     }
 
-  onNotify(message: string): void {
-    this.filtre = message;
+  onNotify(message: Resultat): void {
+    this.filtre = message.activite;
     this.clicked = true;
   }
 
