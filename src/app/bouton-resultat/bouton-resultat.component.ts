@@ -19,9 +19,9 @@ export class BoutonResultatComponent implements  AfterViewInit {
   @ViewChild('spanEl', {static: false}) spanEl: ElementRef;
 
    @Input() color = '#016BB5';
-   @Input() item: Resultat;
+   @Input() item: string;
 
-   @Output()notify: EventEmitter<any> = new EventEmitter<Resultat>();
+   @Output()notify: EventEmitter<any> = new EventEmitter<string>();
 
    clicked = false;
 

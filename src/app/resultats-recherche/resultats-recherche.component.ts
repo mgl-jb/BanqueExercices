@@ -24,6 +24,7 @@ export class ResultatsRechercheComponent implements OnInit {
   filtre: string;
   clicked = false;
   resultats: Resultat[];
+  resultats2: string[];
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
 
@@ -32,6 +33,8 @@ export class ResultatsRechercheComponent implements OnInit {
     this.exercice = this.route.snapshot.paramMap.get('exercice');
     this.type = this.route.snapshot.paramMap.get('type');
     this.resultats = this.route.snapshot.data.resultats as Resultat[];
+    this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
+
     // this.route.data.subscribe(
     //   resultats => this.resultats = resultats
     //   );
@@ -44,8 +47,8 @@ export class ResultatsRechercheComponent implements OnInit {
     console.log(this.resultats);
     }
 
-  onNotify(message: Resultat): void {
-    this.filtre = message.activite;
+  onNotify(message: string): void {
+    this.filtre = message;
     this.clicked = true;
   }
 
