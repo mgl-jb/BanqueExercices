@@ -51,5 +51,4 @@ export class ResultatsRechercheComponent implements OnInit {
     this.filtre = message;
     this.clicked = true;
   }
-
 }

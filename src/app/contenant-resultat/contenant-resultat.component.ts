@@ -30,4 +30,9 @@ export class ContenantResultatComponent implements  AfterViewChecked {
       this.renderer.setStyle(this.parentDiv.nativeElement, 'height', height);
     }
   }
+
+  filterTable(table: Resultat[], filter: string) : Resultat[]{
+    let table2 = table.filter(it => it.activite === filter);
+    return table2;
+  }
 }
