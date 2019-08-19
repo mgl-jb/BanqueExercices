@@ -21,7 +21,7 @@
     <div id="u310" class="ax_default heading_3">
       <div id="u310_div" class=""></div>
       <div id="u310_text" class="text ">
-        <p><span>Démonstratif</span></p>
+        <p><span>{{motCle}}</span></p>
       </div>
     </div>
 
@@ -96,15 +96,15 @@
       </select>
     </div>
 
-    <div *ngFor="let item of arrr" id="u888">
+    <div *ngFor="let item1 of resultats3" id="u888">
 
           <div id="u828">
               <div id="u828_text" class="text ">
-                <p><span>Niveau débutant / Grammaire / Les adjectifs</span></p>
+                <p><span>Niveau {{item1}}</span></p>
               </div>
             </div>
 
-            <app-contenant-resultat [clicked]= "clicked" *ngFor="let item of arrr"></app-contenant-resultat>
+            <app-contenant-resultat [clicked]= "clicked" *ngFor="let item of mapTableParActivite(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
 
     </div>

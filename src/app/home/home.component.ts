@@ -82,13 +82,13 @@ export class HomeComponent implements OnInit {
   }
 
   myClick() {
-    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot clé'));
-    let txt = this.motCle;
-    console.log(this.motCle);
-    console.log(txt);
-    console.log(this.options);
+    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
     this.resultats = fuse.search(this.motCle);
     console.log(this.resultats);
+    let path = 'resultat_mot_cle/:motCle';
+    let route = this.router.config.find(r => r.path === path);
+    route.data = { resultats: this.resultats };
+    this.router.navigate(['/resultat_mot_cle', this.motCle]);
   }
 
   myClick2(u7: any) {

@@ -14,7 +14,7 @@ import { Resultat } from '../home/home.component';
 export class ContenantResultatComponent implements  AfterViewChecked {
 
   @Input() filtre: string;
-  @Input() item: Resultat;
+  @Input() item: string;
   @Input() resultats: Resultat[];
   @Input() clicked: boolean;
 

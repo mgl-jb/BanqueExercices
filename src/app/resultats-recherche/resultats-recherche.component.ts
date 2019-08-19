@@ -34,17 +34,6 @@ export class ResultatsRechercheComponent implements OnInit {
     this.type = this.route.snapshot.paramMap.get('type');
     this.resultats = this.route.snapshot.data.resultats as Resultat[];
     this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
-
-    // this.route.data.subscribe(
-    //   resultats => this.resultats = resultats
-    //   );
-    // this.route.data.pipe(
-    //   switchMap(params => {
-    //     this.resultats = params.get();
-    //     return this.resultats;
-    //   })
-    // );
-    console.log(this.resultats);
     }
 
   onNotify(message: string): void {
