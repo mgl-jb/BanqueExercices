@@ -36,8 +36,8 @@ export class ResultatsRechercheComponent implements OnInit {
     this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
     }
 
-  onNotify(message: string): void {
-    this.filtre = message;
-    this.clicked = true;
+  onNotify(message: any): void {
+    this.filtre = message.item;
+    this.clicked = message.clicked;
   }
 }

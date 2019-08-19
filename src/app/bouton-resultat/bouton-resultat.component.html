@@ -1,5 +1,5 @@
-<div #parentDiv  (click)='onClick()' id="u999" class="ax_default box_1" data-label="btn l'accord de l'adjectif">
-  <div #childDiv id="u999_div">
+<div #parentDiv  (click)='onClick()' id="u999" class="ax_default box_1">
+  <div #childDiv id="u999_div"  [ngClass]="{'selected': clicked}" appHighlight>
   <div  #textEL id="u999_text" class="text ">
     <p><span #spanEl>{{item}}</span></p>
   </div>

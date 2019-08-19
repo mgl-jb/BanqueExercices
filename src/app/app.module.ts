@@ -12,6 +12,7 @@ import { ResultatsMotCleComponent } from './resultats-mot-cle/resultats-mot-cle.
 import { ContenantResultatComponent } from './contenant-resultat/contenant-resultat.component';
 import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
 import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.component';
+import { HighlightDirective } from './shared/directives/highlight.directive';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.compo
     ContenantResultatComponent,
     BoiteOutilsComponent,
     BoutonResultatComponent,
+    HighlightDirective
   ],
   imports: [
     FormsModule,

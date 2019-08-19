@@ -14,6 +14,20 @@
   box-shadow:none;
   color:#016BB5;
 }
+
+#u999_div.selected {
+  border-width: 0px;
+  position:relative;
+  height:31px;
+  background-color:#e4f1fa;
+  border: none;
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #e4f1fa;
+}
+
 #u999 {
   position:relative;
   display: inline-block;

@@ -17,11 +17,11 @@
 <div id="u118" class="ax_default heading_3">
   <div id="u118_div" class=""></div>
   <div id="u118_text" class="text ">
-    <p><span style="font-family:'Calibri';font-weight:400;">Exercices de </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{exercice}}</span><span
-        style="font-family:'Calibri';font-weight:400;"> pour </span><span
+    <p><span style="font-family:'Calibri';font-weight:400;">Je suis </span><span
         style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{niveau}}</span><span
-        style="font-family:'Calibri';font-weight:400;"> : </span><span
+        style="font-family:'Calibri';font-weight:400;">, je veux travailler </span><span
+        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{exercice}}</span><span
+        style="font-family:'Calibri';font-weight:400;"> sur </span><span
         style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{type}}</span></p>
   </div>
 </div>
@@ -42,7 +42,7 @@
 </div>
 <div id="u888">
 
-  <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item'  *ngFor="let item of resultats2 ">
+  <app-bouton-resultat  [ngClass]="{'selected': clicked}" style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item'  *ngFor="let item of resultats2 ">
   </app-bouton-resultat>
 
   <app-contenant-resultat [filtre]="filtre" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>

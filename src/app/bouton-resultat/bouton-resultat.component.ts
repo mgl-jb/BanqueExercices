@@ -1,4 +1,14 @@
-import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Renderer2, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  AfterViewInit,
+  ViewChild,
+  Renderer2,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component';
 
@@ -9,25 +19,23 @@ import { Resultat } from '../home/home.component';
     '../shared/jquery-ui-themes.css',
     '../shared/axure_rp_page.css',
     '../shared/styles_data.css',
-    './bouton-resultat.component.css']
+    './bouton-resultat.component.css'
+  ]
 })
-export class BoutonResultatComponent implements  AfterViewInit {
+export class BoutonResultatComponent implements AfterViewInit {
+  @ViewChild('parentDiv', { static: false }) parentDiv: ElementRef;
+  @ViewChild('childDiv', { static: false }) childDiv: ElementRef;
+  @ViewChild('textEl', { static: false }) textEl: ElementRef;
+  @ViewChild('spanEl', { static: false }) spanEl: ElementRef;
 
-  @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
-  @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
-  @ViewChild('textEl', {static: false}) textEl: ElementRef;
-  @ViewChild('spanEl', {static: false}) spanEl: ElementRef;
+  @Input() color = '#016BB5';
+  @Input() item: string;
+  @Input() clicked: boolean;
 
-   @Input() color = '#016BB5';
-   @Input() item: string;
-
-   @Output()notify: EventEmitter<any> = new EventEmitter<string>();
-
-   clicked = false;
+  @Output() notify: EventEmitter<any> = new EventEmitter<object>();
 
 
-  constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
-
+  constructor(private route: ActivatedRoute, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
     if (this.parentDiv && this.childDiv) {
@@ -40,8 +48,7 @@ export class BoutonResultatComponent implements  AfterViewInit {
   }
 
   onClick() {
-    this.clicked = true;
-    this.notify.emit(this.item);
-    }
-
+    this.clicked = !this.clicked;
+    this.notify.emit({clicked : this.clicked, item: this.item});
+  }
 }
