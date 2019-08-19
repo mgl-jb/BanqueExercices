@@ -53,10 +53,12 @@
 
 
     <div id="u322" class="ax_default droplist" data-label="niveaux">
-      <select id="u322_input">
-        <option selected value="Sélectionnez un niveau">Sélectionnez un niveau</option>
-        <option value="niveau débutant">niveau débutant</option>
-        <option value="niveau intermédiaire">niveau intermédiaire</option>
+      <select id="u322_input" (change)="filtrerParNiveau($event.target.value)">
+        <option selected value="Sélectionnez un niveau" >Sélectionnez un niveau</option>
+        <option value="débutant">niveau débutant</option>
+        <option value="intermédiaire">niveau intermédiaire</option>
+        <option value="avancé">niveau avancé</option>
+
       </select>
     </div>
 
@@ -96,8 +98,8 @@
       </select>
     </div>
 
-    <div *ngFor="let item1 of resultats3" id="u888">
-
+    <div *ngFor="let item1 of resultats3" id="u888"  >
+        <div *ngIf="filtred == false || (item1 == filtreNiveau && filtred == true) ">
           <div id="u828">
               <div id="u828_text" class="text ">
                 <p><span>Niveau {{item1}}</span></p>
@@ -106,5 +108,5 @@
 
             <app-contenant-resultat [clicked]= "clicked" *ngFor="let item of mapTableParActivite(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
-
+          </div>
     </div>

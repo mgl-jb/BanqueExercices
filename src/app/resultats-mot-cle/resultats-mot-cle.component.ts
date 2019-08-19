@@ -14,10 +14,8 @@ import { Resultat } from '../home/home.component';
 export class ResultatsMotCleComponent implements OnInit {
 
   clicked = false;
-  niveau: string;
-  exercice: string;
-  type: string;
-  filtre: string;
+  filtred = false;
+  filtreNiveau: string;
   resultats: Resultat[];
   resultats2: string[];
   motCle: string;
@@ -32,11 +30,6 @@ export class ResultatsMotCleComponent implements OnInit {
     this.resultats3 =  [...new Set(this.resultats.map(it => it.niveau))];
     console.log(this.resultats);
     }
-
-  onNotify(message: string): void {
-    this.filtre = message;
-    this.clicked = true;
-  }
 
   filterTableParActivite(table: Resultat[], filter: string) : Resultat[]{
     let table2 = table.filter(it => it.activite === filter);
@@ -54,5 +47,11 @@ export class ResultatsMotCleComponent implements OnInit {
 
   mapTableParActivite(table: Resultat[]){
     return  [...new Set(table.map(it => it.activite))];
+  }
+
+  filtrerParNiveau(niveau: string){
+    console.log(niveau);
+    this.filtreNiveau = niveau;
+    this.filtred = true;
   }
 }
