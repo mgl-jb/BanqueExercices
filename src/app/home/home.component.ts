@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import Fuse from 'fuse.js';
-import { ResultatsRechercheComponent } from '../resultats-recherche/resultats-recherche.component';
-import exercices from '../../assets/exercices.json';
 import menuRecherche from '../../assets/menuRecherche.json';
 
 
@@ -30,30 +27,27 @@ export interface Resultat {
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('t1', {static: false}) testView: ElementRef;
-  @ViewChild('t2', {static: false}) testView2: ElementRef;
-  @ViewChild('t3', {static: false}) testView3: ElementRef;
+  @ViewChild('t1', {static: false}) selectNiveau: ElementRef;
+  @ViewChild('t2', {static: false}) selectCompetence: ElementRef;
+  @ViewChild('t3', {static: false}) selectSur: ElementRef;
 
-  resultats: any;
-  motCle: string;
-  exercices: Resultat[] = exercices;
   menuRecherche: any = menuRecherche;
 
-  options: any;
+  resultats: any;
 
-  u2Input: any;
+  motCle: string;
 
-  u5Input: any ;
+  niveau: any;
 
-  u7Input: any ;
+  competence: any ;
 
-  array1: any;
+  sur: any ;
 
-  array2: any;
+  competenceArray: any;
 
-  keys1: any;
+  surArray: any;
 
-  keys2: any;
+  MenuKeys: any;
 
   constructor(
     private router: Router,
@@ -64,63 +58,53 @@ export class HomeComponent implements OnInit {
 
 
   configurer_u5_input(u2: any) {
-    this.keys1 = [];
-    this.array2 = [];
-    this.u2Input = u2;
-    this.array1 = this.menuRecherche[this.u2Input];
-    this.keys1 = Object.keys(this.array1);
-    this.testView2.nativeElement.selectedIndex = 0;
-    this.u5Input = this.keys1[0];
+    this.MenuKeys = [];
+    this.surArray = [];
+    this.niveau = u2;
+    this.competenceArray = this.menuRecherche[this.niveau];
+    this.MenuKeys = Object.keys(this.competenceArray);
+    this.selectCompetence.nativeElement.selectedIndex = 0;
+    this.competence = this.MenuKeys[0];
   }
 
   configurer_u7_input(u5: any) {
-    this.array2 = [];
-    this.u5Input = u5;
-    this.array2 = this.menuRecherche[this.u2Input][this.u5Input];
-    this.testView3.nativeElement.selectedIndex = 0;
-    this.u7Input = this.array2[0];
+    this.surArray = [];
+    this.competence = u5;
+    this.surArray = this.menuRecherche[this.niveau][this.competence];
+    this.selectSur.nativeElement.selectedIndex = 0;
+    this.sur = this.surArray[0];
   }
 
   myClick() {
-    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
-    this.resultats = fuse.search(this.motCle);
-    console.log(this.resultats);
-    let path = 'resultat_mot_cle/:motCle';
-    let route = this.router.config.find(r => r.path === path);
-    route.data = { resultats: this.resultats };
+    // let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
+    // this.resultats = fuse.search(this.motCle);
+    // console.log(this.resultats);
+    // let path = 'resultat_mot_cle/:motCle';
+    // let route = this.router.config.find(r => r.path === path);
+    // route.data = { resultats: this.resultats };
     this.router.navigate(['/resultat_mot_cle', this.motCle]);
   }
 
   myClick2(u7: any) {
-    this.u7Input = u7;
+    this.sur = u7;
   }
 
   myClick3() {
-    let fuse1 : any = new Fuse(this.exercices, this.creerOptions('niveau'));
-    let tab1 = fuse1.search(this.u2Input);
-    let fuse2 : any = new Fuse(tab1, this.creerOptions('competence'));
-    let tab2 = fuse2.search(this.u5Input);
-    let fuse3 : any = new Fuse(tab2, this.creerOptions('sur1'));
-    this.resultats = fuse3.search(this.u7Input);
-    let path = 'resultats/:niveau/:exercice/:type';
-    let route = this.router.config.find(r => r.path === path);
-    route.data = { resultats: this.resultats };
-    this.router.navigate(['/resultats', this.u2Input, this.u5Input, this.u7Input]);
+    // let fuse1 : any = new Fuse(this.exercices, this.creerOptions('niveau'));
+    // let tab1 = fuse1.search(this.niveau);
+    // let fuse2 : any = new Fuse(tab1, this.creerOptions('competence'));
+    // let tab2 = fuse2.search(this.competence);
+    // let fuse3 : any = new Fuse(tab2, this.creerOptions('sur1'));
+    // this.resultats = fuse3.search(this.sur);
+    // let path = 'resultats/:niveau/:exercice/:type';
+    // let route = this.router.config.find(r => r.path === path);
+    // route.data = { resultats: this.resultats };
+    this.router.navigate(['/resultats', this.niveau, this.competence, this.sur]);
   }
+
   resetSelelction() {
-    this.testView.nativeElement.selectedIndex = 0;
-    this.keys1 = [];
-    this.array2 = [];
-  }
-  creerOptions(...args: any[]) {
-    this.options = {
-      tokenize: true,
-      matchAllTokens: true,
-      threshold: 0,
-      location: 0,
-      distance: 0,
-      keys: args
-    };
-    return this.options;
+    this.selectNiveau.nativeElement.selectedIndex = 0;
+    this.MenuKeys = [];
+    this.surArray = [];
   }
 }

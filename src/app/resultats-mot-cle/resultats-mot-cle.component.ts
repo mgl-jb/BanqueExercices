@@ -1,6 +1,8 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component';
+import Fuse from 'fuse.js';
+import exercices from '../../assets/exercices.json';
 
 @Component({
   selector: 'app-resultats-mot-cle',
@@ -13,6 +15,8 @@ import { Resultat } from '../home/home.component';
 })
 export class ResultatsMotCleComponent implements OnInit {
 
+  exercices: Resultat[] = exercices;
+  options: any;
   clicked = false;
   filtred = false;
   filtreNiveau: string;
@@ -25,7 +29,7 @@ export class ResultatsMotCleComponent implements OnInit {
 
   ngOnInit() {
     this.motCle = this.route.snapshot.paramMap.get('motCle');
-    this.resultats = this.route.snapshot.data.resultats as Resultat[];
+    this.trouverResultatsMotCle();
     this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
     this.resultats3 =  [...new Set(this.resultats.map(it => it.niveau))];
     console.log(this.resultats);
@@ -53,5 +57,22 @@ export class ResultatsMotCleComponent implements OnInit {
     console.log(niveau);
     this.filtreNiveau = niveau;
     this.filtred = true;
+  }
+
+  trouverResultatsMotCle(){
+    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
+    this.resultats = fuse.search(this.motCle);
+  }
+
+  creerOptions(...args: any[]) {
+    this.options = {
+      tokenize: true,
+      matchAllTokens: true,
+      threshold: 0,
+      location: 0,
+      distance: 0,
+      keys: args
+    };
+    return this.options;
   }
 }
