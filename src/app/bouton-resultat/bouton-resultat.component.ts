@@ -30,10 +30,10 @@ export class BoutonResultatComponent implements AfterViewInit {
 
   @Input() color = '#016BB5';
   @Input() item: string;
-  @Input() clicked: boolean;
 
-  @Output() notify: EventEmitter<any> = new EventEmitter<object>();
+  @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
+  clicked = false;
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2) {}
 
