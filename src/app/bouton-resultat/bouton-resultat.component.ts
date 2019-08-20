@@ -39,7 +39,7 @@ export class BoutonResultatComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.parentDiv && this.childDiv) {
-      let width = `${this.spanEl.nativeElement.offsetWidth + 20}px`;
+      const width = `${this.spanEl.nativeElement.offsetWidth + 20}px`;
       this.renderer.setStyle(this.childDiv.nativeElement, 'width', width);
       this.renderer.setStyle(this.parentDiv.nativeElement, 'width', width);
       this.renderer.setStyle(this.childDiv.nativeElement, 'color', this.color);

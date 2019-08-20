@@ -37,7 +37,7 @@ export class ResultatsRechercheComponent implements OnInit {
     }
 
   onNotify(message: any): void {
-    let elts = this.el.nativeElement.querySelectorAll('#u999_div');
+    const elts = this.el.nativeElement.querySelectorAll('#u999_div');
     elts.forEach(element => {element.classList.remove('selected'); });
     this.filtre = message.item;
     this.clicked = message.clicked;
