@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-boite-outils',
@@ -11,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoiteOutilsComponent implements OnInit {
 
-  arrr = ["nsjjsmmskl", "ttehhe"]
-  constructor() { }
+  @ViewChild('ld', {static: false}) selectPage: ElementRef;
+  listeDeroulante = false;
+  constructor( private renderer: Renderer2) { }
 
   ngOnInit() {
+  }
+  deroulerListe(){
+    this.listeDeroulante = !this.listeDeroulante;
   }
 
 }

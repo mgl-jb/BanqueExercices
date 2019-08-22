@@ -6,12 +6,11 @@
         <p><span>Société québécoise</span></p>
       </div>
     </div>
-    <div id="u824" class="ax_default ax_default_hidden" data-label="liste déroulante"
-      style="display:none; visibility: hidden" data-left="0" data-top="0" data-width="0" data-height="0">
+    <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante"  >
 
       <!-- Unnamed (Rectangle) -->
       <div id="u825" class="ax_default box_1">
-        <div id="u825_div" class=""></div>
+        <div id="u825_div" appHighlight></div>
         <div id="u825_text" class="text ">
           <p><span>Aide à la rédaction</span></p>
         </div>
@@ -19,7 +18,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u826" class="ax_default box_1">
-        <div id="u826_div" class=""></div>
+        <div id="u826_div" appHighlight></div>
         <div id="u826_text" class="text ">
           <p><span>Conjugaison</span></p>
         </div>
@@ -27,7 +26,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u827" class="ax_default box_1">
-        <div id="u827_div" class=""></div>
+        <div id="u827_div" appHighlight></div>
         <div id="u827_text" class="text ">
           <p><span>Dictionnaires</span></p>
         </div>
@@ -35,7 +34,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u828" class="ax_default box_1">
-        <div id="u828_div" class=""></div>
+        <div id="u828_div" appHighlight></div>
         <div id="u828_text" class="text ">
           <p><span>Tests de français</span></p>
         </div>
@@ -43,7 +42,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u829" class="ax_default box_1">
-        <div id="u829_div" class=""></div>
+        <div id="u829_div" appHighlight></div>
         <div id="u829_text" class="text ">
           <p><span>Encyclopédies</span></p>
         </div>
@@ -51,7 +50,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u830" class="ax_default box_1">
-        <div id="u830_div" class=""></div>
+        <div id="u830_div" appHighlight></div>
         <div id="u830_text" class="text ">
           <p><span>Médias francophones</span></p>
         </div>
@@ -59,7 +58,7 @@
 
       <!-- Unnamed (Rectangle) -->
       <div id="u831" class="ax_default box_1">
-        <div id="u831_div" class=""></div>
+        <div id="u831_div" appHighlight></div>
         <div id="u831_text" class="text ">
           <p><span>Société québécoise</span></p>
         </div>
@@ -76,7 +75,7 @@
       <img id="u557_img" class="img " src="../../assets/images/angle_u518.png" />
     </div>
 
-    <div id="u558" class="ax_default">
+    <div id="u558" class="ax_default" (click) = "deroulerListe()">
     </div>
 
     <div id="u582" class="ax_default heading_3">
