@@ -106,7 +106,7 @@
               </div>
             </div>
 
-            <app-contenant-resultat [clicked]= "clicked" *ngFor="let item of mapTableParActivite(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
           </div>
     </div>

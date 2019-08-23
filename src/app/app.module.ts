@@ -35,7 +35,7 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
       { path: 'home', component: HomeComponent },
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
-      { path: 'boite_outils', component: BoiteOutilsComponent},
+      { path: 'boite_outils/:outil', component: BoiteOutilsComponent},
       { path: 'bouton', component: BoutonResultatComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }

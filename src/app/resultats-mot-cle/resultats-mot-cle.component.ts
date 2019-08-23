@@ -4,6 +4,7 @@ import { Resultat } from '../home/home.component';
 import Fuse from 'fuse.js';
 import exercices from '../../assets/exercices.json';
 
+
 @Component({
   selector: 'app-resultats-mot-cle',
   templateUrl: './resultats-mot-cle.component.html',
@@ -15,7 +16,7 @@ import exercices from '../../assets/exercices.json';
 })
 export class ResultatsMotCleComponent implements OnInit {
 
-  exercices: Resultat[] = exercices;
+  exercices: any[] = exercices;
   options: any;
   clicked = false;
   filtred = false;
@@ -24,6 +25,8 @@ export class ResultatsMotCleComponent implements OnInit {
   resultats2: string[];
   motCle: string;
   resultats3: string[];
+  imageSrc = '../../assets/images/u129.png';
+
   constructor(private route: ActivatedRoute) { }
 
 

@@ -28,10 +28,11 @@ export class BoutonResultatComponent implements AfterViewInit {
   @ViewChild('textEl', { static: false }) textEl: ElementRef;
   @ViewChild('spanEl', { static: false }) spanEl: ElementRef;
 
-  @Input() color = '#016BB5';
+  @Input() color;
   @Input() item: string;
 
   @Output() notify: EventEmitter<any> = new EventEmitter<any>();
+
 
   clicked = false;
 
@@ -42,8 +43,8 @@ export class BoutonResultatComponent implements AfterViewInit {
       const width = `${this.spanEl.nativeElement.offsetWidth + 20}px`;
       this.renderer.setStyle(this.childDiv.nativeElement, 'width', width);
       this.renderer.setStyle(this.parentDiv.nativeElement, 'width', width);
+      this.renderer.setStyle(this.childDiv.nativeElement, 'border-color', this.color);
       this.renderer.setStyle(this.childDiv.nativeElement, 'color', this.color);
-      this.renderer.setStyle(this.parentDiv.nativeElement, 'color', this.color);
     }
   }
 

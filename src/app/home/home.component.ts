@@ -3,12 +3,15 @@ import { Router } from '@angular/router';
 import menuRecherche from '../../assets/menuRecherche.json';
 
 
+
+
+
 export interface Resultat {
   niveau: string;
-  competence: string;
+  competence_ressource: string;
   sur1: string;
-  mot_cle: string;
-  vide1: string;
+  mots_cle: string;
+  nom_ressource: string;
   activite: string;
   langue: string;
   lien: string;

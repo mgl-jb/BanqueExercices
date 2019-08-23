@@ -29,6 +29,8 @@ export class ResultatsRechercheComponent implements OnInit {
   resultats: Resultat[];
   resultats2: string[];
   options: any;
+  color = '#016BB5';
+  imageSrc = '../../assets/images/u129.png';
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
 
