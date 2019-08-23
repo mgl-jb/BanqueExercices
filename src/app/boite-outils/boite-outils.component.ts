@@ -11,14 +11,18 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/co
 })
 export class BoiteOutilsComponent implements OnInit {
 
-  @ViewChild('ld', {static: false}) selectPage: ElementRef;
+  @ViewChild('fleche', {static: false}) fleche: ElementRef;
   listeDeroulante = false;
+  degree = 180;
   constructor( private renderer: Renderer2) { }
 
   ngOnInit() {
   }
   deroulerListe(){
     this.listeDeroulante = !this.listeDeroulante;
+    let rotate = `rotate(${this.degree}deg)`;
+    this.renderer.setStyle(this.fleche.nativeElement, 'transform', rotate);
+    this.degree = 180 - this.degree;
   }
 
 }

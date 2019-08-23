@@ -1,69 +1,4 @@
-<body>
-  <div id="base" class="">
-    <div id="u540" class="ax_default heading_3">
-      <div id="u540_div" class=""></div>
-      <div id="u540_text" class="text ">
-        <p><span>Société québécoise</span></p>
-      </div>
-    </div>
-    <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante"  >
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u825" class="ax_default box_1">
-        <div id="u825_div" appHighlight></div>
-        <div id="u825_text" class="text ">
-          <p><span>Aide à la rédaction</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u826" class="ax_default box_1">
-        <div id="u826_div" appHighlight></div>
-        <div id="u826_text" class="text ">
-          <p><span>Conjugaison</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u827" class="ax_default box_1">
-        <div id="u827_div" appHighlight></div>
-        <div id="u827_text" class="text ">
-          <p><span>Dictionnaires</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u828" class="ax_default box_1">
-        <div id="u828_div" appHighlight></div>
-        <div id="u828_text" class="text ">
-          <p><span>Tests de français</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u829" class="ax_default box_1">
-        <div id="u829_div" appHighlight></div>
-        <div id="u829_text" class="text ">
-          <p><span>Encyclopédies</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u830" class="ax_default box_1">
-        <div id="u830_div" appHighlight></div>
-        <div id="u830_text" class="text ">
-          <p><span>Médias francophones</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u831" class="ax_default box_1">
-        <div id="u831_div" appHighlight></div>
-        <div id="u831_text" class="text ">
-          <p><span>Société québécoise</span></p>
-        </div>
-      </div>
-    </div>
     <div id="u541" class="ax_default paragraph">
       <div id="u541_div" class=""></div>
       <div id="u541_text" class="text ">
@@ -71,11 +6,19 @@
             class="link"><span style="color:#0BB601;">Boite à outils</span></a><span> &gt; Société québécoise</span></p>
       </div>
     </div>
-    <div id="u557" class="ax_default icon" data-label="angle">
-      <img id="u557_img" class="img " src="../../assets/images/angle_u518.png" />
+
+    <div id="u540" class="ax_default heading_3">
+      <div id="u540_div" class=""></div>
+      <div id="u540_text" class="text ">
+        <p><span>Société québécoise</span></p>
+      </div>
     </div>
 
-    <div id="u558" class="ax_default" (click) = "deroulerListe()">
+    <div id="u557"  class="ax_default icon" data-label="angle">
+      <img id="u557_img" #fleche class="img " src="../../assets/images/angle_u518.png" />
+    </div>
+
+    <div id="u558" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
     </div>
 
     <div id="u582" class="ax_default heading_3">
@@ -85,15 +28,63 @@
       </div>
     </div>
 
-    <div id="u588" class="ax_default heading_3">
-      <div id="u588_div" class=""></div>
-      <div id="u588_text" class="text ">
-        <p><span>Éducation</span></p>
+    <div id="u888">
+
+        <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' *ngFor="let item of resultats2 ">
+        </app-bouton-resultat>
+
+        <app-contenant-resultat [filtre]="filtre" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
+
       </div>
-    </div>
 
+    <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante">
 
-  </div>
+        <div id="u825" class="ax_default box_1">
+          <div id="u825_div" appHighlight></div>
+          <div id="u825_text" class="text ">
+            <p><span>Aide à la rédaction</span></p>
+          </div>
+        </div>
 
+        <div id="u826" class="ax_default box_1">
+          <div id="u826_div" appHighlight></div>
+          <div id="u826_text" class="text ">
+            <p><span>Conjugaison</span></p>
+          </div>
+        </div>
 
-</body>
+        <div id="u827" class="ax_default box_1">
+          <div id="u827_div" appHighlight></div>
+          <div id="u827_text" class="text ">
+            <p><span>Dictionnaires</span></p>
+          </div>
+        </div>
+
+        <div id="u828" class="ax_default box_1">
+          <div id="u828_div" appHighlight></div>
+          <div id="u828_text" class="text ">
+            <p><span>Tests de français</span></p>
+          </div>
+        </div>
+
+        <div id="u829" class="ax_default box_1">
+          <div id="u829_div" appHighlight></div>
+          <div id="u829_text" class="text ">
+            <p><span>Encyclopédies</span></p>
+          </div>
+        </div>
+
+        <div id="u830" class="ax_default box_1">
+          <div id="u830_div" appHighlight></div>
+          <div id="u830_text" class="text ">
+            <p><span>Médias francophones</span></p>
+          </div>
+        </div>
+
+        <div id="u831" class="ax_default box_1">
+          <div id="u831_div" appHighlight></div>
+          <div id="u831_text" class="text ">
+            <p><span>Société québécoise</span></p>
+          </div>
+        </div>
+      </div>
