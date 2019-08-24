@@ -32,8 +32,8 @@ export class ContenantResultatComponent implements  AfterViewChecked {
     }
   }
 
-  filterTable(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.activite === filter);
+  filterTable(table: any[], filter: string) : Resultat[]{
+    let table2 = table.filter(it => it.type_ressource === filter);
     return table2;
   }
 }

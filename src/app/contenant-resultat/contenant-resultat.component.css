@@ -75,7 +75,6 @@
   left:5px;
   top:0px;
   width:100%;
-  white-space:nowrap;
 }
 #u668_img {
   border-width:0px;
@@ -110,8 +109,7 @@
   position:relative;
   display: inline-block;
   border-width:0px;
-  width:22%;
-  height:20px;
+  width:30%;
   color:#016BB5;
   margin: 10px;
 }

@@ -46,7 +46,7 @@ export class BoiteOutilsComponent implements OnInit {
   this.outil = this.route.snapshot.paramMap.get('outil');
   this.trouverResultats();
   console.log(this.resultats);
-  this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
+  this.resultats2 =  [...new Set(this.resultats.map(it => it.type_ressource))];
   }
 
   deroulerListe(){
