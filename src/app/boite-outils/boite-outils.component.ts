@@ -37,16 +37,18 @@ export class BoiteOutilsComponent implements OnInit {
   filtre: string;
   clicked = false;
   filtred = false;
-  green = '#0BB601';
+  pageColor = '#0BB601';
+  highlightColor = '#D9FCD9';
   imageSrc = '../../assets/images/u73.png';
 
   constructor( private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit() {
-  this.outil = this.route.snapshot.paramMap.get('outil');
-  this.trouverResultats();
-  console.log(this.resultats);
-  this.resultats2 =  [...new Set(this.resultats.map(it => it.type_ressource))];
+    this.route.params.subscribe(params => {
+      this.outil = this.route.snapshot.paramMap.get('outil');
+      this.trouverResultats();
+      console.log(this.resultats);
+      this.resultats2 =  [...new Set(this.resultats.map(it => it.type_ressource))]; });
   }
 
   deroulerListe(){

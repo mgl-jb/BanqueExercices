@@ -30,7 +30,7 @@
 
     <div id="u888">
 
-        <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "green" *ngFor="let item of resultats2 ">
+        <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
         </app-bouton-resultat>
 
         <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
@@ -40,51 +40,51 @@
     <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante">
 
         <div id="u825" class="ax_default box_1">
-          <div id="u825_div" appHighlight></div>
+          <div id="u825_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u825_text" class="text ">
-            <p><span>Aide à la rédaction</span></p>
+            <p><span [routerLink]="['/boite_outils','Aide à la rédaction']">Aide à la rédaction</span></p>
           </div>
         </div>
 
         <div id="u826" class="ax_default box_1">
-          <div id="u826_div" appHighlight></div>
+          <div id="u826_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u826_text" class="text ">
-            <p><span>Conjugaison</span></p>
+            <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Conjugaison</span></p>
           </div>
         </div>
 
         <div id="u827" class="ax_default box_1">
           <div id="u827_div" appHighlight></div>
           <div id="u827_text" class="text ">
-            <p><span>Dictionnaires</span></p>
+            <p><span [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
           </div>
         </div>
 
         <div id="u828" class="ax_default box_1">
-          <div id="u828_div" appHighlight></div>
+          <div id="u828_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u828_text" class="text ">
             <p><span>Tests de français</span></p>
           </div>
         </div>
 
         <div id="u829" class="ax_default box_1">
-          <div id="u829_div" appHighlight></div>
+          <div id="u829_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u829_text" class="text ">
-            <p><span>Encyclopédies</span></p>
+            <p><span [routerLink]="['/boite_outils','Encyclopédies']">Encyclopédies</span></p>
           </div>
         </div>
 
         <div id="u830" class="ax_default box_1">
-          <div id="u830_div" appHighlight></div>
+          <div id="u830_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u830_text" class="text ">
-            <p><span>Médias francophones</span></p>
+            <p><span [routerLink]="['/boite_outils','culture et médias']">Médias francophones</span></p>
           </div>
         </div>
 
         <div id="u831" class="ax_default box_1">
-          <div id="u831_div" appHighlight></div>
+          <div id="u831_div" appHighlight [defaultColor]="highlightColor"></div>
           <div id="u831_text" class="text ">
-            <p><span>Société québécoise</span></p>
+            <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Société québécoise</span></p>
           </div>
         </div>
       </div>

@@ -30,6 +30,7 @@ export class BoutonResultatComponent implements AfterViewInit {
 
   @Input() color;
   @Input() item: string;
+  @Input() highlightColor: string;
 
   @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
