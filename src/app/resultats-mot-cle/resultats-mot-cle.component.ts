@@ -26,6 +26,7 @@ export class ResultatsMotCleComponent implements OnInit {
   motCle: string;
   resultats3: string[];
   imageSrc = '../../assets/images/u129.png';
+  resultats4: any[];
 
   constructor(private route: ActivatedRoute) { }
 
@@ -35,6 +36,7 @@ export class ResultatsMotCleComponent implements OnInit {
     this.trouverResultatsMotCle();
     this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
     this.resultats3 =  [...new Set(this.resultats.map(it => it.niveau))];
+    this.resultats4 =  [...new Set(this.resultats.map(it => it.competence))];
     console.log(this.resultats);
     }
 

@@ -8,10 +8,10 @@ import menuRecherche from '../../assets/menuRecherche.json';
 
 export interface Resultat {
   niveau: string;
-  competence_ressource: string;
+  competence: string;
   sur1: string;
   mots_cle: string;
-  nom_ressource: string;
+  nom: string;
   activite: string;
   langue: string;
   lien: string;
