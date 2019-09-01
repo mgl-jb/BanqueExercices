@@ -13,6 +13,10 @@ export class HighlightDirective {
     this.highlight(this.defaultColor);
   }
 
+  @HostListener('mouseover') onMouseOver() {
+    this.highlight(this.defaultColor);
+  }
+
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight(null);
   }

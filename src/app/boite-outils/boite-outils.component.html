@@ -2,7 +2,7 @@
     <div id="u541" class="ax_default paragraph">
       <div id="u541_div" class=""></div>
       <div id="u541_text" class="text ">
-        <p><a id="u542" class="link"><span style="color:#0BB601;">Accueil</span></a><span> &gt; </span><a id="u543"
+        <p><a id="u542" class="link"><span [routerLink]="['/home']" style="color:#0BB601;">Accueil</span></a><span> &gt; </span><a id="u543"
             class="link"><span style="color:#0BB601;">Boite à outils</span></a><span> &gt; Société québécoise</span></p>
       </div>
     </div>
@@ -40,51 +40,58 @@
     <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante">
 
         <div id="u825" class="ax_default box_1">
-          <div id="u825_div" appHighlight [defaultColor]="highlightColor"></div>
-          <div id="u825_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','Aide à la rédaction']">Aide à la rédaction</span></p>
+          <div id="u825_div" appHighlight [defaultColor]="highlightColor">
+          <div id="u825_text" class="text">
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u826" class="ax_default box_1">
-          <div id="u826_div" appHighlight [defaultColor]="highlightColor"></div>
+          <div id="u826_div" appHighlight [defaultColor]="highlightColor">
           <div id="u826_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Conjugaison</span></p>
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Tests de français']">Tests de français</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u827" class="ax_default box_1">
-          <div id="u827_div" appHighlight></div>
+          <div id="u827_div" appHighlight [defaultColor]="highlightColor">
           <div id="u827_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
+            <p><span [routerLink]="['/boite_outils','Culture et société québécoise']">Culture et société québécoise</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u828" class="ax_default box_1">
-          <div id="u828_div" appHighlight [defaultColor]="highlightColor"></div>
+          <div id="u828_div" appHighlight [defaultColor]="highlightColor">
           <div id="u828_text" class="text ">
-            <p><span>Tests de français</span></p>
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Fiches grammaticales']">Fiches grammaticales</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u829" class="ax_default box_1">
-          <div id="u829_div" appHighlight [defaultColor]="highlightColor"></div>
+          <div id="u829_div" appHighlight [defaultColor]="highlightColor">
           <div id="u829_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','Encyclopédies']">Encyclopédies</span></p>
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Sites d’apprentissage et cours en ligne']">Sites d’apprentissage et cours en ligne</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u830" class="ax_default box_1">
-          <div id="u830_div" appHighlight [defaultColor]="highlightColor"></div>
+          <div id="u830_div" appHighlight [defaultColor]="highlightColor">
           <div id="u830_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','culture et médias']">Médias francophones</span></p>
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Correcteurs et aide à la conjuguaison']">Correcteurs et aide à la conjuguaison</span></p>
           </div>
+        </div>
         </div>
 
         <div id="u831" class="ax_default box_1">
-          <div id="u831_div" appHighlight [defaultColor]="highlightColor"></div>
+          <div id="u831_div" appHighlight [defaultColor]="highlightColor">
           <div id="u831_text" class="text ">
-            <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Société québécoise</span></p>
+            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','Conseils linguistiques et modèles de communications']">Conseils linguistiques et modèles de communications</span></p>
           </div>
         </div>
+      </div>
       </div>
