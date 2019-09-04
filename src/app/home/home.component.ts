@@ -3,19 +3,17 @@ import { Router } from '@angular/router';
 import menuRecherche from '../../assets/menuRecherche.json';
 
 
-
-
-
 export interface Resultat {
   niveau: string;
   competence: string;
-  sur1: string;
-  mots_cle: string;
-  nom: string;
+  theme: string;
+  type: string;
+  sous_theme: string;
   activite: string;
-  langue: string;
+  phrase: string;
+  mot_cle: string;
   lien: string;
-  phrase_explicative: string;
+  langue: string;
 }
 
 @Component({

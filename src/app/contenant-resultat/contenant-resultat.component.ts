@@ -33,7 +33,7 @@ export class ContenantResultatComponent implements  AfterViewChecked {
   }
 
   filterTable(table: any[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.type_ressource === filter);
+    let table2 = table.filter(it => it.sous_theme === filter);
     return table2;
   }
 }

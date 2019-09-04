@@ -2,18 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/co
 import Fuse from 'fuse.js';
 import boiteOutils from '../../assets/boiteOutils.json';
 import { ActivatedRoute } from '@angular/router';
-
-export interface ResultatBoite {
-  niveau: string;
-  categorie_ressource: string;
-  type_ressource: string;
-  activite: string;
-  sous_type_2: string;
-  phrase_explicative: string;
-  mots_clés: string;
-  lien: string;
-  langue: string;
-}
+import { Resultat } from '../home/home.component.js';
 
 @Component({
   selector: 'app-boite-outils',
@@ -26,12 +15,12 @@ export interface ResultatBoite {
 })
 export class BoiteOutilsComponent implements OnInit {
 
-  boiteOutils: ResultatBoite[] = boiteOutils;
+  boiteOutils: Resultat[] = boiteOutils;
   @ViewChild('fleche', {static: false}) fleche: ElementRef;
   listeDeroulante = false;
   degree = 180;
   options: any;
-  resultats: ResultatBoite[];
+  resultats: Resultat[];
   resultats2: string[];
   outil: string;
   filtre: string;
@@ -48,7 +37,7 @@ export class BoiteOutilsComponent implements OnInit {
       this.outil = this.route.snapshot.paramMap.get('outil');
       this.trouverResultats();
       console.log(this.resultats);
-      this.resultats2 =  [...new Set(this.resultats.map(it => it.type_ressource))]; });
+      this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
   }
 
   deroulerListe(){
@@ -59,7 +48,7 @@ export class BoiteOutilsComponent implements OnInit {
   }
 
   trouverResultats(){
-    let fuse : any = new Fuse(this.boiteOutils, this.creerOptions('categorie_ressource'));
+    let fuse : any = new Fuse(this.boiteOutils, this.creerOptions('type'));
     this.resultats = fuse.search(this.outil);
     console.log(this.resultats);
   }

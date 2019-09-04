@@ -56,7 +56,7 @@ export class ResultatsRechercheComponent implements OnInit {
     let tab1 = fuse1.search(this.niveau);
     let fuse2 : any = new Fuse(tab1, this.creerOptions('competence'));
     let tab2 = fuse2.search(this.exercice);
-    let fuse3 : any = new Fuse(tab2, this.creerOptions('sur1'));
+    let fuse3 : any = new Fuse(tab2, this.creerOptions('theme'));
     this.resultats = fuse3.search(this.type);
   }
   creerOptions(...args: any[]) {
