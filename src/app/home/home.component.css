@@ -1433,6 +1433,7 @@ body {
   text-decoration:underline;
 }
 #u44 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:515px;
@@ -1496,6 +1497,7 @@ body {
   box-shadow:none;
 }
 #u46 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:686px;
@@ -1738,6 +1740,7 @@ body {
   box-shadow:none;
 }
 #u54 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:635px;
@@ -2077,6 +2080,7 @@ body {
   text-align:center;
 }
 #u66 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:348px;
@@ -2153,11 +2157,12 @@ body {
   color:#DF8600;
 }
 #u68 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:499px;
   top:703px;
-  width:272px;
+  width:140px;
   height:30px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
   font-weight:700;
@@ -2245,6 +2250,7 @@ body {
   text-align:center;
 }
 #u70 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:197px;
@@ -2342,6 +2348,7 @@ body {
   box-shadow:none;
 }
 #u72 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:816px;
@@ -2410,6 +2417,7 @@ body {
   box-shadow:none;
 }
 #u74 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:816px;
@@ -2479,6 +2487,7 @@ body {
   box-shadow:none;
 }
 #u76 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:816px;
@@ -2548,6 +2557,7 @@ body {
   box-shadow:none;
 }
 #u78 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:1005px;
@@ -2617,6 +2627,7 @@ body {
   box-shadow:none;
 }
 #u80 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:1005px;
@@ -2686,6 +2697,7 @@ body {
   box-shadow:none;
 }
 #u82 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:1005px;
@@ -2755,6 +2767,7 @@ body {
   box-shadow:none;
 }
 #u84 {
+  cursor: pointer;
   border-width:0px;
   position:absolute;
   left:818px;

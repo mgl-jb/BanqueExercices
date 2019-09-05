@@ -29,6 +29,7 @@
 }
 
 #u999 {
+  cursor: pointer;
   position:relative;
   display: inline-block;
   border-width:0px;
