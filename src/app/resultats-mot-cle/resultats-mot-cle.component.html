@@ -80,25 +80,19 @@
 
 
     <div id="u325" class="ax_default droplist" data-label="compétences">
-      <select id="u325_input" disabled>
-        <option value="Sélectionnez une compétence">Sélectionnez une compétence</option>
-        <option selected value="Grammaire">Grammaire</option>
-        <option value="Verbes">Verbes</option>
-        <option value="Oral">Oral</option>
-        <option value="Ecrit">Ecrit</option>
-        <option value="Vocabulaire">Vocabulaire</option>
+      <select id="u325_input"  (change)="filtrerParCompetence($event.target.value)">
+        <option *ngFor="let key of mapTableParCompetence(resultats)" [value]="key">{{key}}</option>
       </select>
     </div>
 
     <div id="u326" class="ax_default droplist" data-label="types">
-      <select id="u326_input">
-        <option value="Sélectionnez un type">Sélectionnez un type</option>
-        <option value="Les abjectifs">Les abjectifs</option>
-        <option value="Les pronoms">Les pronoms</option>
+      <select id="u326_input"  (change)="filtrerParType($event.target.value)">
+        <option *ngFor="let key of mapTableParType(resultats)" [value]="key">{{key}}</option>
       </select>
     </div>
 
-    <div *ngFor="let item1 of resultats3" id="u888"  >
+    <div *ngIf="filtredCompetence == false && filtredType == false">
+    <div *ngFor="let item1 of resultats3" id="u888">
         <div *ngIf="filtred == false || (item1 == filtreNiveau && filtred == true) ">
           <div id="u828">
               <div id="u828_text" class="text ">
@@ -110,3 +104,34 @@
             <br>
           </div>
     </div>
+  </div>
+
+  <div *ngIf="filtredType == true">
+    <div *ngFor="let item1 of resultats4" id="u888">
+        <div *ngIf="filtredType == false || (item1 == filtreType && filtredType == true) ">
+          <div id="u828">
+              <div id="u828_text" class="text ">
+                <p><span>{{item1}}</span></p>
+              </div>
+            </div>
+
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParType(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <br>
+          </div>
+    </div>
+  </div>
+
+  <div *ngIf="filtredCompetence == true">
+    <div *ngFor="let item1 of resultats5" id="u888">
+        <div *ngIf="filtredCompetence == false || (item1 == filtreCompetence && filtredCompetence == true) ">
+          <div id="u828">
+              <div id="u828_text" class="text ">
+                <p><span>{{item1}}</span></p>
+              </div>
+            </div>
+
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParCompetence(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <br>
+          </div>
+    </div>
+  </div>

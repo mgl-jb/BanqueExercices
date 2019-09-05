@@ -20,13 +20,18 @@ export class ResultatsMotCleComponent implements OnInit {
   options: any;
   clicked = false;
   filtred = false;
+  filtredType = false;
+  filtredCompetence = false;
   filtreNiveau: string;
+  filtreType: string;
+  filtreCompetence: string;
   resultats: Resultat[];
   resultats2: string[];
   motCle: string;
   resultats3: string[];
   imageSrc = '../../assets/images/u129.png';
   resultats4: any[];
+  resultats5: any[];
 
   constructor(private route: ActivatedRoute) { }
 
@@ -36,8 +41,8 @@ export class ResultatsMotCleComponent implements OnInit {
     this.trouverResultatsMotCle();
     this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
     this.resultats3 =  [...new Set(this.resultats.map(it => it.niveau))];
-    this.resultats4 =  [...new Set(this.resultats.map(it => it.competence))];
-    console.log(this.resultats);
+    this.resultats4 =  [...new Set(this.resultats.map(it => it.type))];
+    this.resultats5 =  [...new Set(this.resultats.map(it => it.competence))];
     }
 
   filterTableParActivite(table: Resultat[], filter: string) : Resultat[]{
@@ -50,6 +55,16 @@ export class ResultatsMotCleComponent implements OnInit {
     return table2;
   }
 
+  filterTableParType(table: Resultat[], filter: string) : Resultat[]{
+    let table2 = table.filter(it => it.type === filter);
+    return table2;
+  }
+
+  filterTableParCompetence(table: Resultat[], filter: string) : Resultat[]{
+    let table2 = table.filter(it => it.competence === filter);
+    return table2;
+  }
+
   mapTableParNiveau(table: Resultat[]){
     return  [...new Set(table.map(it => it.niveau))];
   }
@@ -58,10 +73,30 @@ export class ResultatsMotCleComponent implements OnInit {
     return  [...new Set(table.map(it => it.activite))];
   }
 
+  mapTableParType(table: Resultat[]){
+    return  [...new Set(table.map(it => it.type))];
+  }
+
+  mapTableParCompetence(table: Resultat[]){
+    return  [...new Set(table.map(it => it.competence))];
+  }
+
   filtrerParNiveau(niveau: string){
     console.log(niveau);
     this.filtreNiveau = niveau;
     this.filtred = true;
+  }
+
+  filtrerParType(niveau: string){
+    console.log(niveau);
+    this.filtreType = niveau;
+    this.filtredType = true;
+  }
+
+  filtrerParCompetence(niveau: string){
+    console.log(niveau);
+    this.filtreCompetence = niveau;
+    this.filtredCompetence = true;
   }
 
   trouverResultatsMotCle(){
