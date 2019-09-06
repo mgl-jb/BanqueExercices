@@ -45,8 +45,7 @@
   </div>
   <div id="u2" class="ax_default droplist">
     <select #t1 id="u1_input" (change)="configurer_u5_input($event.target.value)">
-      <option value="Tous niveaux">Tous niveaux</option>
-      <option selected value="débutant">débutant</option>
+      <option  value="débutant">débutant</option>
       <option value="intermédiaire">intermédiaire</option>
       <option value="avancé">avancé</option>
     </select>
@@ -162,21 +161,21 @@
   <div id="u66" class="ax_default label">
     <div id="u66_div" class=""></div>
     <div id="u66_text" class="text ">
-      <p><span>Français québécois</span></p>
+      <p><span [routerLink]="['/fr_sp', 'Fiches grammaticales']">Français québécois</span></p>
     </div>
   </div>
   <div id="u67" class="ax_default">
     <div id="u68" class="ax_default label">
       <div id="u68_div" class=""></div>
       <div id="u68_text" class="text ">
-        <p><span>Français spécialisé</span></p>
+        <p><span [routerLink]="['/fr_sp','Dictionnaires']">Français spécialisé</span></p>
       </div>
     </div>
   </div>
   <div id="u70" class="ax_default label">
     <div id="u70_div" class=""></div>
     <div id="u70_text" class="text ">
-      <p><span>Français général</span></p>
+      <p><span [routerLink]="['/fr_sp','Dictionnaires']">Français général</span></p>
     </div>
   </div>
 

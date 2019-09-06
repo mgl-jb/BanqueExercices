@@ -54,11 +54,7 @@
 
     <div id="u322" class="ax_default droplist" data-label="niveaux">
       <select id="u322_input" (change)="filtrerParNiveau($event.target.value)">
-        <option selected value="Sélectionnez un niveau" >Sélectionnez un niveau</option>
-        <option value="débutant">niveau débutant</option>
-        <option value="intermédiaire">niveau intermédiaire</option>
-        <option value="avancé">niveau avancé</option>
-
+        <option *ngFor="let key of mapTableParNiveau(resultats)" [value]="key">{{key}}</option>
       </select>
     </div>
 
@@ -87,7 +83,7 @@
 
     <div id="u326" class="ax_default droplist" data-label="types">
       <select id="u326_input"  (change)="filtrerParType($event.target.value)">
-        <option *ngFor="let key of mapTableParType(resultats)" [value]="key">{{key}}</option>
+        <option *ngFor="let key of mapTableParType(resultats)" [value]="key"  (click)="filtrerParType($event.target.value)">{{key}}</option>
       </select>
     </div>
 

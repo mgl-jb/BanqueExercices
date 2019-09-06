@@ -13,6 +13,7 @@ import { ContenantResultatComponent } from './contenant-resultat/contenant-resul
 import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
 import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
+import { FrancaisSpecialiseComponent } from './francais-specialise/francais-specialise.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
     ContenantResultatComponent,
     BoiteOutilsComponent,
     BoutonResultatComponent,
-    HighlightDirective
+    HighlightDirective,
+    FrancaisSpecialiseComponent
   ],
   imports: [
     FormsModule,
@@ -36,6 +38,7 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
       { path: 'boite_outils/:outil', component: BoiteOutilsComponent},
+      { path: 'fr_sp/:type', component: FrancaisSpecialiseComponent},
       { path: 'bouton', component: BoutonResultatComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
