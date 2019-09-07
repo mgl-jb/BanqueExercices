@@ -44,8 +44,8 @@
     </div>
   </div>
   <div id="u2" class="ax_default droplist">
-    <select #t1 id="u1_input" (change)="configurer_u5_input($event.target.value)">
-      <option  value="débutant">débutant</option>
+    <select #t1 [(ngModel)]="niveau" id="u1_input">
+      <option selected value="débutant">débutant</option>
       <option value="intermédiaire">intermédiaire</option>
       <option value="avancé">avancé</option>
     </select>
@@ -58,8 +58,15 @@
       </div>
     </div>
     <div id="u5" class="ax_default droplist">
-      <select #t2 id="u5_input" (change)="configurer_u7_input($event.target.value)">
-        <option *ngFor="let key of MenuKeys" [value]="key">{{key}}</option>
+      <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurer_u7_input($event.target.value)">
+        <option selected alue="l'ensemble des compétences">l'ensemble des compétences</option>
+        <option value="la grammaire et l'orthographe">la grammaire et l'orthographe</option>
+        <option value="la compréhension orale">la compréhension orale</option>
+        <option value="la compréhension écrite">la compréhension écrite</option>
+        <option value="la prononciation">la prononciation</option>
+        <option value="les dictées">les dictées</option>
+        <option value="le vocabulaire">le vocabulaire</option>
+        <option value="la construction des phrases">la construction des phrases</option>
       </select>
     </div>
     <div id="u6" class="ax_default">
@@ -72,8 +79,8 @@
       </div>
 
       <div id="u7" class="ax_default droplist">
-        <select #t3 id="u7_input" (change)=myClick2($event.target.value)>
-          <option *ngFor="let item of surArray" [value]="item">{{item}}</option>
+        <select #t3 [(ngModel)]="theme" id="u7_input">
+          <option *ngFor="let item of themeArray" [value]="item">{{item}}</option>
         </select>
       </div>
     </div>
@@ -92,7 +99,7 @@
   <div id="u46" class="ax_default primary_button">
     <div id="u46_div" class=""></div>
     <div id="u46_text" class="text ">
-      <p><span (click)="myClick3()">LANCER LA RECHERCHE</span></p>
+      <p><span (click)="afficherResultats()">LANCER LA RECHERCHE</span></p>
     </div>
   </div>
 

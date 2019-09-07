@@ -38,17 +38,16 @@ export class HomeComponent implements OnInit {
 
   motCle: string;
 
-  niveau: any;
+  niveau = 'débutant';
 
-  competence: any ;
+  competence = 'l\'ensemble des compétences' ;
 
-  sur: any ;
+  theme = '' ;
 
   competenceArray: any;
 
-  surArray: any;
+  themeArray: any;
 
-  MenuKeys: any;
 
   constructor(
     private router: Router,
@@ -57,23 +56,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-
-  configurer_u5_input(u2: any) {
-    this.MenuKeys = [];
-    this.surArray = [];
-    this.niveau = u2;
-    this.competenceArray = this.menuRecherche[this.niveau];
-    this.MenuKeys = Object.keys(this.competenceArray);
-    this.selectCompetence.nativeElement.selectedIndex = 0;
-    this.competence = this.MenuKeys[0];
-  }
-
   configurer_u7_input(u5: any) {
-    this.surArray = [];
+    this.themeArray = [];
     this.competence = u5;
-    this.surArray = this.menuRecherche[this.niveau][this.competence];
+    this.themeArray = this.menuRecherche[this.niveau][this.competence];
     this.selectSur.nativeElement.selectedIndex = 0;
-    this.sur = this.surArray[0];
+    this.theme = this.themeArray[0];
   }
 
   myClick() {
@@ -87,25 +75,19 @@ export class HomeComponent implements OnInit {
   }
 
   myClick2(u7: any) {
-    this.sur = u7;
+    this.theme = u7;
   }
 
-  myClick3() {
-    // let fuse1 : any = new Fuse(this.exercices, this.creerOptions('niveau'));
-    // let tab1 = fuse1.search(this.niveau);
-    // let fuse2 : any = new Fuse(tab1, this.creerOptions('competence'));
-    // let tab2 = fuse2.search(this.competence);
-    // let fuse3 : any = new Fuse(tab2, this.creerOptions('sur1'));
-    // this.resultats = fuse3.search(this.sur);
-    // let path = 'resultats/:niveau/:exercice/:type';
-    // let route = this.router.config.find(r => r.path === path);
-    // route.data = { resultats: this.resultats };
-    this.router.navigate(['/resultats', this.niveau, this.competence, this.sur]);
+  afficherResultats() {
+    this.router.navigate(['/resultats', this.niveau, this.competence, this.theme]);
   }
 
   resetSelelction() {
     this.selectNiveau.nativeElement.selectedIndex = 0;
-    this.MenuKeys = [];
-    this.surArray = [];
+    this.niveau = this.selectNiveau.nativeElement.options[0].value;
+    this.selectCompetence.nativeElement.selectedIndex = 0;
+    this.competence = this.selectCompetence.nativeElement.options[0].value;
+    this.theme = '';
+    this.themeArray = [];
   }
 }

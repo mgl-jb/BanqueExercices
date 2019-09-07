@@ -22,6 +22,7 @@ export class ResultatsMotCleComponent implements OnInit {
   filtred = false;
   filtredType = false;
   filtredCompetence = false;
+  filtre: string;
   filtreNiveau: string;
   filtreType: string;
   filtreCompetence: string;
