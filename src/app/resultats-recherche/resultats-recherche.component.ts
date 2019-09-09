@@ -41,7 +41,7 @@ export class ResultatsRechercheComponent implements OnInit {
     this.exercice = this.route.snapshot.paramMap.get('exercice');
     this.theme = this.route.snapshot.paramMap.get('type');
     this.trouverResultats();
-    this.resultats2 =  [...new Set(this.resultats.map(it => it.activite))];
+    this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))];
     }
 
   onNotify(message: any): void {
