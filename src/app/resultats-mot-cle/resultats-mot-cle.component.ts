@@ -94,12 +94,14 @@ export class ResultatsMotCleComponent implements OnInit {
     console.log(niveau);
     this.filtreType = niveau;
     this.filtredType = true;
+    this.filtredCompetence = false;
   }
 
   filtrerParCompetence(niveau: string){
     console.log(niveau);
     this.filtreCompetence = niveau;
     this.filtredCompetence = true;
+    this.filtredType = false;
   }
 
   trouverResultatsMotCle(){
