@@ -5,7 +5,7 @@
     <div id="u308" class="ax_default paragraph">
       <div id="u308_div" class=""></div>
       <div id="u308_text" class="text ">
-        <p><a id="u309" class="link"><span style="color:#016BB5;cursor: pointer;">Accueil</span></a><span> &gt; Résultat de la recherche par mot clés</span></p>
+        <p><a id="u309" class="link"><span  [routerLink]="['/home']" style="color:#016BB5;cursor: pointer;">Accueil</span></a><span> &gt; Résultat de la recherche par mot clés</span></p>
       </div>
     </div>
 
@@ -66,19 +66,17 @@
       </div>
     </div>
 
+    <div id="u325" class="ax_default droplist" data-label="compétences">
+        <select [(ngModel)]= "filtre" id="u325_input"  (change)="filtrerParCompetence($event.target.value)">
+          <option *ngFor="let key of mapTableParCompetence(resultats)" [value]="key">{{key}}</option>
+        </select>
+      </div>
 
     <div id="u324" class="ax_default label">
       <div id="u324_div" class=""></div>
       <div id="u324_text" class="text ">
         <p><span>Par types</span></p>
       </div>
-    </div>
-
-
-    <div id="u325" class="ax_default droplist" data-label="compétences">
-      <select [(ngModel)]= "filtre" id="u325_input"  (change)="filtrerParCompetence($event.target.value)">
-        <option *ngFor="let key of mapTableParCompetence(resultats)" [value]="key">{{key}}</option>
-      </select>
     </div>
 
     <div id="u326" class="ax_default droplist" data-label="types">
@@ -96,7 +94,7 @@
               </div>
             </div>
 
-            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParSousTheme(filterTableParNiveau(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
           </div>
     </div>
@@ -107,11 +105,11 @@
         <div *ngIf="filtredType == false || (item1 == filtreType && filtredType == true) ">
           <div id="u828">
               <div id="u828_text" class="text ">
-                <p><span>{{item1}}</span></p>
+                <p><span>Type: {{item1}}</span></p>
               </div>
             </div>
 
-            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParType(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParSousTheme(filterTableParType(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
           </div>
     </div>
@@ -122,11 +120,11 @@
         <div *ngIf="filtredCompetence == false || (item1 == filtreCompetence && filtredCompetence == true) ">
           <div id="u828">
               <div id="u828_text" class="text ">
-                <p><span>{{item1}}</span></p>
+                <p><span>Compétence: {{item1}}</span></p>
               </div>
             </div>
 
-            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParActivite(filterTableParCompetence(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
+            <app-contenant-resultat [clicked]= "clicked" [imageSrc]="imageSrc" *ngFor="let item of mapTableParSousTheme(filterTableParCompetence(resultats,item1));" [item]="item" [resultats]="resultats"></app-contenant-resultat>
             <br>
           </div>
     </div>

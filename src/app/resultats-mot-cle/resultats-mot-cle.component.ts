@@ -46,10 +46,6 @@ export class ResultatsMotCleComponent implements OnInit {
     this.resultats5 =  [...new Set(this.resultats.map(it => it.competence))];
     }
 
-  filterTableParActivite(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.activite === filter);
-    return table2;
-  }
 
   filterTableParNiveau(table: Resultat[], filter: string) : Resultat[]{
     let table2 = table.filter(it => it.niveau === filter);
@@ -66,12 +62,17 @@ export class ResultatsMotCleComponent implements OnInit {
     return table2;
   }
 
+  filterTableParSousTheme(table: Resultat[], filter: string) : Resultat[]{
+    let table2 = table.filter(it => it.sous_theme === filter);
+    return table2;
+  }
+
   mapTableParNiveau(table: Resultat[]){
     return  [...new Set(table.map(it => it.niveau))];
   }
 
-  mapTableParActivite(table: Resultat[]){
-    return  [...new Set(table.map(it => it.activite))];
+  mapTableParSousTheme(table: Resultat[]){
+    return  [...new Set(table.map(it => it.sous_theme))];
   }
 
   mapTableParType(table: Resultat[]){
@@ -113,7 +114,7 @@ export class ResultatsMotCleComponent implements OnInit {
     this.options = {
       tokenize: true,
       matchAllTokens: true,
-      threshold: 0,
+      threshold: 0.2,
       location: 0,
       distance: 0,
       keys: args
