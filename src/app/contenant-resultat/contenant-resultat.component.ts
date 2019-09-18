@@ -14,10 +14,12 @@ import { Resultat } from '../home/home.component';
 export class ContenantResultatComponent implements  AfterViewChecked {
 
   @Input() filtre: string;
+  @Input() niveau: string;
   @Input() item: string;
   @Input() imageSrc: string;
-  @Input() resultats: any[];
+  @Input() resultats: Resultat[];
   @Input() clicked: boolean;
+  @Input() toutesCompetences: boolean;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
@@ -32,8 +34,14 @@ export class ContenantResultatComponent implements  AfterViewChecked {
     }
   }
 
-  filterTable(table: any[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.sous_theme === filter);
+  filterTable(table: any[], filter: string): Resultat[] {
+    let table2: any;
+    if (this.toutesCompetences) {
+      const table3 = table.filter(it => it.competence === filter);
+      table2 =  [...new Set(table3.map(it => it.theme))];
+    } else {
+      table2 = table.filter(it => it.sous_theme === filter);
+    }
     return table2;
   }
 }

@@ -45,6 +45,7 @@
   <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color]='color' [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
   </app-bouton-resultat>
 
-  <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked" ></app-contenant-resultat>
+  <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" 
+   [item] ='item' [resultats]='resultats' [clicked]="clicked" [toutesCompetences]= "toutesCompetences" [niveau]="niveau" ></app-contenant-resultat>
 
 </div>

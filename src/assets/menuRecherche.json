@@ -1,6 +1,6 @@
 {
   "débutant": {
-    "l'ensemble des compétences": [""],
+    "toutes les compétences": [""],
     "la grammaire et l'orthographe": ["les adjectifs", "les adverbes", "les déterminants", "les noms", "la construction des phrases",
     								 "les prépositions", "les pronoms","les verbes","les temps"],
     "la compréhension orale": [""],
@@ -15,7 +15,7 @@
   },
 
   "intermédiaire": {
-   "l'ensemble des compétences": [""],
+   "toutes les compétences": [""],
     "la grammaire et l'orthographe": ["les adjectifs", "les adverbes", "les déterminants", "les noms", "la construction des phrases",
     								 "les prépositions", "les pronoms","les verbes","les temps"],
     "la compréhension orale": [""],
@@ -29,7 +29,7 @@
     "la construction des phrases": []
   },
   "avancé": {
-   "l'ensemble des compétences": [""],
+   "toutes les compétences": [""],
     "la grammaire et l'orthographe": ["les adjectifs", "les adverbes", "les déterminants", "les noms", "la construction des phrases",
     								 "les prépositions", "les pronoms","les verbes","les temps"],
     "la compréhension orale": [""],

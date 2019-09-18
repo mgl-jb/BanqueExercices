@@ -26,6 +26,7 @@ export class ResultatsRechercheComponent implements OnInit {
   theme: string;
   filtre: string;
   clicked = false;
+  toutesCompetences: boolean;
   resultats: Resultat[];
   resultats2: string[];
   options: any;
@@ -37,11 +38,13 @@ export class ResultatsRechercheComponent implements OnInit {
 
 
   ngOnInit() {
-    this.niveau = this.route.snapshot.paramMap.get('niveau');
-    this.exercice = this.route.snapshot.paramMap.get('exercice');
-    this.theme = this.route.snapshot.paramMap.get('type');
-    this.trouverResultats();
-    this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))];
+    this.route.params.subscribe(params => {
+      this.niveau = this.route.snapshot.paramMap.get('niveau');
+      this.exercice = this.route.snapshot.paramMap.get('exercice');
+      this.theme = this.route.snapshot.paramMap.get('type');
+      this.toutesCompetences = (this.exercice === 'toutes les compétences');
+      this.trouverResultats();
+    });
     }
 
   onNotify(message: any): void {
@@ -52,14 +55,16 @@ export class ResultatsRechercheComponent implements OnInit {
   }
   trouverResultats() {
     const fuse1: any = new Fuse(this.exercices, this.creerOptions('niveau'));
-    if ( this.exercice === 'l\'ensemble des compétences') {
+    if (this.toutesCompetences) {
       this.resultats = fuse1.search(this.niveau);
+      this.resultats2 =  [...new Set(this.resultats.map(it => it.competence))];
     } else {
     const tab1 = fuse1.search(this.niveau);
     const fuse2: any = new Fuse(tab1, this.creerOptions('competence'));
     const tab2 = fuse2.search(this.exercice);
     const fuse3: any = new Fuse(tab2, this.creerOptions('theme'));
     this.resultats = fuse3.search(this.theme);
+    this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))];
     }
 
   }
