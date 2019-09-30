@@ -10,7 +10,6 @@ export interface Resultat {
   type: string;
   sous_theme: string;
   activite: string;
-  phrase: string;
   mot_cle: string;
   lien: string;
   langue: string;
