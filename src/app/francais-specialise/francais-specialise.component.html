@@ -10,7 +10,7 @@
     <div id="u540" class="ax_default heading_3">
       <div id="u540_div" class=""></div>
       <div id="u540_text" class="text ">
-        <p><span>{{type}}</span></p>
+        <p><span>{{type | capitalizeFirstLetter}}</span></p>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
       <div id="u825" class="ax_default box_1">
         <div id="u825_div" appHighlight [defaultColor]="highlightColor">
         <div id="u825_text" class="text">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','Dictionnaires']">Dictionnaires</span></p>
+          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français général']">Français général</span></p>
         </div>
       </div>
       </div>
@@ -50,7 +50,7 @@
       <div id="u826" class="ax_default box_1">
         <div id="u826_div" appHighlight [defaultColor]="highlightColor">
         <div id="u826_text" class="text ">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','Tests de français']">Tests de français</span></p>
+          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']">Français québécois</span></p>
         </div>
       </div>
       </div>
@@ -58,7 +58,7 @@
       <div id="u827" class="ax_default box_1">
         <div id="u827_div" appHighlight [defaultColor]="highlightColor">
         <div id="u827_text" class="text ">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','Culture et société québécoise']">Culture et société québécoise</span></p>
+          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français spécialisé']">Français spécialisé</span></p>
         </div>
       </div>
       </div>

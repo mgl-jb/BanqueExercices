@@ -57,7 +57,7 @@ export class ResultatsRechercheComponent implements OnInit {
     const fuse1: any = new Fuse(this.exercices, this.creerOptions('niveau'));
     if (this.toutesCompetences) {
       this.resultats = fuse1.search(this.niveau);
-      this.resultats2 =  [...new Set(this.resultats.map(it => it.competence))];
+      this.resultats2 =  [...new Set(this.resultats.map(it => it.competence).filter(i => i !== ''))];
     } else {
     const tab1 = fuse1.search(this.niveau);
     const fuse2: any = new Fuse(tab1, this.creerOptions('competence'));

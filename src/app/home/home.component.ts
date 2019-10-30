@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 
   niveau = 'débutant';
 
-  competence = 'l\'ensemble des compétences' ;
+  competence = 'toutes les compétences' ;
 
   theme = '' ;
 

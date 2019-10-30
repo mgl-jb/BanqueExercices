@@ -59,7 +59,7 @@
     </div>
     <div id="u5" class="ax_default droplist">
       <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurer_u7_input($event.target.value)">
-        <option selected alue="toutes les compétences">toutes les compétences</option>
+        <option selected value="toutes les compétences">toutes les compétences</option>
         <option value="la grammaire et l'orthographe">la grammaire et l'orthographe</option>
         <option value="la compréhension orale">la compréhension orale</option>
         <option value="la compréhension écrite">la compréhension écrite</option>
@@ -165,26 +165,27 @@
   <div id="u65" class="ax_default icon">
     <img id="u65_img" class="img " src="../../assets/images/u65.png" />
   </div>
+  <div id="u70" class="ax_default label">
+    <div id="u70_div" class=""></div>
+    <div id="u70_text" class="text ">
+      <p><span [routerLink]="['/fr_sp','français général']">français général</span></p>
+    </div>
+  </div>
   <div id="u66" class="ax_default label">
     <div id="u66_div" class=""></div>
     <div id="u66_text" class="text ">
-      <p><span [routerLink]="['/fr_sp', 'Fiches grammaticales']">Français québécois</span></p>
+      <p><span [routerLink]="['/fr_sp', 'français québécois']">français québécois</span></p>
     </div>
   </div>
   <div id="u67" class="ax_default">
     <div id="u68" class="ax_default label">
       <div id="u68_div" class=""></div>
       <div id="u68_text" class="text ">
-        <p><span [routerLink]="['/fr_sp','Dictionnaires']">Français spécialisé</span></p>
+        <p><span [routerLink]="['/fr_sp','français spécialisé']">français spécialisé</span></p>
       </div>
     </div>
   </div>
-  <div id="u70" class="ax_default label">
-    <div id="u70_div" class=""></div>
-    <div id="u70_text" class="text ">
-      <p><span [routerLink]="['/fr_sp','Dictionnaires']">Français général</span></p>
-    </div>
-  </div>
+
 
 
 
@@ -223,7 +224,7 @@
   <div id="u74" class="ax_default label">
     <div id="u74_div" class=""></div>
     <div id="u74_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Tests de français']">Tests de français</span></p>
+      <p><span [routerLink]="['/boite_outils','test de français']">Tests de français</span></p>
     </div>
   </div>
   <div id="u75" class="ax_default icon" [routerLink]="['/boite_outils','Tests de français']">
@@ -232,7 +233,7 @@
   <div id="u76" class="ax_default label">
     <div id="u76_div" class=""></div>
     <div id="u76_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Culture et société québécoise']">Culture et société québécoise</span></p>
+      <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Culture et société québécoise</span></p>
     </div>
   </div>
   <div id="u77" class="ax_default icon">
@@ -241,7 +242,7 @@
   <div id="u78" class="ax_default label">
     <div id="u78_div" class=""></div>
     <div id="u78_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Fiches grammaticales']">Fiches grammaticales</span></p>
+      <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
     </div>
   </div>
   <div id="u79" class="ax_default icon">
@@ -250,7 +251,7 @@
   <div id="u80" class="ax_default label">
     <div id="u80_div" class=""></div>
     <div id="u80_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Sites d’apprentissage et cours en ligne']">Sites d’apprentissage et cours
+      <p><span [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">Sites d’apprentissage et cours
           en ligne</span></p>
     </div>
   </div>
@@ -260,7 +261,7 @@
   <div id="u82" class="ax_default label">
     <div id="u82_div" class=""></div>
     <div id="u82_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Correcteurs et aide à la conjuguaison']">Correcteurs et aide à la
+      <p><span [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">Correcteurs et aide à la
           conjuguaison</span></p>
     </div>
   </div>
@@ -270,8 +271,7 @@
   <div id="u84" class="ax_default label">
     <div id="u84_div" class=""></div>
     <div id="u84_text" class="text ">
-      <p><span [routerLink]="['/boite_outils','Conseils linguistiques et modèles de communications']">Conseils
-          linguistiques et modèles de communications</span></p>
+      <p><span [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">Conseils linguistiques et modèles de communication</span></p>
     </div>
   </div>
   <div id="u85" class="ax_default icon">

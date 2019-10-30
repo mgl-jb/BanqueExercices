@@ -14,6 +14,7 @@ import { BoiteOutilsComponent } from './boite-outils/boite-outils.component';
 import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { FrancaisSpecialiseComponent } from './francais-specialise/francais-specialise.component';
+import { CapitalizeFirstLetterPipe } from './shared/pipes/capitalizefirstletter.pipe';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FrancaisSpecialiseComponent } from './francais-specialise/francais-spec
     BoiteOutilsComponent,
     BoutonResultatComponent,
     HighlightDirective,
+    CapitalizeFirstLetterPipe,
     FrancaisSpecialiseComponent
   ],
   imports: [

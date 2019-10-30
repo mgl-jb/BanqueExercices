@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import Fuse from 'fuse.js';
-import boiteOutils from '../../assets/boiteOutils.json';
+import exercices from '../../assets/exercices.json';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component.js';
 
@@ -15,7 +15,7 @@ import { Resultat } from '../home/home.component.js';
 })
 export class BoiteOutilsComponent implements OnInit {
 
-  boiteOutils: Resultat[] = boiteOutils;
+  exercices: Resultat[] = exercices;
   @ViewChild('fleche', {static: false}) fleche: ElementRef;
   listeDeroulante = false;
   degree = 180;
@@ -40,15 +40,15 @@ export class BoiteOutilsComponent implements OnInit {
       this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
   }
 
-  deroulerListe(){
+  deroulerListe() {
     this.listeDeroulante = !this.listeDeroulante;
-    let rotate = `rotate(${this.degree}deg)`;
+    const rotate = `rotate(${this.degree}deg)`;
     this.renderer.setStyle(this.fleche.nativeElement, 'transform', rotate);
     this.degree = 180 - this.degree;
   }
 
-  trouverResultats(){
-    let fuse : any = new Fuse(this.boiteOutils, this.creerOptions('type'));
+  trouverResultats() {
+    const fuse: any = new Fuse(this.exercices, this.creerOptions('type'));
     this.resultats = fuse.search(this.outil);
     console.log(this.resultats);
   }
