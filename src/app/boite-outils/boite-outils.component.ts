@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import Fuse from 'fuse.js';
-import exercices from '../../assets/exercices.json';
+import exercices from 'assets/exercices.json';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component.js';
 
@@ -28,7 +28,7 @@ export class BoiteOutilsComponent implements OnInit {
   filtred = false;
   pageColor = '#0BB601';
   highlightColor = '#D9FCD9';
-  imageSrc = '../../assets/images/u73.png';
+  imageSrc = 'assets/images/u73.png';
 
   constructor( private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
 

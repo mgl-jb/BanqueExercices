@@ -2,7 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component';
 import Fuse from 'fuse.js';
-import exercices from '../../assets/exercices.json';
+import exercices from 'assets/exercices.json';
 
 
 @Component({
@@ -30,7 +30,7 @@ export class ResultatsMotCleComponent implements OnInit {
   resultats2: string[];
   motCle: string;
   resultats3: string[];
-  imageSrc = '../../assets/images/u129.png';
+  imageSrc = 'assets/images/u129.png';
   resultats4: any[];
   resultats5: any[];
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import menuRecherche from '../../assets/menuRecherche.json';
+import menuRecherche from 'assets/menuRecherche.json';
 
 
 export interface Resultat {

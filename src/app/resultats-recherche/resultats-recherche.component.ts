@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import Fuse from 'fuse.js';
 import {Resultat} from '../home/home.component';
-import exercices from '../../assets/exercices.json';
+import exercices from 'assets/exercices.json';
 
 
 @Component({
@@ -32,7 +32,7 @@ export class ResultatsRechercheComponent implements OnInit {
   options: any;
   color = '#016BB5';
   highlightColor = '#e4f1fa';
-  imageSrc = '../../assets/images/u129.png';
+  imageSrc = 'assets/images/u129.png';
 
   constructor(private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
 
