@@ -47,43 +47,43 @@ export class ResultatsMotCleComponent implements OnInit {
     }
 
 
-  filterTableParNiveau(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.niveau === filter);
+  filterTableParNiveau(table: Resultat[], filter: string): Resultat[] {
+    const table2 = table.filter(it => it.niveau === filter);
     return table2;
   }
 
-  filterTableParType(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.type === filter);
+  filterTableParType(table: Resultat[], filter: string): Resultat[] {
+    const table2 = table.filter(it => it.type === filter);
     return table2;
   }
 
-  filterTableParCompetence(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.competence === filter);
+  filterTableParCompetence(table: Resultat[], filter: string): Resultat[] {
+    const table2 = table.filter(it => it.competence === filter);
     return table2;
   }
 
-  filterTableParSousTheme(table: Resultat[], filter: string) : Resultat[]{
-    let table2 = table.filter(it => it.sous_theme === filter);
+  filterTableParSousTheme(table: Resultat[], filter: string): Resultat[] {
+    const table2 = table.filter(it => it.sous_theme === filter);
     return table2;
   }
 
-  mapTableParNiveau(table: Resultat[]){
+  mapTableParNiveau(table: Resultat[]) {
     return  [...new Set(table.map(it => it.niveau))];
   }
 
-  mapTableParSousTheme(table: Resultat[]){
+  mapTableParSousTheme(table: Resultat[]) {
     return  [...new Set(table.map(it => it.sous_theme))];
   }
 
-  mapTableParType(table: Resultat[]){
+  mapTableParType(table: Resultat[]) {
     return  [...new Set(table.map(it => it.type))];
   }
 
-  mapTableParCompetence(table: Resultat[]){
+  mapTableParCompetence(table: Resultat[]) {
     return  [...new Set(table.map(it => it.competence))];
   }
 
-  filtrerParNiveau(niveau: string){
+  filtrerParNiveau(niveau: string) {
     console.log(niveau);
     this.filtreNiveau = niveau;
     this.filtred = true;
@@ -91,22 +91,22 @@ export class ResultatsMotCleComponent implements OnInit {
     this.filtredCompetence = false;
   }
 
-  filtrerParType(niveau: string){
+  filtrerParType(niveau: string) {
     console.log(niveau);
     this.filtreType = niveau;
     this.filtredType = true;
     this.filtredCompetence = false;
   }
 
-  filtrerParCompetence(niveau: string){
+  filtrerParCompetence(niveau: string) {
     console.log(niveau);
     this.filtreCompetence = niveau;
     this.filtredCompetence = true;
     this.filtredType = false;
   }
 
-  trouverResultatsMotCle(){
-    let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
+  trouverResultatsMotCle() {
+    const fuse: any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
     this.resultats = fuse.search(this.motCle);
   }
 
