@@ -119,7 +119,14 @@
   top:266px;
   width: 1030px;
 }
-
+#u6666_img {
+  border-width:0px;
+  position:relative;
+  left:0px;
+  top:0px;
+  width:12px;
+  height:12px;
+}
 a span{
   position:absolute;
   color:rgb(255, 255, 255);
