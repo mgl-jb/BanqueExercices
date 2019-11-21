@@ -61,8 +61,8 @@ export class ResultatsRechercheComponent implements OnInit {
     } else {
     const tab1 = fuse1.search(this.niveau);
     const fuse2: any = new Fuse(tab1, this.creerOptions('competence'));
-    this.resultats = fuse2.search(this.exercice).filter(it => it.type === 'Exercice');;
-    if( this.theme !== ''){
+    this.resultats = fuse2.search(this.exercice).filter(it => it.type === 'Exercice');
+    if ( this.theme !== '') {
       const fuse3: any = new Fuse(this.resultats, this.creerOptions('theme'));
       this.resultats = fuse3.search(this.theme);
     }
