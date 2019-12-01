@@ -2,10 +2,7 @@
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+
 
 trigger:
 - master
