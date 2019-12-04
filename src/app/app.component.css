@@ -31,7 +31,7 @@ body {
   left:0px;
   top:0px;
   width:1339px;
-  height:70px;
+  height:80px;
   background:inherit;
   background-color:rgba(242, 242, 242, 1);
   border:none;
@@ -46,7 +46,7 @@ body {
   left:0px;
   top:0px;
   width:1339px;
-  height:70px;
+  height:80px;
 }
 #u93_text {
   border-width:0px;
@@ -80,7 +80,7 @@ body {
   border-width:0px;
   position:absolute;
   left:342px;
-  top:23px;
+  top:28px;
   width:529px;
   height:24px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
@@ -102,7 +102,7 @@ body {
   left:0px;
   top:0px;
   width:2px;
-  height:30px;
+  height:50px;
   background:inherit;
   background-color:rgba(1, 107, 181, 1);
   border:none;
@@ -117,7 +117,7 @@ body {
   left:320px;
   top:20px;
   width:2px;
-  height:30px;
+  height:50px;
 }
 #u95_text {
   border-width:0px;
@@ -133,16 +133,16 @@ body {
   position:absolute;
   left:0px;
   top:0px;
-  width:139px;
-  height:70px;
+  width:170px;
+  height:85px;
 }
 #u96 {
   border-width:0px;
   position:absolute;
-  left:169px;
+  left:140px;
   top:0px;
-  width:139px;
-  height:70px;
+  width:170px;
+  height:85px;
 }
 #u96_text {
   border-width:0px;
