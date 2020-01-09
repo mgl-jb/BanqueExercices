@@ -1,44 +1,88 @@
-<div id="base" class="">
+<div id="home">
 
-  <div id="u71" class="ax_default paragraph">
-    <div id="u71_div" class=""></div>
-    <div id="u71_text" class="text ">
-      <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Cette banque s'adresse aux
-        </span><span
-          style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">personnes qui
-          apprennent le français.</span>
-        <span> Vous y trouverez de nombreuses activités et outils de référence de sources variées.</span>
-        <p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p>
-        <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Pour accéder aux contenus,
-            plusieurs choix s'offrent à vous : </span></p>
-        <ul>
-          <li>
-            <span style="font-family:'Calibri';font-weight:400;">recherche par niveau et par compétence;</span>
-          </li>
-          <li>
-            <span style="font-family:'Calibri';font-weight:400;">recherche par mot clé;</span>
-          </li>
-          <li>
-            <span style="font-family:'Calibri';font-weight:400;">recherche par variété de français.</span>
-          </li>
-        </ul>
+  <div id="about">
 
-        <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Bon travail et bon
-            apprentissage!</span></p>
-    </div>
+
+    <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Cette banque s'adresse aux
+      </span><span
+        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">personnes qui
+        apprennent le français.</span>
+      <span> Vous y trouverez de nombreuses activités et outils de référence de sources variées.</span>
+      <p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p>
+      <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Pour accéder aux contenus,
+          plusieurs choix s'offrent à vous : </span></p>
+      <ul>
+        <li>
+          <span style="font-family:'Calibri';font-weight:400;">recherche par niveau et par compétence;</span>
+        </li>
+        <li>
+          <span style="font-family:'Calibri';font-weight:400;">recherche par mot clé;</span>
+        </li>
+        <li>
+          <span style="font-family:'Calibri';font-weight:400;">recherche par variété de français.</span>
+        </li>
+      </ul>
+
+      <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Bon travail et bon
+          apprentissage!</span></p>
+
   </div>
 
-  <div id="u1" class="ax_default box_1">
-    <div id="u1_div" class=""></div>
-  </div>
-  <div id="u49" class="ax_default heading_3">
-    <div id="u49_div" class=""></div>
-    <div id="u49_text" class="text ">
+
+  <div id="menus">
+
+
+
+    <div id="label_rech_exer">
       <p><span>Rechercher une activité</span></p>
     </div>
-  </div>
-  <div id="u47" class="ax_default label">
-    <div id="u47_div" class=""></div>
+
+    <div id=liste_menus>
+      <div id=niveau>
+        <p><span>Je suis </span>
+          <select #t1 [(ngModel)]="niveau" id="u1_input">
+            <option selected value="débutant">débutant</option>
+            <option value="intermédiaire">intermédiaire</option>
+            <option value="avancé">avancé</option>
+          </select>
+        </p>
+      </div>
+
+      <div id=competence>
+        <p><span>je veux travailler </span>
+          <select #t2 [(ngModel)]="competence" (change)="configurer_u7_input($event.target.value)">
+            <option selected value="toutes les compétences">toutes les compétences</option>
+            <option value="la grammaire et l'orthographe">la grammaire et l'orthographe</option>
+            <option value="la compréhension orale">la compréhension orale</option>
+            <option value="la compréhension écrite">la compréhension écrite</option>
+            <option value="la prononciation">la prononciation</option>
+            <option value="les dictées">les dictées</option>
+            <option value="le vocabulaire">le vocabulaire</option>
+            <option value="la construction des phrases">la construction des phrases</option>
+          </select>
+        </p>
+      </div>
+      <div id=theme>
+        <p><span>sur </span>
+          <select #t3 [(ngModel)]="theme">
+            <option *ngFor="let item of themeArray" [value]="item">{{item}}</option>
+          </select>
+        </p>
+      </div>
+
+    </div> -->
+    <div id=lancer_reinit_rech>
+      <div id=lancer_rech>
+
+      </div>
+      <div id=reinit_rech>
+
+      </div>
+
+    </div>
+
+    <!-- <div id="u47" class="ax_default label">
+    <div id="u47_div" ></div>
     <div id="u47_text" class="text ">
       <p><span>Je suis</span></p>
     </div>
@@ -52,7 +96,7 @@
   </div>
   <div id="u3" class="ax_default">
     <div id="u4" class="ax_default label">
-      <div id="u4_div" class=""></div>
+      <div id="u4_div" ></div>
       <div id="u4_text" class="text ">
         <p><span>je veux travailler</span></p>
       </div>
@@ -72,7 +116,7 @@
     <div id="u6" class="ax_default">
 
       <div id="u8" class="ax_default label">
-        <div id="u8_div" class=""></div>
+        <div id="u8_div" ></div>
         <div id="u8_text" class="text ">
           <p><span>sur</span></p>
         </div>
@@ -87,7 +131,7 @@
   </div>
   <div id="u43" class="ax_default" data-left="498" data-top="418" data-width="157" data-height="17">
     <div id="u44" class="ax_default label">
-      <div id="u44_div" class=""></div>
+      <div id="u44_div" ></div>
       <div id="u44_text" class="text ">
         <p><span style="text-decoration:underline;" (click)="resetSelelction()">Réinitialiser la recherche</span></p>
       </div>
@@ -97,58 +141,57 @@
     </div>
   </div>
   <div id="u46" class="ax_default primary_button">
-    <div id="u46_div" class=""></div>
+    <div id="u46_div" ></div>
     <div id="u46_text" class="text ">
       <p><span (click)="afficherResultats()">LANCER LA RECHERCHE</span></p>
     </div>
+  </div> -->
   </div>
+
+  <div id="nested">
+    <div id="nested2">
+      <div id="search">
+
+
+        <div>
+          <p><span>Rechercher par mot clé</span></p>
+        </div>
+
+        <!-- <div id="u86" class="ax_default ellipse">
+          <img id="u86_img" class="img " src="assets/images/u86.png" />
+        </div>
+        <div id="u87" class="ax_default ellipse">
+          <img id="u87_img" class="img " src="assets/images/u87.png" />
+        </div>
+        <div id="u51" class="ax_default" data-left="198" data-top="575" data-width="508" data-height="32">
+          <div id="u52" class="ax_default text_field">
+            <input [(ngModel)]="motCle" id="u52_input" type="text" value="" />
+          </div>
+        </div>
+        <div id="u54" class="ax_default primary_button">
+          <div id="u54_div"></div>
+          <div id="u54_text" class="text ">
+            <p><span (click)="myClick()">RECHERCHER</span></p>
+          </div>
+        </div>
+        <div id="u55" class="ax_default" data-left="158" data-top="513" data-width="39" data-height="39">
+          <div id="u56" class="ax_default ellipse">
+            <img id="u56_img" class="img " src="assets/images/u56.png" />
+          </div>
+          <div id="u57" class="ax_default icon">
+            <img id="u57_img" class="img " src="assets/images/u57.png" />
+          </div>
+        </div> -->
+      </div>
 
 
 
+      <div id="specialise"></div>
+      <!-- <div id="u58" class="ax_default box_1">
 
-  <div id="u48" class="ax_default box_1">
-    <div id="u48_div" class=""></div>
-  </div>
-  <div id="u50" class="ax_default heading_3">
-    <div id="u50_div" class=""></div>
-    <div id="u50_text" class="text ">
-      <p><span>Rechercher par mot clé</span></p>
-    </div>
-  </div>
-  <div id="u86" class="ax_default ellipse">
-    <img id="u86_img" class="img " src="assets/images/u86.png" />
-  </div>
-  <div id="u87" class="ax_default ellipse">
-    <img id="u87_img" class="img " src="assets/images/u87.png" />
-  </div>
-  <div id="u51" class="ax_default" data-left="198" data-top="575" data-width="508" data-height="32">
-    <div id="u52" class="ax_default text_field">
-      <input [(ngModel)]="motCle" id="u52_input" type="text" value="" />
-    </div>
-  </div>
-  <div id="u54" class="ax_default primary_button">
-    <div id="u54_div" class=""></div>
-    <div id="u54_text" class="text ">
-      <p><span (click)="myClick()">RECHERCHER</span></p>
-    </div>
-  </div>
-  <div id="u55" class="ax_default" data-left="158" data-top="513" data-width="39" data-height="39">
-    <div id="u56" class="ax_default ellipse">
-      <img id="u56_img" class="img " src="assets/images/u56.png" />
-    </div>
-    <div id="u57" class="ax_default icon">
-      <img id="u57_img" class="img " src="assets/images/u57.png" />
-    </div>
-  </div>
-
-
-
-
-  <div id="u58" class="ax_default box_1">
-    <div id="u58_div" class=""></div>
   </div>
   <div id="u59" class="ax_default heading_3">
-    <div id="u59_div" class=""></div>
+    <div id="u59_div" ></div>
     <div id="u59_text" class="text ">
       <p><span>Ressources par variété de français</span></p>
     </div>
@@ -166,35 +209,28 @@
     <img id="u65_img" class="img " src="assets/images/u65.png" />
   </div>
   <div id="u70" class="ax_default label">
-    <div id="u70_div" class=""></div>
+    <div id="u70_div" ></div>
     <div id="u70_text" class="text ">
       <p><span [routerLink]="['/fr_sp','français spécialisé']">français spécialisé</span></p>
     </div>
   </div>
   <div id="u66" class="ax_default label">
-    <div id="u66_div" class=""></div>
+    <div id="u66_div" ></div>
     <div id="u66_text" class="text ">
       <p><span [routerLink]="['/fr_sp', 'français québécois']">français québécois</span></p>
     </div>
-  </div>
-  <!-- <div id="u67" class="ax_default">
-    <div id="u68" class="ax_default label">
-      <div id="u68_div" class=""></div>
-      <div id="u68_text" class="text ">
-        <p><span [routerLink]="['/fr_sp','français spécialisé']">français spécialisé</span></p>
-      </div>
-    </div>
   </div> -->
 
+    </div>
+    <div id="toolbox"></div>
 
 
 
+    <!--   <div id="u61" class="ax_default box_1">
 
-  <div id="u61" class="ax_default box_1">
-    <div id="u61_div" class=""></div>
   </div>
   <div id="u62" class="ax_default heading_3">
-    <div id="u62_div" class=""></div>
+    <div id="u62_div" ></div>
     <div id="u62_text" class="text ">
       <p><span>Boite à outils</span></p>
     </div>
@@ -213,7 +249,7 @@
     <img id="u64_img" class="img " src="assets/images/u64.png" />
   </div>
   <div id="u72" class="ax_default label">
-    <div id="u72_div" class=""></div>
+    <div id="u72_div" ></div>
     <div id="u72_text" class="text ">
       <p><span [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
     </div>
@@ -222,7 +258,7 @@
     <img id="u73_img" class="img " src="assets/images/lib_livre_A_green.png" />
   </div>
   <div id="u74" class="ax_default label">
-    <div id="u74_div" class=""></div>
+    <div id="u74_div" ></div>
     <div id="u74_text" class="text ">
       <p><span [routerLink]="['/boite_outils','test de français']">Tests de français</span></p>
     </div>
@@ -231,7 +267,7 @@
     <img id="u75_img" class="img " src="assets/images/lib_exerc_green.png" />
   </div>
   <div id="u76" class="ax_default label">
-    <div id="u76_div" class=""></div>
+    <div id="u76_div" ></div>
     <div id="u76_text" class="text ">
       <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Culture et société québécoise</span></p>
     </div>
@@ -240,7 +276,7 @@
     <img id="u77_img" class="img " src="assets/images/lib_quebec_green.png" />
   </div>
   <div id="u78" class="ax_default label">
-    <div id="u78_div" class=""></div>
+    <div id="u78_div" ></div>
     <div id="u78_text" class="text ">
       <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
     </div>
@@ -249,7 +285,7 @@
     <img id="u79_img" class="img " src="assets/images/lib_cahier_green.png" />
   </div>
   <div id="u80" class="ax_default label">
-    <div id="u80_div" class=""></div>
+    <div id="u80_div" ></div>
     <div id="u80_text" class="text ">
       <p><span [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">Sites d’apprentissage et cours
           en ligne</span></p>
@@ -259,7 +295,7 @@
     <img id="u81_img" class="img " src="assets/images/lib_www_green.png" />
   </div>
   <div id="u82" class="ax_default label">
-    <div id="u82_div" class=""></div>
+    <div id="u82_div" ></div>
     <div id="u82_text" class="text ">
       <p><span [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">Correcteurs et aide à la
           conjuguaison</span></p>
@@ -269,26 +305,26 @@
     <img id="u83_img" class="img " src="assets/images/lib_crayon_green.png" />
   </div>
   <div id="u84" class="ax_default label">
-    <div id="u84_div" class=""></div>
+    <div id="u84_div" ></div>
     <div id="u84_text" class="text ">
       <p><span [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">Conseils linguistiques et modèles de communication</span></p>
     </div>
   </div>
   <div id="u85" class="ax_default icon">
     <img id="u85_img" class="img " src="assets/images/lib_Atlas_green.png" />
+  </div> -->
+
   </div>
-
-
-  <div id="u0" class="ax_default line">
+  <!--   <div id="u0" class="ax_default line">
     <img id="u0_img" class="img " src="assets/images/u0.png" />
-  </div>
+  </div> -->
 
 
 
 
-  <div id="u98" class="ax_default" data-left="0" data-top="0" data-width="1023" data-height="190">
+  <!-- <div id="u98" class="ax_default" data-left="0" data-top="0" data-width="1023" data-height="190">
     <div id="u99" class="ax_default box_1">
-      <div id="u99_div" class=""></div>
+      <div id="u99_div" ></div>
       <div id="u99_text" class="text ">
 
         <p style="font-size:18px;"><span
@@ -311,12 +347,12 @@
     </div>
 
     <div id="u102" class="ax_default box_1">
-      <div id="u102_div" class=""></div>
+      <div id="u102_div" ></div>
     </div>
   </div>
 
   <div id="u104" class="ax_default box_3">
-    <div id="u104_div" class=""></div>
+    <div id="u104_div" ></div>
     <div id="u104_text" class="text ">
       <p><span>Le ministère de l'Immigration, de la Francisation et de l'Intégration a sélectionné des ressources qui
           proviennent de différents sites web du Québec, du Canada, de la France et d'ailleurs. Le Ministère n'exerce
@@ -325,6 +361,6 @@
           conditions d'utilisation, à la licence d'utilisation et à la politique de confidentialité du site qu'elle
           consulte.</span></p>
     </div>
-  </div>
+  </div> -->
 
 </div>
