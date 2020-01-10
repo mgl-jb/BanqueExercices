@@ -1,42 +1,28 @@
 <div id="home">
 
   <div id="about">
-
-
-    <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Cette banque s'adresse aux
-      </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;color:#016BB5;">personnes qui
-        apprennent le français.</span>
-      <span> Vous y trouverez de nombreuses activités et outils de référence de sources variées.</span>
-      <p style="text-align:center;"><span style="font-family:'Calibri';font-weight:400;"><br></span></p>
-      <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Pour accéder aux contenus,
-          plusieurs choix s'offrent à vous : </span></p>
-      <ul>
-        <li>
-          <span style="font-family:'Calibri';font-weight:400;">recherche par niveau et par compétence;</span>
-        </li>
-        <li>
-          <span style="font-family:'Calibri';font-weight:400;">recherche par mot clé;</span>
-        </li>
-        <li>
-          <span style="font-family:'Calibri';font-weight:400;">recherche par variété de français.</span>
-        </li>
-      </ul>
-
-      <p style="text-align:left;"><span style="font-family:'Calibri';font-weight:400;">Bon travail et bon
-          apprentissage!</span></p>
-
+    <p>
+      Cette banque s'adresse aux <span style="font-weight:700;color:#016BB5;">personnes qui apprennent le
+        français.</span>
+      Vous y trouverez de nombreuses activités et outils de référence de sources variées.
+      <br><br>
+    </p>
+    <p>
+      Pour accéder aux contenus, plusieurs choix s'offrent à vous :
+    </p>
+    <ul>
+      <li>recherche par niveau et par compétence;</li>
+      <li>recherche par mot clé;</li>
+      <li>recherche par variété de français.</li>
+    </ul>
+    <p>Bon travail et bon apprentissage!</p>
   </div>
 
 
   <div id="menus">
-
-
-
-    <div id="label_rech_exer">
+    <div id="label">
       <p><span>Rechercher une activité</span></p>
     </div>
-
     <div id=liste_menus>
       <div id=niveau>
         <p><span>Je suis </span>
@@ -70,13 +56,27 @@
         </p>
       </div>
 
-    </div> -->
+    </div>
     <div id=lancer_reinit_rech>
-      <div id=lancer_rech>
+      <div id=reinit_rech>
+        <div>
+          <img src="assets/images/u45.png" />
+        </div>
+        <div>
+          <div>
+            <p><span style="text-decoration:underline;" (click)="resetSelelction()">Réinitialiser la recherche</span>
+            </p>
+          </div>
+        </div>
 
       </div>
-      <div id=reinit_rech>
 
+      <div id=lancer_rech>
+        <div id="bouton">
+
+          <p><span (click)="afficherResultats()">RECHERCHER</span></p>
+
+        </div>
       </div>
 
     </div>
@@ -151,13 +151,18 @@
   <div id="nested">
     <div id="nested2">
       <div id="search">
-
-
-        <div>
+        <div id="label">
           <p><span>Rechercher par mot clé</span></p>
         </div>
+        <div id="input_rech">
+          <input [(ngModel)]="motCle" id="input" type="text" value="" />
+          <div id="bouton">
+            <p><span (click)="myClick()">RECHERCHER</span></p>
+          </div>
+        </div>
+      </div>
 
-        <!-- <div id="u86" class="ax_default ellipse">
+      <!-- <div id="u86" class="ax_default ellipse">
           <img id="u86_img" class="img " src="assets/images/u86.png" />
         </div>
         <div id="u87" class="ax_default ellipse">
@@ -182,11 +187,25 @@
             <img id="u57_img" class="img " src="assets/images/u57.png" />
           </div>
         </div> -->
+
+
+
+
+      <div id="specialise">
+        <div id="label">
+          <p><span>Ressources par variété de français</span></p>
+        </div>
+        <div id="boutons">
+          <div id="bout_typ_fr">
+            <p><span [routerLink]="['/fr_sp','français spécialisé']">français spécialisé</span></p>
+          </div>
+          <div id="bout_typ_fr">
+            <p><span [routerLink]="['/fr_sp', 'français québécois']">français québécois</span></p>
+          </div>
+        </div>
       </div>
 
 
-
-      <div id="specialise"></div>
       <!-- <div id="u58" class="ax_default box_1">
 
   </div>
@@ -222,11 +241,75 @@
   </div> -->
 
     </div>
-    <div id="toolbox"></div>
+    <div id="toolbox">
+      <div id="tool">
+        <div >
+          <img id="icone_img" class="img " src="assets/images/lib_livre_A_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
+        </div>
+      </div>
+      <div id="tool" [routerLink]="['/boite_outils','Tests de français']">
+        <div  >
+          <img id="icone_img" class="img " src="assets/images/lib_exerc_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','test de français']">Tests de français</span></p>
+        </div>
+      </div>
+      <div id="tool">
+        <div>
+          <img id="icone_img" class="img " src="assets/images/lib_quebec_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Culture et société québécoise</span>
+          </p>
+        </div>
+      </div>
 
+      <div id="tool">
+        <div>
+          <img id="icone_img" class="img " src="assets/images/lib_cahier_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
+        </div>
+      </div>
+      <div id="tool">
+        <div >
+          <img id="icone_img" class="img " src="assets/images/lib_www_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">Sites d’apprentissage et
+              cours en ligne</span></p>
+        </div>
+      </div>
+      <div id="tool">
+        <div >
+          <img id="icone_img" class="img " src="assets/images/lib_crayon_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">Correcteurs et aide à la
+              conjuguaison</span></p>
+        </div>
+      </div>
+      <div id="tool">
+        <div >
+          <img id="icone_img" class="img " src="assets/images/lib_Atlas_green.png" />
+        </div>
+        <div id="label2">
+          <p><span [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">Conseils
+              linguistiques et modèles de communication</span></p>
+        </div>
+      </div>
+    </div>
 
+  </div>
 
-    <!--   <div id="u61" class="ax_default box_1">
+</div>
+
+<!--   <div id="u61" class="ax_default box_1">
 
   </div>
   <div id="u62" class="ax_default heading_3">
@@ -314,15 +397,15 @@
     <img id="u85_img" class="img " src="assets/images/lib_Atlas_green.png" />
   </div> -->
 
-  </div>
-  <!--   <div id="u0" class="ax_default line">
+
+<!--   <div id="u0" class="ax_default line">
     <img id="u0_img" class="img " src="assets/images/u0.png" />
   </div> -->
 
 
 
 
-  <!-- <div id="u98" class="ax_default" data-left="0" data-top="0" data-width="1023" data-height="190">
+<!-- <div id="u98" class="ax_default" data-left="0" data-top="0" data-width="1023" data-height="190">
     <div id="u99" class="ax_default box_1">
       <div id="u99_div" ></div>
       <div id="u99_text" class="text ">
@@ -362,5 +445,3 @@
           consulte.</span></p>
     </div>
   </div> -->
-
-</div>

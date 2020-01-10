@@ -1,21 +1,21 @@
 #home {
   display: grid;
   grid-auto-rows: minmax(7em, auto);
-  grid-gap: 1em;
+  grid-gap: 2em;
+  font-family: "Calibri Bold", "Calibri Regular", "Calibri";
 }
 #about {
-  margin: auto;
+  margin-top: 2em;
+  align-content: center;
   grid-auto-rows: minmax(7em, auto);
   border-width: 0px;
-  background-color: rgba(255, 255, 255, 0);
+  background: inherit;
+  background-color: rgba(255, 255, 255, 1);
   border: none;
   border-radius: 10px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-family: "Calibri";
-  font-style: normal;
-  font-size: 14px;
+  -moz-box-shadow: 0px 0px 30px rgba(121, 121, 121, 0.517647058823529);
+  -webkit-box-shadow: 0px 0px 30px rgba(121, 121, 121, 0.517647058823529);
+  box-shadow: 0px 0px 30px rgba(121, 121, 121, 0.517647058823529);
 }
 #menus {
   grid-auto-rows: minmax(7em, auto);
@@ -28,10 +28,54 @@
   -webkit-box-shadow: 0px 0px 30px rgba(121, 121, 121, 0.517647058823529);
   box-shadow: 0px 0px 30px rgba(121, 121, 121, 0.517647058823529);
 }
-
+#label {
+  font-weight: 700;
+}
+#label2 {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-align: left;
+}
 #lancer_reinit_rech {
 }
+#bouton {
+  cursor: pointer;
+  background: inherit;
+  background-color: rgba(1, 107, 181, 1);
+  border: none;
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  color: #fff;
+  width: 90px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+#input_rech {
+  display: grid;
+  grid-auto-rows: minmax(1em, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+#input {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-decoration: none;
+  color: #000000;
+  text-align: left;
+  border-color: transparent;
+  outline-style: none;
+  height: 30px;
+}
 #nested {
   grid-template-columns: 1fr 1fr;
   display: grid;
@@ -44,8 +88,9 @@
   grid-gap: 1em;
 }
 #search {
+  display:grid;
   border-width: 0px;
-  grid-auto-rows: minmax(7em, auto);
+  grid-auto-rows: minmax(1em, auto);
   background: inherit;
   background-color: rgba(1, 107, 181, 0.0980392156862745);
   border: none;
@@ -55,23 +100,75 @@
   box-shadow: none;
 }
 #specialise {
+  display: grid;
   border-width: 0;
-  grid-auto-rows: minmax(7em, auto);
+  grid-auto-rows: minmax(1em, auto);
   background: inherit;
   background-color: rgba(223, 134, 0, 0.0980392156862745);
   border: none;
   border-radius: 10px;
   box-shadow: none;
 }
-
+#boutons {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(1em, auto);
+  grid-template-columns: repeat(auto-fill, 10em);
+}
+#bout_typ_fr {
+  cursor: pointer;
+  border-width: 0px;
+  font-family: "Calibri Bold", "Calibri Regular", "Calibri";
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 14px;
+  color: #df8600;
+  text-align: center;
+  background: inherit;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 207, 136, 1);
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 130px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #toolbox {
+  display: grid;
   border-width: 0;
-  grid-auto-rows: minmax(14em, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(1em, auto);
+  grid-gap: 0.5em;
   background: inherit;
   background-color: rgba(11, 182, 1, 0.0980392156862745);
   border: none;
   border-radius: 10px;
   box-shadow: none;
+}
+#tool {
+  display: inline-flex;
+  border-width: 0;
+  grid-auto-rows: minmax(1em, auto);
+  background: inherit;
+  background-color: rgba(11, 182, 1, 0.0980392156862745);
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+#icone_img {
+  border-width: 0px;
+  left: 0px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
 }
 #u0_img {
   border-width: 0px;
@@ -1538,12 +1635,9 @@
   word-wrap: break-word;
 }
 #u46_div {
-  border-width: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 155px;
-  height: 30px;
+
+
+
   background: inherit;
   background-color: rgba(1, 107, 181, 1);
   border: none;
@@ -1554,31 +1648,22 @@
 }
 #u46 {
   cursor: pointer;
-  border-width: 0px;
-  position: absolute;
-  left: 686px;
-  top: 412px;
-  width: 155px;
-  height: 30px;
-}
-#u46_div.mouseOver {
-  border-width: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 155px;
-  height: 30px;
   background: inherit;
-  background-color: rgba(1, 83, 137, 1);
+  background-color: rgba(1, 107, 181, 1);
   border: none;
   border-radius: 5px;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  color: #fff;
 }
+
 #u46_text {
   border-width: 0px;
-  position: absolute;
   left: 2px;
   top: 8px;
   width: 151px;
@@ -1723,7 +1808,6 @@
 }
 #u51 {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
@@ -1731,14 +1815,12 @@
 }
 #u52 {
   border-width: 0px;
-  position: absolute;
   left: 198px;
   top: 575px;
   width: 430px;
   height: 32px;
 }
 #u52_input {
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 430px;
@@ -1780,7 +1862,6 @@
 }
 #u54_div {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 85px;
@@ -1804,7 +1885,7 @@
 }
 #u54_text {
   border-width: 0px;
-  position: absolute;
+
   left: 2px;
   top: 8px;
   width: 82px;
@@ -2112,9 +2193,6 @@
 }
 #u66_div {
   border-width: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
   width: 131px;
   height: 30px;
   background: inherit;
@@ -2136,20 +2214,26 @@
 #u66 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
-  left: 348px;
-  top: 703px;
-  width: 131px;
-  height: 30px;
   font-family: "Calibri Bold", "Calibri Regular", "Calibri";
   font-weight: 700;
   font-style: normal;
+  line-height: normal;
   color: #df8600;
   text-align: center;
+  background: inherit;
+  background-color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 207, 136, 1);
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: auto;
 }
 #u66_div.mouseOver {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 131px;
@@ -2172,7 +2256,6 @@
 }
 #u66_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 6px;
   width: 131px;
@@ -2278,7 +2361,6 @@
 }
 #u70_div {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 131px;
@@ -2302,7 +2384,6 @@
 #u70 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
   left: 197px;
   top: 703px;
   width: 131px;
@@ -2315,7 +2396,7 @@
 }
 #u70_div.mouseOver {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 131px;
@@ -2338,7 +2419,7 @@
 }
 #u70_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 6px;
   width: 131px;
@@ -2361,7 +2442,7 @@
 }
 #u72_div {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2376,14 +2457,14 @@
 #u72 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
+
   left: 816px;
   top: 590px;
   height: 17px;
 }
 #u72_div.mouseOver {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2397,13 +2478,13 @@
 }
 #u72_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
 }
 #u73_img {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 25px;
@@ -2411,7 +2492,7 @@
 }
 #u73 {
   border-width: 0px;
-  position: absolute;
+
   left: 788px;
   top: 587px;
   width: 25px;
@@ -2419,7 +2500,7 @@
 }
 #u73_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2428,7 +2509,7 @@
 }
 #u74_div {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2443,14 +2524,14 @@
 #u74 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
+
   left: 816px;
   top: 630px;
   height: 17px;
 }
 #u74_div.mouseOver {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2464,14 +2545,14 @@
 }
 #u74_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   white-space: nowrap;
 }
 #u75_img {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 25px;
@@ -2479,7 +2560,6 @@
 }
 #u75 {
   border-width: 0px;
-  position: absolute;
   left: 788px;
   top: 627px;
   width: 25px;
@@ -2487,7 +2567,6 @@
 }
 #u75_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2496,7 +2575,6 @@
 }
 #u76_div {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2511,7 +2589,6 @@
 #u76 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
   left: 816px;
   top: 660px;
   height: 17px;
@@ -2519,7 +2596,6 @@
 }
 #u76_div.mouseOver {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2533,13 +2609,11 @@
 }
 #u76_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
 }
 #u77_img {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 27px;
@@ -2547,7 +2621,6 @@
 }
 #u77 {
   border-width: 0px;
-  position: absolute;
   left: 788px;
   top: 665px;
   width: 27px;
@@ -2555,7 +2628,6 @@
 }
 #u77_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2564,7 +2636,6 @@
 }
 #u78_div {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2579,14 +2650,12 @@
 #u78 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
   left: 1005px;
   top: 590px;
   height: 17px;
 }
 #u78_div.mouseOver {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2600,14 +2669,12 @@
 }
 #u78_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   white-space: nowrap;
 }
 #u79_img {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 30px;
@@ -2615,7 +2682,6 @@
 }
 #u79 {
   border-width: 0px;
-  position: absolute;
   left: 973px;
   top: 585px;
   width: 10px;
@@ -2623,7 +2689,6 @@
 }
 #u79_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2632,7 +2697,6 @@
 }
 #u80_div {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2647,7 +2711,6 @@
 #u80 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
   left: 1005px;
   top: 625px;
   height: 17px;
@@ -2655,7 +2718,6 @@
 }
 #u80_div.mouseOver {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2669,13 +2731,11 @@
 }
 #u80_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
 }
 #u81_img {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 27px;
@@ -2683,7 +2743,6 @@
 }
 #u81 {
   border-width: 0px;
-  position: absolute;
   left: 975px;
   top: 627px;
   width: 27px;
@@ -2691,7 +2750,6 @@
 }
 #u81_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2700,7 +2758,7 @@
 }
 #u82_div {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2715,7 +2773,7 @@
 #u82 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
+
   left: 1005px;
   top: 667px;
   width: 115px;
@@ -2723,7 +2781,7 @@
 }
 #u82_div.mouseOver {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2737,13 +2795,13 @@
 }
 #u82_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
 }
 #u83_img {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 27px;
@@ -2751,7 +2809,7 @@
 }
 #u83 {
   border-width: 0px;
-  position: absolute;
+
   left: 977px;
   top: 670px;
   width: 27px;
@@ -2759,7 +2817,7 @@
 }
 #u83_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 0px;
@@ -2768,7 +2826,7 @@
 }
 #u84_div {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2783,7 +2841,7 @@
 #u84 {
   cursor: pointer;
   border-width: 0px;
-  position: absolute;
+
   left: 818px;
   top: 710px;
   height: 17px;
@@ -2791,7 +2849,7 @@
 }
 #u84_div.mouseOver {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   height: 17px;
@@ -2805,13 +2863,13 @@
 }
 #u84_text {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
 }
 #u85_img {
   border-width: 0px;
-  position: absolute;
+
   left: 0px;
   top: 0px;
   width: 30px;
@@ -2819,7 +2877,7 @@
 }
 #u85 {
   border-width: 0px;
-  position: absolute;
+
   left: 788px;
   top: 713px;
   width: 30px;
@@ -2827,7 +2885,6 @@
 }
 #u85_text {
   border-width: 0px;
-  position: absolute;
   left: 0px;
   top: 0px;
   width: 0px;
