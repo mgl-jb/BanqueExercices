@@ -1,40 +1,34 @@
 {
   "débutant": {
-    "toutes les compétences": [],
-    "la grammaire et l'orthographe": [ "la construction des phrases", "les adjectifs", "les adverbes", "les déterminants", "les noms",
-    								 "les prépositions", "les pronoms","les verbes"],
-    "la compréhension orale": ["les dictées", "les autres activités"],
-    "la compréhension écrite": [],
-    "la prononciation": ["les sons", "les voyelles", "les consonnes", "les virelangues", "les liaisons","l'alphabet","les particularités du français québécois"],
-    "les dictées": [""],
-    "le vocabulaire": ["la famille", "la maison et la constuction", "la météo et les saisons", "la santé et le corps", "la ville et les transports", "le monde du travail",
-       "l'école", "les aliments et la cuisine", "les animaux et la nature", "les couleurs, les nombres et les objets", "les heures, les jours et les mois",
-       "les loisirs et le sport", "les thématiques variées", "les vêtements"],
-    "la production écrite": ["les dictées"]
+    "toutes les compétences": [""],
+    "Compréhension écrite": ["Cinéma", "Consommation et services", "Relations sociales"],
+    "Compréhension orale": ["Consommation et services", "Dictées", "Relations sociales"],
+    "Grammaire et orthographe": [ "Adjectifs", "Construction des phrases", "Déterminants", "Prépositions", "Pronoms","Verbes"],
+    "Production écrite": [""],
+    "Prononciation": ["Alphabet","Consonnes", "Consonnes et voyelles", "Liaisons", "Particularités du français québécois", "Virelangues", "Voyelles"],
+    "Vocabulaire": ["Aliments et cuisine", "Animaux et nature", "Consommation et services", "Couleurs, nombres et objets", "École", "Heures,  jours et mois",
+    "Loisirs et sport", "Maison et constructions", "Météo et saisons", "Monde du travail", "Santé et corps", "Thèmes variés", "Vie familiale", "Ville et transports"]
+
   },
 
   "intermédiaire": {
-   "toutes les compétences": [""],
-    "la grammaire et l'orthographe": ["la construction des phrases", "les adjectifs", "les adverbes", "les déterminants", "les prépositions", "les pronoms", "les verbes"],
-    "la compréhension orale": ["les dictées", "les autres activités"],
-    "la compréhension écrite": [""],
-    "la prononciation": ["les sons"],
-    "les dictées": [""],
-    "le vocabulaire": ["la famille", "la maison et la constuction", "la météo et les saisons", "la santé et le corps", "la ville et les transports", "le monde du travail",
-      "l'école", "les aliments et la cuisine", "les animaux et la nature", "les couleurs, les nombres et les objets", "les heures, les jours et les mois",
-      "les loisirs et le sport", "les thématiques variées", "les vêtements"],
-    "la production écrite": ["les dictées"]
+    "toutes les compétences": [""],
+    "Compréhension écrite": ["Actualité", "Relations sociales"],
+    "Compréhension orale": ["Cinéma", "Consommation et services", "Dictées", "En emploi", "Habitation", "Littérature", "Musique", "Publicité", "Relations sociales"],
+    "Grammaire et orthographe": [ "Adjectifs","Adverbes", "Construction des phrases", "Déterminants", "Noms", "Prépositions", "Pronoms","Verbes"],
+    "Production écrite": [""],
+    "Prononciation": ["Genre", "Superlatif"],
+    "Vocabulaire": ["Aliments et cuisine", "Animaux et nature", "Consommation et services", "Couleurs, nombres et objets", "École", "Heures,  jours et mois",
+    "Loisirs et sport", "Maison et constructions", "Météo et saisons", "Monde du travail", "Santé et corps", "Thèmes variés", "Vie familiale", "Ville et transports"]
   },
   "avancé": {
-   "toutes les compétences": [""],
-    "la grammaire et l'orthographe": ["la concordance des temps", "la construction des phrases", "les déterminants", "les dictées", "les pronoms", "les verbes"],
-    "la compréhension orale": ["les dictées", "les autres activités"],
-    "la compréhension écrite": [""],
-    "la prononciation": ["les sons", "les voyelles", "les consonnes", "les virelangues", "les liaisons","l'alphabet" ],
-    "les dictées": [""],
-    "le vocabulaire": ["la famille", "la maison et la constuction", "la météo et les saisons", "la santé et le corps", "la ville et les transports", "le monde du travail",
-      "l'école", "les aliments et la cuisine", "les animaux et la nature", "les couleurs, les nombres et les objets", "les heures, les jours et les mois",
-      "les loisirs et le sport", "les thématiques variées", "les vêtements"],
-      "la production écrite": ["les dictées"]
+    "toutes les compétences": [""],
+    "Compréhension écrite": ["Littérature"],
+    "Compréhension orale": ["Actualité", "Consommation et services", "Dictées", "En emploi", "Littérature", "Relations sociales"],
+    "Grammaire et orthographe": ["Construction des phrases", "Déterminants", "Pronoms","Verbes"],
+    "Production écrite": ["Dictées"],
+    "Prononciation": [""],
+    "Vocabulaire": ["Aliments et cuisine", "Animaux et nature", "Consommation et services", "Couleurs, nombres et objets", "École", "Heures,  jours et mois",
+    "Loisirs et sport", "Maison et constructions", "Météo et saisons", "Monde du travail", "Santé et corps", "Thèmes variés", "Vie familiale", "Ville et transports"]
   }
 }
