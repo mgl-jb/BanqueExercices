@@ -1,34 +1,20 @@
+<div id="boite">
 
-    <div id="u541" class="ax_default paragraph">
-      <div id="u541_div" class=""></div>
-      <div id="u541_text" class="text ">
-        <p><a id="u542" class="link"><span [routerLink]="['/home']" style="color:#0BB601; cursor: pointer;">Accueil</span></a><span> &gt; </span><a id="u543"
-            class="link"><span style="color:#0BB601;">Boite à outils</span></a><span> &gt; Société québécoise</span></p>
+      <div id="arbo">
+        <p><a  class="link"><span [routerLink]="['/home']" >Accueil</span></a><span> &gt; </span><a
+            class="link"><span >Boite à outils</span></a><span> &gt; {{outil}}</span></p>
       </div>
-    </div>
 
-    <div id="u540" class="ax_default heading_3">
-      <div id="u540_div" class=""></div>
-      <div id="u540_text" class="text ">
-        <p><span>{{outil | capitalizeFirstLetter}}</span></p>
-      </div>
-    </div>
-
-    <div id="u557"  class="ax_default icon" data-label="angle">
+    <div id="outil" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
       <img id="u557_img" #fleche class="img " src="assets/images/angle_u518.png" />
+      <p>{{outil | capitalizeFirstLetter}}</p>
     </div>
 
-    <div id="u558" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
+    <div id="label_filtrer">
+        <p>Filtrer par catégorie</p>
     </div>
 
-    <div id="u582" class="ax_default heading_3">
-      <div id="u582_div" class=""></div>
-      <div id="u582_text" class="text ">
-        <p><span>Filtrer par catégorie</span></p>
-      </div>
-    </div>
-
-    <div id="u888">
+    <div >
 
         <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
         </app-bouton-resultat>
@@ -95,3 +81,4 @@
         </div>
       </div>
       </div>
+  </div>

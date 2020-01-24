@@ -1,31 +1,21 @@
-<div id="u115" class="ax_default heading_3">
-  <div id="u115_div" class=""></div>
-  <div id="u115_text" class="text ">
-    <p><span>Exercices trouvés pour votre recherche :</span></p>
-  </div>
-</div>
+<div id="boite">
 
-
-<div id="u116" class="ax_default paragraph">
-  <div id="u116_div" class=""></div>
-  <div id="u116_text" class="text ">
+  <div id="arbo">
     <p><a id="u117" class="link"><span [routerLink]="['/home']" style="color:#016BB5;cursor: pointer;">Accueil</span></a><span> &gt; Résultat de la recherche
         personnalisée</span></p>
   </div>
+
+<div id="u115" class="ax_default heading_3">
+
+    <p><span>Exercices trouvés pour votre recherche :</span></p>
+
 </div>
 
-<div id="u118" class="ax_default heading_3">
-  <div id="u118_div" class=""></div>
-  <div id="u118_text" class="text ">
-    <p><span style="font-family:'Calibri';font-weight:400;">Je suis </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{niveau}}</span><span
-        style="font-family:'Calibri';font-weight:400;">, je veux travailler </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{exercice}}</span><span
-        *ngIf="theme"  style="font-family:'Calibri';font-weight:400;"> sur </span><span
-        style="font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';font-weight:700;">{{theme}}</span></p>
-  </div>
+<div>
+    <p>Je suis <span style="font-weight:700;">{{niveau}}</span>, je veux travailler <span style="font-weight:700;">{{exercice}}</span>
+      <span *ngIf="theme"  style="font-weight:400;"> sur </span><span style="font-weight:700;">{{theme}}</span></p>
 </div>
-<div id="u241" class="ax_default line">
+<div >
   <img id="u241_img" class="img " src="assets/images/u241.png">
 </div>
 <div id="u119" class="ax_default label" data-label="btn_nouvelle_recherche">
@@ -34,13 +24,12 @@
     <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
   </div>
 </div>
-<div id="u242" class="ax_default heading_3">
-  <div id="u242_div" class=""></div>
-  <div id="u242_text" class="text ">
-    <p><span>Filtrer les résultats de recherche</span></p>
-  </div>
+<div id="label_filtrer">
+  <p>Filtrer les résultats de recherche</p>
 </div>
-<div id="u888">
+
+
+<div>
 
   <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color]='color' [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
   </app-bouton-resultat>
@@ -48,4 +37,5 @@
   <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2"
    [item] ='item' [resultats]='resultats' [clicked]="clicked" [toutesCompetences]= "toutesCompetences" [niveau]="niveau" ></app-contenant-resultat>
 
+</div>
 </div>

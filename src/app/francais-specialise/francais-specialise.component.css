@@ -1,201 +1,29 @@
-#u540_div {
+#boite {
+  display: grid;
+  grid-auto-rows: minmax(2em, auto);
+  grid-gap: 2em;
+  font-family: "Calibri Bold", "Calibri Regular", "Calibri";
+}
+.link {
+  color:#FF9D4B;
+  cursor: pointer;
+}
+#outil {
+  display: flex;
   border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:161px;
-  height:24px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
   font-weight:700;
   font-style:normal;
   font-size:20px;
   color:#FF9D4B;
 }
-#u540 {
-  border-width:0px;
-  position:absolute;
-  left:175px;
-  top:127px;
-  height:24px;
-  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
+#label_filtrer {
   font-weight:700;
-  font-style:normal;
-  font-size:20px;
-  color:#FF9D4B;
 }
-#u540_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  white-space:nowrap;
-}
-#u541_div {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:264px;
-  height:14px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  border:none;
-  border-radius:10px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  font-size:12px;
-}
-#u541 {
-  border-width:0px;
-  position:absolute;
-  left:158px;
-  top:93px;
-  height:14px;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  font-size:12px;
-}
-#u541_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  white-space:nowrap;
-}
-
 #u557_img {
   border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
   width:9px;
   height:5px;
-}
-#u557 {
-  border-width:0px;
-  position:absolute;
-  left:158px;
-  top:139px;
-  width:9px;
-  height:5px;
-}
-#u557_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:0px;
-  visibility:hidden;
-  word-wrap:break-word;
-}
-#u558 {
-  border-width:0px;
-  position:absolute;
-  left:158px;
-  top:117px;
-  width:250px;
-  height:37px;
-  overflow:hidden;
-}
-
-#u582_div {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:137px;
-  height:19px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
-  font-weight:700;
-  font-style:normal;
-  font-size:16px;
-}
-#u582 {
-  border-width:0px;
-  position:absolute;
-  left:158px;
-  top:167px;
-  width:137px;
-  height:19px;
-  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
-  font-weight:700;
-  font-style:normal;
-  font-size:16px;
-}
-#u582_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:137px;
-  white-space:nowrap;
-}
-
-#u588_div {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:69px;
-  height:19px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  border:none;
-  border-radius:0px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
-  font-weight:700;
-  font-style:normal;
-  font-size:16px;
-  color:#FF9D4B;
-}
-#u588 {
-  border-width:0px;
-  position:absolute;
-  left:158px;
-  top:250px;
-  width:69px;
-  height:19px;
-  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
-  font-weight:700;
-  font-style:normal;
-  font-size:16px;
-  color:#FF9D4B;
-}
-#u588_text {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:69px;
-  white-space:nowrap;
-}
-#u888 {
-  position: relative;
-  left: 159px;
-  top: 210px;
-  width: 1030px;
 }
 #u824 {
   border-width:0px;

@@ -1,34 +1,21 @@
-
-    <div id="u541" class="ax_default paragraph">
-      <div id="u541_div" class=""></div>
-      <div id="u541_text" class="text ">
-        <p><a id="u542" class="link"><span [routerLink]="['/home']" style="color:#FF9D4B; cursor: pointer;">Accueil</span></a><span> &gt; </span>
+<div id="boite">
+      <div >
+        <p><a  class="link"><span [routerLink]="['/home']" style="color:#FF9D4B; cursor: pointer;">Accueil</span></a><span> &gt; </span>
           <span> {{type}}</span></p>
       </div>
-    </div>
 
-    <div id="u540" class="ax_default heading_3">
-      <div id="u540_div" class=""></div>
-      <div id="u540_text" class="text ">
-        <p><span>{{type | capitalizeFirstLetter}}</span></p>
+      <div id="outil" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
+        <img id="u557_img" #fleche class="img " src="assets/images/u61.png" />
+        <p>{{type | capitalizeFirstLetter}}</p>
       </div>
+
+      <div id="label_filtrer">
+        <p>Filtrer par catégorie</p>
     </div>
 
-    <div id="u557"  class="ax_default icon" data-label="angle">
-      <img id="u557_img" #fleche class="img " src="assets/images/u61.png" />
-    </div>
 
-    <div id="u558" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
-    </div>
 
-    <div id="u582" class="ax_default heading_3">
-      <div id="u582_div" class=""></div>
-      <div id="u582_text" class="text ">
-        <p><span>Filtrer par catégorie</span></p>
-      </div>
-    </div>
-
-    <div id="u888">
+    <div >
 
         <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
         </app-bouton-resultat>
@@ -42,7 +29,7 @@
       <div id="u825" class="ax_default box_1">
         <div id="u825_div" appHighlight [defaultColor]="highlightColor">
         <div id="u825_text" class="text">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français général']">Français général</span></p>
+          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']">Français québécois</span></p>
         </div>
       </div>
       </div>
@@ -63,4 +50,4 @@
       </div>
       </div>
       </div>
-
+</div>
