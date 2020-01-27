@@ -7,7 +7,7 @@
       Vous y trouverez de nombreuses activités et outils de référence de sources variées.
       <br><br>
     </p>
-    <p>
+ <!--    <p>
       Pour accéder aux contenus, plusieurs choix s'offrent à vous :
     </p>
     <ul>
@@ -15,7 +15,7 @@
       <li>recherche par mot clé;</li>
       <li>recherche par variété de français.</li>
     </ul>
-    <p>Bon travail et bon apprentissage!</p>
+    <p>Bon travail et bon apprentissage!</p> -->
   </div>
 
 
@@ -36,15 +36,14 @@
 
       <div id=competence>
         <p><span>je veux travailler </span>
-          <select #t2 [(ngModel)]="competence" (change)="configurer_u7_input($event.target.value)">
+          <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurer_u7_input($event.target.value)">
             <option selected value="toutes les compétences">toutes les compétences</option>
-            <option value="la grammaire et l'orthographe">la grammaire et l'orthographe</option>
-            <option value="la compréhension orale">la compréhension orale</option>
-            <option value="la compréhension écrite">la compréhension écrite</option>
-            <option value="la prononciation">la prononciation</option>
-            <option value="les dictées">les dictées</option>
-            <option value="le vocabulaire">le vocabulaire</option>
-            <option value="la construction des phrases">la construction des phrases</option>
+            <option value="Compréhension écrite">Compréhension écrite</option>
+            <option value="Compréhension orale">Compréhension orale</option>
+            <option value="Grammaire et orthographe">Grammaire et orthographe</option>
+            <option value="Production écrite">Production écrite</option>
+            <option value="Prononciation">Prononciation</option>
+            <option value="Vocabulaire">Vocabulaire</option>
           </select>
         </p>
       </div>
@@ -59,14 +58,11 @@
     </div>
     <div id=lancer_reinit_rech>
       <div id=reinit_rech>
-        <span style="text-decoration:underline;" (click)="resetSelelction()">Réinitialiser la recherche</span>
-        <div id="bouton">
-
-          <p><span (click)="afficherResultats()">RECHERCHER</span></p>
-
-        </div>
+        <span (click)="resetSelelction()">Réinitialiser la recherche</span>
       </div>
-
+      <div id="bouton">
+          <p><span (click)="afficherResultats()">RECHERCHER</span></p>
+      </div>
     </div>
 
     <!-- <div id="u47" class="ax_default label">
@@ -231,7 +227,7 @@
     </div>
     <div id="toolbox">
       <div id="tool">
-        <div >
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_livre_A_green.png" />
         </div>
         <div id="label2">
@@ -239,7 +235,7 @@
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','Tests de français']">
-        <div  >
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_exerc_green.png" />
         </div>
         <div id="label2">
@@ -247,7 +243,7 @@
         </div>
       </div>
       <div id="tool">
-        <div>
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_quebec_green.png" />
         </div>
         <div id="label2">
@@ -257,15 +253,15 @@
       </div>
 
       <div id="tool">
-        <div>
-          <img id="icone_img" class="img " src="assets/images/lib_cahier_green.png" />
+        <div id="icone_img">
+          <img id="icone_img" src="assets/images/lib_cahier_green.png" />
         </div>
         <div id="label2">
           <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
         </div>
       </div>
       <div id="tool">
-        <div >
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_www_green.png" />
         </div>
         <div id="label2">
@@ -274,7 +270,7 @@
         </div>
       </div>
       <div id="tool">
-        <div >
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_crayon_green.png" />
         </div>
         <div id="label2">
@@ -283,7 +279,7 @@
         </div>
       </div>
       <div id="tool">
-        <div >
+        <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_Atlas_green.png" />
         </div>
         <div id="label2">
