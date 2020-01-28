@@ -1,6 +1,6 @@
 #home {
   display: grid;
-  grid-auto-rows: minmax(7em, auto);
+  grid-auto-rows: minmax(4em, auto);
   grid-gap: 2em;
   font-family: "Calibri Bold", "Calibri Regular", "Calibri";
   max-width: 60em;
@@ -93,7 +93,7 @@
   outline-style: none;
 }
 #nested {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   display: grid;
   grid-auto-rows: minmax(7em, auto);
   grid-gap: 1em;
@@ -175,4 +175,18 @@
   margin:auto;
   width: 30px;
   height: 30px;
+}
+#footer {
+  display: flex;
+  background-color:rgba(51, 51, 51, 1);
+  border-radius:10px;
+  font-size:10px;
+  color:#FFFFFF;
+  word-wrap:break-word;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  line-height:normal;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
