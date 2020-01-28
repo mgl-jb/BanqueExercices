@@ -1,112 +1,53 @@
 #boite {
   display: grid;
   grid-auto-rows: minmax(2em, auto);
-  grid-gap: 2em;
+  grid-gap: 1em;
   font-family: "Calibri Bold", "Calibri Regular", "Calibri";
+  max-width: 60em;
+  margin:auto;
+  margin-top: 1em;
 }
 #arbo {
-  font-size: 12px;
+  display:grid;
+  font-size: 13px;
 }
 #label_filtrer {
   font-weight:700;
 }
-#u307 {
+
+#label_rech_bout {
+  display: grid;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(1em, auto);
+}
+#label_rech {
   border-width:0px;
   font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
   font-weight:700;
-  font-style:normal;
   font-size:20px;
   color:#016BB5;
+  text-align: left;
 }
-#u311_div {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:183px;
-  height:30px;
-  background:inherit;
-  background-color:rgba(255, 255, 255, 0);
-  box-sizing:border-box;
-  border-width:1px;
-  border-style:solid;
-  border-color:rgba(1, 107, 181, 1);
-  border-radius:5px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  color:#016BB5;
-}
-#u311 {
-  border-width:0px;
-  position:absolute;
-  left:998px;
-  top:124px;
-  width:183px;
-  height:30px;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  color:#016BB5;
-}
-#u311_div.mouseOver {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:183px;
-  height:30px;
-  background:inherit;
-  background-color:rgba(1, 107, 181, 0.0980392156862745);
-  box-sizing:border-box;
-  border-width:1px;
-  border-style:solid;
-  border-color:rgba(1, 107, 181, 1);
-  border-radius:5px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  color:#016BB5;
-}
-#u311.mouseOver {
-}
-#u311_div.selected {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:183px;
-  height:30px;
-  background:inherit;
-  background-color:rgba(1, 107, 181, 0.2);
-  box-sizing:border-box;
-  border-width:1px;
-  border-style:solid;
-  border-color:rgba(1, 107, 181, 1);
-  border-radius:5px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  font-family:'Calibri';
-  font-weight:400;
-  font-style:normal;
-  color:#016BB5;
-}
-#u311.selected {
-}
-#u311_text {
-  border-width:0px;
-  position:absolute;
-  left:10px;
-  top:6px;
-  width:163px;
-  white-space:nowrap;
+
+#bouton{
+  cursor: pointer;
+  border-width: 0px;
+  font-family: "Calibri Bold", "Calibri Regular", "Calibri";
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 13px;
+  text-align: center;
+  background: inherit;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  justify-self: end;
+  align-items: center;
+  max-width: 13em;
 }
 
 

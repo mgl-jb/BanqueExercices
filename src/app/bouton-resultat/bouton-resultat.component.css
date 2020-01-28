@@ -1,6 +1,5 @@
 #u999_div {
   border-width:0px;
-  position:relative;
   height:27px;
   background:inherit;
   background-color:rgba(255, 255, 255, 1);
@@ -13,33 +12,31 @@
   -webkit-box-shadow:none;
   box-shadow:none;
   color:#016BB5;
+  font-style:normal;
+  text-align:center;
+  line-height:normal;
+  font-weight:700;
+  font-size:14px;
+  font-family:'Calibri Bold', 'Calibri Regular', 'Calibri';
 }
 
 #u999_div.selected {
   border-width: 0px;
-  position:relative;
   height:27px;
   background-color:#E4E2E2;
-  border: none;
   border-radius: 5px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
   color: #e4f1fa;
 }
 
 #u999 {
   cursor: pointer;
-  position:relative;
   display: inline-block;
-  border-width:0px;
   height:27px;
   color:#016BB5;
   margin: 1px;
 }
 
 #u999_text {
-  border-width:0px;
   position:relative;
   display: inline-block;
   top:5px;

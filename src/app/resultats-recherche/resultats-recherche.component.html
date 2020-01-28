@@ -1,41 +1,41 @@
 <div id="boite">
 
   <div id="arbo">
-    <p><a id="u117" class="link"><span [routerLink]="['/home']" style="color:#016BB5;cursor: pointer;">Accueil</span></a><span> &gt; Résultat de la recherche
+    <p><a class="link"><span [routerLink]="['/home']" style="color:#016BB5;cursor: pointer;">Accueil</span></a><span> &gt; Résultat de la recherche
         personnalisée</span></p>
   </div>
 
-<div id="u115" class="ax_default heading_3">
-
-    <p><span>Exercices trouvés pour votre recherche :</span></p>
-
+  <div id="label_rech_bout">
+    <div id = label_rech>
+      <span>Exercices trouvés pour votre recherche : </span>
+    </div>
+    <div id="bouton">
+      <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
+    </div>
 </div>
 
-<div>
+<div id="resume_rech">
     <p>Je suis <span style="font-weight:700;">{{niveau}}</span>, je veux travailler <span style="font-weight:700;">{{exercice}}</span>
       <span *ngIf="theme"  style="font-weight:400;"> sur </span><span style="font-weight:700;">{{theme}}</span></p>
 </div>
-<div >
-  <img id="u241_img" class="img " src="assets/images/u241.png">
-</div>
-<div id="u119" class="ax_default label" data-label="btn_nouvelle_recherche">
-  <div id="u119_div" class=""></div>
-  <div id="u119_text" class="text ">
-    <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
-  </div>
-</div>
+
+
 <div id="label_filtrer">
   <p>Filtrer les résultats de recherche</p>
 </div>
 
 
-<div>
-
+<div id="cat_cont">
+<div id="categories">
   <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color]='color' [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
   </app-bouton-resultat>
+</div>
 
+<div id="contenants">
   <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2"
    [item] ='item' [resultats]='resultats' [clicked]="clicked" [toutesCompetences]= "toutesCompetences" [niveau]="niveau" ></app-contenant-resultat>
+</div>
+
 
 </div>
 </div>

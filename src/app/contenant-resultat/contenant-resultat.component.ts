@@ -11,7 +11,7 @@ import { Resultat } from '../home/home.component';
     '../shared/styles_data.css',
     './contenant-resultat.component.css']
 })
-export class ContenantResultatComponent implements  AfterViewChecked {
+export class ContenantResultatComponent {
 
   @Input() filtre: string;
   @Input() niveau: string;
@@ -27,12 +27,12 @@ export class ContenantResultatComponent implements  AfterViewChecked {
   constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
 
 
-  ngAfterViewChecked() {
+ /*  ngAfterViewChecked() {
     if (this.parentDiv && this.childDiv) {
       const height = `${this.childDiv.nativeElement.offsetHeight + 60 }px`;
       this.renderer.setStyle(this.parentDiv.nativeElement, 'height', height);
     }
-  }
+  } */
 
   filterTable(table: any[], filter: string): Resultat[] {
     let table2: any;

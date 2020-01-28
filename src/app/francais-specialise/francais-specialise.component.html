@@ -1,13 +1,25 @@
 <div id="boite">
-      <div >
-        <p><a  class="link"><span [routerLink]="['/home']" style="color:#FF9D4B; cursor: pointer;">Accueil</span></a><span> &gt; </span>
+
+      <div id="arbo">
+        <p><a  class="link"><span [routerLink]="['/home']">Accueil</span></a><span> &gt; </span>
           <span> {{type}}</span></p>
       </div>
 
-      <div id="outil" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
-        <img id="u557_img" #fleche class="img " src="assets/images/u61.png" />
+      <div id="outil" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
+        <img id="u557_img" #fleche src="assets/images/u61.png" />
         <p>{{type | capitalizeFirstLetter}}</p>
       </div>
+
+      <div id="liste_deroul_tools" #ld *ngIf="listeDeroulante">
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','français spécialisé']" appHighlight [defaultColor]="highlightColor">
+          <p><span >Français spécialisé</span></p>
+      </div>
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']" appHighlight [defaultColor]="highlightColor">
+          <p><span>Français québécois</span></p>
+      </div>
+    </div>
 
       <div id="label_filtrer">
         <p>Filtrer par catégorie</p>
@@ -15,39 +27,17 @@
 
 
 
-    <div >
+    <div id="cat_cont">
 
+      <div id="categories">
         <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
         </app-bouton-resultat>
+      </div>
 
-        <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
+<div id="contenents">
+  <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
+</div>
+
 
     </div>
-
-    <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante">
-
-      <div id="u825" class="ax_default box_1">
-        <div id="u825_div" appHighlight [defaultColor]="highlightColor">
-        <div id="u825_text" class="text">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']">Français québécois</span></p>
-        </div>
-      </div>
-      </div>
-
-      <div id="u826" class="ax_default box_1">
-        <div id="u826_div" appHighlight [defaultColor]="highlightColor">
-        <div id="u826_text" class="text ">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']">Français québécois</span></p>
-        </div>
-      </div>
-      </div>
-
-      <div id="u827" class="ax_default box_1">
-        <div id="u827_div" appHighlight [defaultColor]="highlightColor">
-        <div id="u827_text" class="text ">
-          <p><span (click)="deroulerListe()" [routerLink]="['/fr_sp','français spécialisé']">Français spécialisé</span></p>
-        </div>
-      </div>
-      </div>
-      </div>
 </div>

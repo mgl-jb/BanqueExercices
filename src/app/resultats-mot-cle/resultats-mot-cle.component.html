@@ -6,23 +6,14 @@
         personnalisée</span></p>
   </div>
 
-<div id="u307" class="ax_default heading_3">
-
-    <p><span>Exercices trouvés pour votre recherche : </span><span>{{motCle}}</span></p>
-
+<div id="label_rech_bout">
+    <div id = label_rech>
+      <span><span>Exercices trouvés pour votre recherche : </span><span>{{motCle}}</span></span>
+    </div>
+    <div id="bouton">
+      <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
+    </div>
 </div>
-
-
-    <div  >
-      <img  src="assets/images/u241.png">
-    </div>
-
-    <div id="u311" class="ax_default label" data-label="btn_nouvelle_recherche">
-      <div id="u311_div" class=""></div>
-      <div id="u311_text" class="text ">
-        <p><span [routerLink]="['/home']">Faire une nouvelle recherche</span></p>
-      </div>
-    </div>
 
 
     <div id="label_filtrer">
@@ -59,7 +50,7 @@
     <div *ngFor="let item1 of resultats3" >
         <div *ngIf="filtred == false || (item1 == filtreNiveau && filtred == true) ">
           <div >
-              <div id= "label_filtrer">
+              <div id= "label_rech">
                 <p><span>Niveau: {{item1}}</span></p>
               </div>
             </div>
@@ -74,7 +65,7 @@
     <div *ngFor="let item1 of resultats4" >
         <div *ngIf="filtredType == false || (item1 == filtreType && filtredType == true) ">
           <div >
-              <div  id= "label_filtrer">
+              <div  id= "label_rech">
                 <p><span>Type: {{item1}}</span></p>
               </div>
             </div>
@@ -89,7 +80,7 @@
     <div *ngFor="let item1 of resultats5">
         <div *ngIf="filtredCompetence == false || (item1 == filtreCompetence && filtredCompetence == true) ">
           <div >
-              <div id= "label_filtrer">
+              <div id= "label_rech">
                 <p><span>Compétence: {{item1}}</span></p>
               </div>
             </div>

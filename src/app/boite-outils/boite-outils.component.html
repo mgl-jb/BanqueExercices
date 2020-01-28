@@ -6,79 +6,78 @@
       </div>
 
     <div id="outil" class="ax_default" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
-      <img id="u557_img" #fleche class="img " src="assets/images/angle_u518.png" />
+      <img id="u557_img" #fleche src="assets/images/angle_u518.png" />
       <p>{{outil | capitalizeFirstLetter}}</p>
     </div>
+    <div id="liste_deroul_tools" #ld *ngIf="listeDeroulante">
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','dictionnaires']" appHighlight [defaultColor]="highlightColor">
+          <p><span >Dictionnaires</span></p>
+      </div>
+
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','test de français']" appHighlight [defaultColor]="highlightColor">
+          <p><span>Tests de français</span></p>
+      </div>
+
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','culture et société québécoise']" appHighlight [defaultColor]="highlightColor">
+          <p><span  >Culture et société québécoise</span></p>
+      </div>
+
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','fiches grammaticales']" appHighlight [defaultColor]="highlightColor">
+
+          <p><span >Fiches grammaticales</span></p>
+
+      </div>
+
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']" appHighlight [defaultColor]="highlightColor">
+
+          <p><span >Sites d’apprentissage et cours en ligne</span></p>
+
+      </div>
+
+
+
+        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']" appHighlight [defaultColor]="highlightColor">
+
+          <p><span >Correcteurs et aide à la conjuguaison</span></p>
+
+      </div>
+
+
+
+        <div id="u825_div"  (click)="deroulerListe()" [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']" appHighlight [defaultColor]="highlightColor">
+
+          <p><span >Conseils linguistiques et modèles de communication</span></p>
+        </div>
+
+    </div>
+
 
     <div id="label_filtrer">
         <p>Filtrer par catégorie</p>
     </div>
 
-    <div >
-
+    <div id="cat_cont">
+      <div id="categories">
         <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
         </app-bouton-resultat>
+      </div>
 
-        <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
+<div id="contenants">
+  <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
+</div>
+
 
       </div>
 
-    <div id="u824" #ld class="ax_default" *ngIf="listeDeroulante">
 
-        <div id="u825" class="ax_default box_1">
-          <div id="u825_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u825_text" class="text">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','dictionnaires']">Dictionnaires</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u826" class="ax_default box_1">
-          <div id="u826_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u826_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','test de français']">Tests de français</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u827" class="ax_default box_1">
-          <div id="u827_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u827_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','culture et société québécoise']">Culture et société québécoise</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u828" class="ax_default box_1">
-          <div id="u828_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u828_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u829" class="ax_default box_1">
-          <div id="u829_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u829_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">Sites d’apprentissage et cours en ligne</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u830" class="ax_default box_1">
-          <div id="u830_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u830_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">Correcteurs et aide à la conjuguaison</span></p>
-          </div>
-        </div>
-        </div>
-
-        <div id="u831" class="ax_default box_1">
-          <div id="u831_div" appHighlight [defaultColor]="highlightColor">
-          <div id="u831_text" class="text ">
-            <p><span (click)="deroulerListe()" [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">Conseils linguistiques et modèles de communication</span></p>
-          </div>
-        </div>
-      </div>
-      </div>
   </div>

@@ -3,7 +3,7 @@
   grid-auto-rows: minmax(7em, auto);
   grid-gap: 2em;
   font-family: "Calibri Bold", "Calibri Regular", "Calibri";
-  max-width: 80em;
+  max-width: 60em;
   margin: auto;
 }
 #about {
@@ -34,8 +34,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
-  margin: auto;
-  grid-auto-rows: minmax(1em, 3em);
+  text-align: center;
 }
 
 #liste_menus {
@@ -61,7 +60,7 @@
   font-size: 12px;
 }
 #bouton {
-  display:grid;
+  display:flex;
   cursor: pointer;
   background: inherit;
   background-color: rgba(1, 107, 181, 1);
@@ -92,7 +91,6 @@
   text-align: left;
   border-color: transparent;
   outline-style: none;
-  max-width: 20em;
 }
 #nested {
   grid-template-columns: 1fr 1fr;
@@ -126,7 +124,7 @@
   display: grid;
   grid-gap: 10px;
   grid-auto-rows: minmax(1em, 2em);
-  grid-template-columns: repeat(auto-fill, 10em);
+  grid-template-columns: repeat(auto-fill, 8em);
 }
 #bout_typ_fr {
   cursor: pointer;
@@ -145,9 +143,6 @@
   border-style: solid;
   border-color: rgba(255, 207, 136, 1);
   border-radius: 5px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,6 +169,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: none;
+  cursor: pointer;
 }
 #icone_img {
   margin:auto;

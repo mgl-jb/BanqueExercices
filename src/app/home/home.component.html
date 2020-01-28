@@ -226,12 +226,12 @@
 
     </div>
     <div id="toolbox">
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','Dictionnaires']">
         <div id="icone_img">
-          <img id="icone_img" class="img " src="assets/images/lib_livre_A_green.png" />
+          <img id="icone_img" src="assets/images/lib_livre_A_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','Dictionnaires']">Dictionnaires</span></p>
+          <p><span >Dictionnaires</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','Tests de français']">
@@ -239,52 +239,49 @@
           <img id="icone_img" class="img " src="assets/images/lib_exerc_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','test de français']">Tests de français</span></p>
+          <p><span >Tests de français</span></p>
         </div>
       </div>
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','culture et société québécoise']">
         <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_quebec_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','culture et société québécoise']">Culture et société québécoise</span>
+          <p><span >Culture et société québécoise</span>
           </p>
         </div>
       </div>
 
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','fiches grammaticales']">
         <div id="icone_img">
           <img id="icone_img" src="assets/images/lib_cahier_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','fiches grammaticales']">Fiches grammaticales</span></p>
+          <p><span >Fiches grammaticales</span></p>
         </div>
       </div>
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">
         <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_www_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">Sites d’apprentissage et
-              cours en ligne</span></p>
+          <p><span >Sites d’apprentissage et cours en ligne</span></p>
         </div>
       </div>
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">
         <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_crayon_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">Correcteurs et aide à la
-              conjuguaison</span></p>
+          <p><span >Correcteurs et aide à la conjuguaison</span></p>
         </div>
       </div>
-      <div id="tool">
+      <div id="tool" [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">
         <div id="icone_img">
           <img id="icone_img" class="img " src="assets/images/lib_Atlas_green.png" />
         </div>
         <div id="label2">
-          <p><span [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">Conseils
-              linguistiques et modèles de communication</span></p>
+          <p><span >Conseils linguistiques et modèles de communication</span></p>
         </div>
       </div>
     </div>
