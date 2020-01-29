@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  configurer_u7_input(u5: any) {
+  configurerCompetence(u5: any) {
     this.themeArray = [];
     this.competence = u5;
     this.themeArray = this.menuRecherche[this.niveau][this.competence];
@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
     this.theme = this.themeArray[0];
   }
 
-  myClick() {
+  rechercherParMotCle() {
     // let fuse : any = new Fuse(this.exercices, this.creerOptions('mot_cle'));
     // this.resultats = fuse.search(this.motCle);
     // console.log(this.resultats);
@@ -71,10 +71,6 @@ export class HomeComponent implements OnInit {
     // let route = this.router.config.find(r => r.path === path);
     // route.data = { resultats: this.resultats };
     this.router.navigate(['/resultat_mot_cle', this.motCle]);
-  }
-
-  myClick2(u7: any) {
-    this.theme = u7;
   }
 
   afficherResultats() {

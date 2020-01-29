@@ -5,11 +5,13 @@
   font-family: "Calibri Bold", "Calibri Regular", "Calibri";
   max-width: 60em;
   margin: auto;
+  margin-top: 1em;
 }
 #about {
   margin: auto;
   align-content: center;
   grid-auto-rows: minmax(2em, auto);
+  font-weight:700;
 }
 #menus {
   display: grid;
@@ -33,7 +35,7 @@
 #label2 {
   font-weight: 400;
   font-style: normal;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 

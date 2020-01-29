@@ -2,8 +2,8 @@
 
   <div id="about">
     <p>
-      Cette banque s'adresse aux <span style="font-weight:700;color:#016BB5;">personnes qui apprennent le
-        français.</span>
+      Cette banque s'adresse aux <span style="color:#016BB5;">personnes qui apprennent le
+        français</span> et au <span style="color:#016BB5;">personnel enseignant.</span>
       Vous y trouverez de nombreuses activités et outils de référence de sources variées.
       <br><br>
     </p>
@@ -25,7 +25,7 @@
     </div>
     <div id=liste_menus>
       <div id=niveau>
-        <p><span>Je suis </span>
+        <p><span style="font-weight: 600;">Je suis </span>
           <select #t1 [(ngModel)]="niveau" id="u1_input">
             <option selected value="débutant">débutant</option>
             <option value="intermédiaire">intermédiaire</option>
@@ -35,8 +35,8 @@
       </div>
 
       <div id=competence>
-        <p><span>je veux travailler </span>
-          <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurer_u7_input($event.target.value)">
+        <p><span style="font-weight: 600;">je veux travailler </span>
+          <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurerCompetence($event.target.value)">
             <option selected value="toutes les compétences">toutes les compétences</option>
             <option value="Compréhension écrite">Compréhension écrite</option>
             <option value="Compréhension orale">Compréhension orale</option>
@@ -48,7 +48,7 @@
         </p>
       </div>
       <div id=theme>
-        <p><span>sur </span>
+        <p><span style="font-weight: 600;">sur </span>
           <select #t3 [(ngModel)]="theme">
             <option *ngFor="let item of themeArray" [value]="item">{{item}}</option>
           </select>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div id="u5" class="ax_default droplist">
-      <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurer_u7_input($event.target.value)">
+      <select #t2 [(ngModel)]="competence" id="u5_input" (change)="configurerCompetence($event.target.value)">
         <option selected value="toutes les compétences">toutes les compétences</option>
         <option value="la grammaire et l'orthographe">la grammaire et l'orthographe</option>
         <option value="la compréhension orale">la compréhension orale</option>
@@ -141,7 +141,7 @@
         <div id="input_rech">
           <input [(ngModel)]="motCle" id="input" type="text" value="" />
           <div id="bouton">
-            <p><span (click)="myClick()">RECHERCHER</span></p>
+            <p><span (click)="rechercherParMotCle()">RECHERCHER</span></p>
           </div>
         </div>
       </div>
