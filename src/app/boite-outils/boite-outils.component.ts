@@ -3,6 +3,7 @@ import Fuse from 'fuse.js';
 import exercices from 'assets/exercices.json';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component.js';
+import { RechercheService } from 'app/shared/services/recherche.service.js';
 
 @Component({
   selector: 'app-boite-outils',
@@ -30,13 +31,15 @@ export class BoiteOutilsComponent implements OnInit {
   highlightColor = '#D9FCD9';
   imageSrc = 'assets/images/u73.png';
 
-  constructor( private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
+  constructor( private route: ActivatedRoute,
+               private renderer: Renderer2,
+               private el: ElementRef,
+               private rechercheService: RechercheService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.outil = this.route.snapshot.paramMap.get('outil');
-      this.trouverResultats();
-      console.log(this.resultats);
+      this.getResults();
       this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
   }
 
@@ -47,22 +50,8 @@ export class BoiteOutilsComponent implements OnInit {
     this.degree = 180 - this.degree;
   }
 
-  trouverResultats() {
-    const fuse: any = new Fuse(this.exercices, this.creerOptions('type'));
-    this.resultats = fuse.search(this.outil);
-    console.log(this.resultats);
-  }
-
-  creerOptions(...args: any[]) {
-    this.options = {
-      tokenize: true,
-      matchAllTokens: true,
-      threshold: 0,
-      location: 0,
-      distance: 0,
-      keys: args
-    };
-    return this.options;
+  getResults(): void {
+    this.resultats = this.rechercheService.trouverResultatsOutil(this.outil);
   }
 
   onNotify(message: any): void {

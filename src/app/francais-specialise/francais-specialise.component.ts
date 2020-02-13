@@ -3,6 +3,7 @@ import Fuse from 'fuse.js';
 import exercices from 'assets/exercices.json';
 import { ActivatedRoute } from '@angular/router';
 import { Resultat } from '../home/home.component.js';
+import { RechercheService } from 'app/shared/services/recherche.service.js';
 
 @Component({
   selector: 'app-francais-specialise',
@@ -30,14 +31,16 @@ export class FrancaisSpecialiseComponent implements OnInit {
   highlightColor = '#FFDFC4';
   imageSrc = 'assets/images/u61.png';
 
-  constructor( private route: ActivatedRoute, private renderer: Renderer2, private el: ElementRef) { }
+  constructor( private route: ActivatedRoute,
+               private renderer: Renderer2,
+               private el: ElementRef,
+               private rechercheService: RechercheService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.type = this.route.snapshot.paramMap.get('type');
-      this.trouverResultats();
-      console.log(this.resultats);
-      this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
+    this.type = this.route.snapshot.paramMap.get('type');
+    this.getResults();
+    this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
   }
 
   deroulerListe() {
@@ -45,6 +48,10 @@ export class FrancaisSpecialiseComponent implements OnInit {
     const rotate = `rotate(${this.degree}deg)`;
     this.renderer.setStyle(this.fleche.nativeElement, 'transform', rotate);
     this.degree = 180 - this.degree;
+  }
+
+  getResults(): void {
+    this.resultats = this.rechercheService.trouverResultatsType(this.type);
   }
 
   trouverResultats() {

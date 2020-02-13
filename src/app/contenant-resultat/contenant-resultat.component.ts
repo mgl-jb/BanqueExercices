@@ -15,6 +15,8 @@ export class ContenantResultatComponent {
 
   @Input() filtre: string;
   @Input() niveau: string;
+  @Input() exercice: string;
+  @Input() theme: string;
   @Input() item: string;
   @Input() imageSrc: string;
   @Input() resultats: Resultat[];

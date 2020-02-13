@@ -1,7 +1,7 @@
 <div #parentDiv  id="contenant" *ngIf="clicked == false || (item == filtre && clicked == true) " >
 
   <div id="titre">
-      <p><span>{{item}}</span></p>
+      <p><span [routerLink]="['/details', niveau, exercice, theme, item]">{{item}}</span></p>
   </div>
   <div #childDiv id="liste_liens">
     <div *ngFor="let item1 of filterTable(resultats,item)" id="lien">

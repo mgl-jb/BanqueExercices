@@ -15,6 +15,7 @@ import { BoutonResultatComponent } from './bouton-resultat/bouton-resultat.compo
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { FrancaisSpecialiseComponent } from './francais-specialise/francais-specialise.component';
 import { CapitalizeFirstLetterPipe } from './shared/pipes/capitalizefirstletter.pipe';
+import { DetailSousThemeComponent } from './detail-sous-theme/detail-sous-theme.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CapitalizeFirstLetterPipe } from './shared/pipes/capitalizefirstletter.
     BoutonResultatComponent,
     HighlightDirective,
     CapitalizeFirstLetterPipe,
-    FrancaisSpecialiseComponent
+    FrancaisSpecialiseComponent,
+    DetailSousThemeComponent
   ],
   imports: [
     FormsModule,
@@ -37,6 +39,8 @@ import { CapitalizeFirstLetterPipe } from './shared/pipes/capitalizefirstletter.
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
+      { path: 'details/:niveau/:exercice/:theme/:item', component: DetailSousThemeComponent},
+      { path: 'resultat_mot_cle/:motCle/:item', component: DetailSousThemeComponent},
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
       { path: 'boite_outils/:outil', component: BoiteOutilsComponent},
