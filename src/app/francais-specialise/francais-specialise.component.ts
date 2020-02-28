@@ -30,6 +30,7 @@ export class FrancaisSpecialiseComponent implements OnInit {
   pageColor = '#FF9D4B';
   highlightColor = '#FFDFC4';
   imageSrc = 'assets/images/u61.png';
+  typeRecherche = 'fr_sp';
 
   constructor( private route: ActivatedRoute,
                private renderer: Renderer2,

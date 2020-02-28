@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, AfterViewInit, Renderer2, ViewChild, Input, AfterViewChecked } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Resultat } from '../home/home.component';
 
 @Component({
@@ -18,15 +18,17 @@ export class ContenantResultatComponent {
   @Input() exercice: string;
   @Input() theme: string;
   @Input() item: string;
+  @Input() sousType: string;
   @Input() imageSrc: string;
   @Input() resultats: Resultat[];
   @Input() clicked: boolean;
   @Input() toutesCompetences: boolean;
+  @Input() typeRecherche: string;
 
   @ViewChild('parentDiv', {static: false}) parentDiv: ElementRef;
   @ViewChild('childDiv', {static: false}) childDiv: ElementRef;
 
-  constructor(private route: ActivatedRoute, private renderer: Renderer2) { }
+  constructor(private route: ActivatedRoute, private renderer: Renderer2, private router: Router ) { }
 
 
  /*  ngAfterViewChecked() {
@@ -45,5 +47,16 @@ export class ContenantResultatComponent {
       table2 = table.filter(it => it.sous_theme === filter);
     }
     return table2;
+  }
+
+  page_sous_type(item: string): void {
+    if (this.typeRecherche === 'menu') {
+      this.router.navigate(['/details', this.niveau, this.exercice, this.theme, item]);
+    } else if (this.typeRecherche === 'fr_sp') {
+      this.router.navigate(['/details', this.sousType, this.item]);
+    } else {
+      this.router.navigate(['/details', this.item]);
+    }
+
   }
 }

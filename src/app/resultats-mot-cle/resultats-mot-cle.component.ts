@@ -31,6 +31,7 @@ export class ResultatsMotCleComponent implements OnInit {
   motCle: string;
   resultats3: string[];
   imageSrc = 'assets/images/u129.png';
+  typeRecherche = 'motCle';
   resultats4: any[];
   resultats5: any[];
 

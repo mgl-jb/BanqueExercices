@@ -40,6 +40,8 @@ import { DetailSousThemeComponent } from './detail-sous-theme/detail-sous-theme.
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: 'details/:niveau/:exercice/:theme/:item', component: DetailSousThemeComponent},
+      { path: 'details/:soustype/:item', component: DetailSousThemeComponent},
+      { path: 'details/:item', component: DetailSousThemeComponent},
       { path: 'resultat_mot_cle/:motCle/:item', component: DetailSousThemeComponent},
       { path: 'resultats/:niveau/:exercice/:type', component: ResultatsRechercheComponent},
       { path: 'resultat_mot_cle/:motCle', component: ResultatsMotCleComponent},
