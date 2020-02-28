@@ -39,7 +39,7 @@ export class FrancaisSpecialiseComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
     this.type = this.route.snapshot.paramMap.get('type');
-    this.getResults();
+    this.trouverResultats();
     this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))]; });
   }
 
@@ -55,7 +55,7 @@ export class FrancaisSpecialiseComponent implements OnInit {
   }
 
   trouverResultats() {
-    const fuse: any = new Fuse(this.exercices, this.creerOptions('type'));
+    const fuse: any = new Fuse(this.exercices, this.creerOptions('sous_type'));
     this.resultats = fuse.search(this.type);
     console.log(this.resultats);
   }

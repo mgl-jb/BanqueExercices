@@ -7,7 +7,7 @@
       Vous y trouverez de nombreuses activités et outils de référence de sources variées.
       <br><br>
     </p>
- <!--    <p>
+    <!--    <p>
       Pour accéder aux contenus, plusieurs choix s'offrent à vous :
     </p>
     <ul>
@@ -61,7 +61,7 @@
         <span (click)="resetSelelction()">Réinitialiser la recherche</span>
       </div>
       <div id="bouton">
-          <p><span (click)="afficherResultats()">RECHERCHER</span></p>
+        <p><span (click)="afficherResultats()">RECHERCHER</span></p>
       </div>
     </div>
 
@@ -179,14 +179,21 @@
         <div id="label">
           <p><span>Ressources par variété de français</span></p>
         </div>
-        <div id="boutons">
-          <div id="bout_typ_fr">
-            <p><span [routerLink]="['/fr_sp','français spécialisé']">français spécialisé</span></p>
-          </div>
-          <div id="bout_typ_fr">
-            <p><span [routerLink]="['/fr_sp', 'français québécois']">français québécois</span></p>
-          </div>
+
+        <div id="verieteSelect">
+          <select [(ngModel)]="variete" (change)="afficherVarieteFr($event.target.value)">
+            <option selected value="Variétés de français">Variétés de français</option>
+            <option value="Administration, droit et affaires">Administration, droit et affaires</option>
+            <option value="Arts, mode et design">Arts, mode et design</option>
+            <option value="Génie, informatique et sciences appliquées">Génie, informatique et sciences appliquées</option>
+            <option value="Industrie textile">Industrie textile</option>
+            <option value="Santé et soins infirmiers">Santé et soins infirmiers</option>
+            <option value="Tourisme, commerce de détail et services personnels">Tourisme, commerce de détail et services
+              personnels</option>
+          </select>
         </div>
+
+
       </div>
 
 
@@ -231,7 +238,7 @@
           <img id="icone_img" src="assets/images/lib_livre_A_green.png" />
         </div>
         <div id="label2">
-          <p><span >Dictionnaires</span></p>
+          <p><span>Dictionnaires</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','Tests de français']">
@@ -239,7 +246,7 @@
           <img id="icone_img" class="img " src="assets/images/lib_exerc_green.png" />
         </div>
         <div id="label2">
-          <p><span >Tests de français</span></p>
+          <p><span>Tests de français</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','culture et société québécoise']">
@@ -247,7 +254,7 @@
           <img id="icone_img" class="img " src="assets/images/lib_quebec_green.png" />
         </div>
         <div id="label2">
-          <p><span >Culture et société québécoise</span>
+          <p><span>Culture et société québécoise</span>
           </p>
         </div>
       </div>
@@ -257,7 +264,7 @@
           <img id="icone_img" src="assets/images/lib_cahier_green.png" />
         </div>
         <div id="label2">
-          <p><span >Fiches grammaticales</span></p>
+          <p><span>Fiches grammaticales</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','sites d\'apprentissage et cours en ligne']">
@@ -265,7 +272,7 @@
           <img id="icone_img" class="img " src="assets/images/lib_www_green.png" />
         </div>
         <div id="label2">
-          <p><span >Sites d’apprentissage et cours en ligne</span></p>
+          <p><span>Sites d’apprentissage et cours en ligne</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','correcteurs et aide à la conjugaison']">
@@ -273,7 +280,7 @@
           <img id="icone_img" class="img " src="assets/images/lib_crayon_green.png" />
         </div>
         <div id="label2">
-          <p><span >Correcteurs et aide à la conjuguaison</span></p>
+          <p><span>Correcteurs et aide à la conjuguaison</span></p>
         </div>
       </div>
       <div id="tool" [routerLink]="['/boite_outils','conseils linguistiques et modèles de communication']">
@@ -281,7 +288,7 @@
           <img id="icone_img" class="img " src="assets/images/lib_Atlas_green.png" />
         </div>
         <div id="label2">
-          <p><span >Conseils linguistiques et modèles de communication</span></p>
+          <p><span>Conseils linguistiques et modèles de communication</span></p>
         </div>
       </div>
     </div>
@@ -297,7 +304,7 @@
         conditions d'utilisation, à la licence d'utilisation et à la politique de confidentialité du site qu'elle
         consulte.</span></p>
 
-</div>
+  </div>
 
 </div>
 
@@ -425,5 +432,3 @@
       <div id="u102_div" ></div>
     </div>
   </div>-->
-
-

@@ -1,43 +1,66 @@
 <div id="boite">
 
-      <div id="arbo">
-        <p><a  class="link"><span [routerLink]="['/home']">Accueil</span></a><span> &gt; </span>
-          <span> {{type}}</span></p>
-      </div>
+  <div id="arbo">
+    <p><a class="link"><span [routerLink]="['/home']">Accueil</span></a><span> &gt; </span>
+      <span> {{type}}</span></p>
+  </div>
 
-      <div id="outil" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
-        <img id="u557_img" #fleche src="assets/images/u61.png" />
-        <p>{{type | capitalizeFirstLetter}}</p>
-      </div>
+  <div id="outil" tabindex="0" style="cursor: pointer;" (click)="deroulerListe()">
+    <img id="u557_img" #fleche src="assets/images/u61.png" />
+    <p>{{type | capitalizeFirstLetter}}</p>
+  </div>
 
-      <div id="liste_deroul_tools" #ld *ngIf="listeDeroulante">
+  <div id="liste_deroul_tools" #ld *ngIf="listeDeroulante">
 
-        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','français spécialisé']" appHighlight [defaultColor]="highlightColor">
-          <p><span >Français spécialisé</span></p>
-      </div>
-
-        <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','français québécois']" appHighlight [defaultColor]="highlightColor">
-          <p><span>Français québécois</span></p>
-      </div>
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Administration, droit et affaires']" appHighlight
+      [defaultColor]="highlightColor">
+      <p><span>Administration, droit et affaires</span></p>
     </div>
 
-      <div id="label_filtrer">
-        <p>Filtrer par catégorie</p>
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Arts, mode et design']" appHighlight [defaultColor]="highlightColor">
+      <p><span>Arts, mode et design</span></p>
+    </div>
+
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Génie, informatique et sciences appliquées']" appHighlight
+      [defaultColor]="highlightColor">
+      <p><span>Génie, informatique et sciences appliquées</span></p>
+    </div>
+
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Industrie textile']" appHighlight [defaultColor]="highlightColor">
+      <p><span>Industrie textile</span></p>
+    </div>
+
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Santé et soins infirmiers']" appHighlight
+      [defaultColor]="highlightColor">
+      <p><span>Santé et soins infirmiers</span></p>
+    </div>
+
+    <div id="u825_div" (click)="deroulerListe()" [routerLink]="['/fr_sp','Tourisme, commerce de détail et services personnels']" appHighlight
+      [defaultColor]="highlightColor">
+      <p><span>Tourisme, commerce de détail et services personnels</span></p>
+    </div>
+  </div>
+
+  <div id="label_filtrer">
+    <p>Filtrer par catégorie</p>
+  </div>
+
+
+
+  <div id="cat_cont">
+
+    <div id="categories">
+      <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color]="pageColor"
+        [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
+      </app-bouton-resultat>
+    </div>
+
+    <div id="contenents">
+      <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px"
+        *ngFor="let item of let item of resultats2" [item]='item' [resultats]='resultats' [clicked]="clicked">
+      </app-contenant-resultat>
     </div>
 
 
-
-    <div id="cat_cont">
-
-      <div id="categories">
-        <app-bouton-resultat style="margin-bottom:5px" (notify)='onNotify($event)' [item]='item' [color] = "pageColor"  [highlightColor]="highlightColor" *ngFor="let item of resultats2 ">
-        </app-bouton-resultat>
-      </div>
-
-<div id="contenents">
-  <app-contenant-resultat [filtre]="filtre" [imageSrc]="imageSrc" style="top:20px" *ngFor="let item of let item of resultats2" [item] ='item' [resultats]='resultats' [clicked]="clicked"></app-contenant-resultat>
-</div>
-
-
-    </div>
+  </div>
 </div>

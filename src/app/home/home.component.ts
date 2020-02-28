@@ -1,18 +1,20 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import menuRecherche from 'assets/menuRecherche.json';
 
 
 export interface Resultat {
-  niveau: string;
-  competence: string;
-  theme: string;
-  type: string;
+  sous_type: string;
   sous_theme: string;
-  activite: string;
   mot_cle: string;
   lien: string;
   langue: string;
+  type: string;
+  activite: string;
+  theme: string;
+  niveau: string;
+  descriptif: string;
+  competence: string;
 }
 
 @Component({
@@ -30,6 +32,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('t1', {static: false}) selectNiveau: ElementRef;
   @ViewChild('t2', {static: false}) selectCompetence: ElementRef;
   @ViewChild('t3', {static: false}) selectSur: ElementRef;
+  @ViewChild('fleche', {static: false}) fleche: ElementRef;
 
   menuRecherche: any = menuRecherche;
 
@@ -37,11 +40,17 @@ export class HomeComponent implements OnInit {
 
   motCle: string;
 
+  variete = 'Variétés de français';
+
   niveau = 'débutant';
 
   competence = 'toutes les compétences' ;
 
   theme = '' ;
+
+  degree = 180;
+
+  listeDeroulante = false;
 
   competenceArray: any;
 
@@ -50,7 +59,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-  ) { }
+    private renderer: Renderer2,
+    private el: ElementRef ) { }
 
   ngOnInit() {
   }
@@ -75,6 +85,19 @@ export class HomeComponent implements OnInit {
 
   afficherResultats() {
     this.router.navigate(['/resultats', this.niveau, this.competence, this.theme]);
+  }
+
+  afficherVarieteFr(variete) {
+    if (variete !== 'Variétés de français') {
+      this.router.navigate(['/fr_sp', this.variete]);
+    }
+  }
+
+  deroulerListe() {
+    this.listeDeroulante = !this.listeDeroulante;
+    const rotate = `rotate(${this.degree}deg)`;
+    this.renderer.setStyle(this.fleche.nativeElement, 'transform', rotate);
+    this.degree = 180 - this.degree;
   }
 
   resetSelelction() {

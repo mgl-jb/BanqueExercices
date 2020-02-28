@@ -71,6 +71,11 @@ export class RechercheService {
     return fuse.search(type);
   }
 
+  trouverResultatsSousType(type: string) {
+    const fuse: any = new Fuse(this.exercices, this.creerOptions('sous_type'));
+    return fuse.search(type);
+  }
+
   creerOptions(...args: any[]) {
     this.options = {
       tokenize: true,

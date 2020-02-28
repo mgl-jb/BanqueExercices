@@ -68,7 +68,6 @@ export class ResultatsRechercheComponent implements OnInit {
     }
     this.resultats2 =  [...new Set(this.resultats.map(it => it.sous_theme))];
     }
-
   }
   creerOptions(...args: any[]) {
     this.options = {
