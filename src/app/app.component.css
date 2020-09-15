@@ -1,6 +1,6 @@
 #u93_div {
   display: grid;
-  grid-template-columns: 60fr 0.25fr 80fr;
+  grid-template-columns: 40fr 0.25fr 80fr;
   grid-auto-rows: minmax(7em, auto);
   grid-gap: 1em;
   background-color: rgba(242, 242, 242, 1);
@@ -21,6 +21,6 @@
 
 img {
   object-fit: scale-down;
-  width: 100%;
+  width: 50%;
   max-height: 100%;
 }
